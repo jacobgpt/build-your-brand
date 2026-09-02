@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Roasters — Coffee timed to when you run out, not a calendar date</title>
+<style>
+  /* design.md Typography: Plex Mono display, Inter body */
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap');
+
+  :root{
+    /* design.md Palette */
+    --ink:#111214;
+    --bone:#EDEAE3;
+    --slate:#6B6F76;
+    --signal:#D63A2E;   /* accent only, <5% of layout */
+    --ready:#1F7A5C;    /* status only */
+    --border: rgba(17,18,20,.10); /* design.md Components: 1px hairline @10% ink */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--bone); color:var(--ink);
+    font-family:"Inter",-apple-system,"Segoe UI",sans-serif;
+    font-size:16px; line-height:1.5;
+  }
+  h1,h2,.eyebrow,.badge{
+    font-family:"IBM Plex Mono",ui-monospace,"SF Mono",Consolas,monospace;
+    text-transform:uppercase; letter-spacing:.04em;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  section{padding:64px 0} /* design.md Components: no section under 64px vertical padding */
+
+  /* HERO — no hero.mp4/hero-poster.jpg exist yet for this brand, so this is
+     a CSS-only hero built from design.md's palette (hero path 3). */
+  .hero{
+    background:
+      linear-gradient(180deg, var(--ink) 0%, #1c1d20 100%);
+    color:var(--bone);
+  }
+  .hero .wrap{padding-top:96px;padding-bottom:96px}
+  .eyebrow{font-size:12px;color:var(--slate);display:flex;align-items:center;gap:10px;margin-bottom:20px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--ready)}
+  .hero h1{font-size:clamp(32px,5vw,52px);line-height:1.15;max-width:720px;color:var(--bone)}
+  .hero .sub{margin-top:20px;color:#c7c5c0;max-width:560px;font-size:17px}
+  .badge{
+    display:inline-flex;gap:8px;align-items:center;margin-top:32px;
+    border:1px solid rgba(237,234,227,.2); padding:10px 16px; font-size:11px;
+    color:var(--bone); border-radius:2px; /* design.md Components: 0-2px radius */
+  }
+  .badge b{color:var(--signal)}
+
+  h2{font-size:22px;margin-bottom:16px}
+  .gap p, .how p, .who p{max-width:640px;color:var(--ink)}
+  .how ul{margin-top:16px;padding-left:20px}
+  .how li{margin-bottom:8px}
+
+  section.gap{border-top:1px solid var(--border)}
+  section.how{border-top:1px solid var(--border)}
+  section.who{border-top:1px solid var(--border)}
+  section.close{border-top:1px solid var(--border)}
+
+  .who .persona{
+    border:1px solid var(--border); padding:24px; margin-top:20px; border-radius:2px;
+    background:rgba(17,18,20,.02);
+  }
+
+  .cta{
+    display:inline-block; margin-top:24px; background:var(--signal); color:#fff;
+    text-decoration:none; padding:14px 28px; font-family:"IBM Plex Mono",monospace;
+    font-size:13px; text-transform:uppercase; letter-spacing:.06em; border-radius:2px;
+    /* design.md Components: solid signal-red fill, no gradient, no shadow */
+  }
+
+  footer{padding:40px 0;color:var(--slate);font-size:12px;border-top:1px solid var(--border)}
+
+  @media (max-width: 480px){
+    section{padding:40px 0}
+    .hero .wrap{padding-top:56px;padding-bottom:56px}
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> next ship: timed to your consumption, not a calendar day</div>
+    <h1>Your coffee shows up when you're actually about to run out.</h1>
+    <p class="sub">Not a fixed biweekly ship date. Signal Roasters tracks your real consumption and roasts within 48 hours of the delivery window that matches it — so the bag lands when you need it, not whenever the calendar says.</p>
+    <div class="badge">STATUS <b>●</b> ROASTED WITHIN 48H OF SHIP</div>
+  </div>
+</section>
+
+<section class="gap">
+  <div class="wrap">
+    <h2>The gap in every other subscription</h2>
+    <p>Subscription roasters ship on a fixed calendar date, not your actual pace. You run out three days early, or you're drowning in a backlog of stale bags. The timing is decorative — arrives on a cute day — instead of operational: arrives when you're actually low.</p>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <h2>How the timing actually works</h2>
+    <p>You tell us your real cadence once. We ship to match it, roasting small batches within 48 hours of your delivery window — not sitting in a warehouse for weeks.</p>
+    <ul>
+      <li>Delivery timed to consumption, not a calendar date</li>
+      <li>Roasted within 48 hours of your ship window</li>
+      <li>No merch upsells, no seasonal gimmick flavors — just the bean, on time</li>
+    </ul>
+  </div>
+</section>
+
+<section class="who">
+  <div class="wrap">
+    <h2>Who this is for</h2>
+    <div class="persona">
+      <p>Someone who works from a home office, has run out of coffee mid-morning on a workday at least once, and found that more annoying than a missed package. The first cup is a start-of-shift signal, not a ritual to savor.</p>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <h2>Get the next bag timed right</h2>
+    <p>Tell us your actual pace. We'll ship to match it.</p>
+    <a class="cta" href="#">Start your schedule</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Signal Roasters — built with design.md · records/website/signal-roasters/</div>
+</footer>
+
+</body>
+</html>

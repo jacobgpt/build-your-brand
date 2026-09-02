@@ -1,0 +1,21 @@
+{
+  "brand_id": "signal-roasters",
+  "created_at": "2026-09-02T00:00:00Z",
+  "one_line_input": "A subscription coffee roastery for people who work from home, called Signal Roasters. We ship small-batch beans roasted within 48 hours of your delivery window, timed to when you actually run out, not a fixed calendar day. For remote workers who treat their 9am cup as the start of the workday, not a treat. Different from big subscription roasters because we don't upsell merch or gimmicky flavors - just consistently good coffee on a schedule that matches your actual consumption. We refuse to look like a lifestyle brand with beach photos and hygge blankets - this is a tool for getting your workday started, photographed like equipment, not a mood board.",
+  "positioning": "Signal Roasters is coffee delivery timed to your actual consumption, not a calendar date — for remote workers who treat their first cup as the start-of-shift signal, not a treat. The obvious alternative (subscription roasters on a fixed biweekly ship date) runs you out early or drowns you in stale backlog; Signal ships to when you'll actually need it.",
+  "audience": "Someone who works from a home office, has run out of coffee mid-morning on a workday at least once, and finds that more annoying than a missed package — they want the cup to be a dependable start-of-shift trigger, not a ritual to savor.",
+  "tone": "Plain, operational, a little dry — reads like equipment documentation, not a love letter to coffee. Confident without adjectives doing the work. Never sounds like: cozy, artisanal-with-a-story, or apologetic about being a subscription.",
+  "visual_pillars": [
+    "Product photographed like equipment on a plain surface — flat lighting, no lifestyle staging, no hands-wrapped-around-mug shots",
+    "Palette stays desaturated and utilitarian (charcoal, bone, one signal accent color) — no warm golden-hour coffee-shop tones",
+    "Typography is a monospace or grotesk workhorse face, never a script or serif associated with 'craft' branding",
+    "Every image includes a legible timing/schedule element (a date, a countdown, a delivery window) somewhere in frame — the mechanism is always visible, not implied",
+    "No beach, blanket, hygge, or seasonal-mood-board imagery under any circumstance"
+  ],
+  "avoid": [
+    "Lifestyle photography (blankets, sweaters, window light, someone gazing out a window with a mug)",
+    "Seasonal gimmick flavors or copy referencing them (pumpkin spice, holiday blends)",
+    "Merch upsells at checkout (mugs, tote bags, apparel) as a growth lever",
+    "Any claim of 'ethically sourced' or 'small-batch craft' without a specific, checkable fact behind it"
+  ]
+}

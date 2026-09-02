@@ -29,12 +29,24 @@ Read in full:
   beyond it.
 - `records/brands/<brand_id>-research.md` if it exists — real competitor
   notes and quoted customer language. This is your proof source.
-- `records/briefs/*.json` and `records/assets/*` if any exist for this
-  brand — if a real built asset already exists (from `hephaestus-production`),
-  it can become the hero image. **Never generate a new image or video here**
-  — this skill is HTML/CSS only. If no asset exists, use a CSS
-  gradient/pattern hero built from the brand's palette instead. Say which
-  path you took.
+- **`design.md` at the repo root, if it exists** (built by the
+  `design-tokens` skill). When present, this is the source of truth for
+  every visual value — use its exact hex codes, named fonts, voice
+  USE/AVOID words, and component rules **instead of** deriving your own
+  from `visual_pillars` in Step 3. When absent, fall back to deriving
+  palette/type/voice directly from `visual_pillars` as before — say
+  explicitly which path you took (design.md vs. derived) at the end of the
+  build.
+- `records/assets/*` if any exist for this brand:
+  - `assets/hero.mp4` + `assets/hero-poster.jpg` (built by
+    `hephaestus-production`'s hero-video step) — if both exist, this is the
+    hero background (see Step 3).
+  - Otherwise a static image asset from a prior `hephaestus-production`
+    build can become the hero image.
+  - **Never generate a new image or video here** — this skill is HTML/CSS
+    only. If nothing exists, use a CSS gradient/pattern hero built from the
+    brand's palette (from `design.md` if present, else derived) instead.
+  Say which hero path you took (video / static image / CSS-only).
 
 ### Step 1 — Map sections from the brand's actual argument
 
@@ -83,20 +95,42 @@ user or leave a clearly marked `[FILL: ...]` placeholder and tell them.
 
 One self-contained `records/website/<brand_id>/index.html`:
 
-- **CSS inline** in a `<style>` block. Every visual choice traced to a
-  specific `visual_pillars` entry or the `avoid` list — comment which pillar
-  drove which rule (e.g. `/* pillar: muted earth tones + safety-orange accent */`).
-  Derive an actual palette and type pairing from the pillars' descriptions —
-  don't default to a generic SaaS-blue/Inter look unless the pillars
-  genuinely call for it.
-- **Hero**: if a real asset exists (Step 0), `<img src="../../assets/<file>.png">`
-  (relative path back to the shared `records/assets/` folder — do not copy
-  the file). If not, a CSS gradient/pattern hero using the derived palette,
-  clearly not a stock-photo placeholder.
-- **Fonts**: system font stack by default (`-apple-system, "Segoe UI", ...`)
-  unless the brand's visual pillars specifically call for a distinct
-  typographic feel — then load one Google Fonts pairing via `<link>`, with
-  a system fallback. Never more than two font families.
+- **CSS inline** in a `<style>` block.
+  - **If `design.md` exists**: use its exact hex codes, named fonts,
+    component rules, and USE/AVOID voice words verbatim — comment which
+    `design.md` section drove which rule (e.g. `/* design.md Palette: signal
+    red, accent-only, <5% of layout */`). Do not deviate from its values or
+    invent your own alongside them.
+  - **If `design.md` does not exist**: fall back to deriving palette/type
+    from `visual_pillars` as before — comment which pillar drove which rule
+    (e.g. `/* pillar: muted earth tones + safety-orange accent */`). Don't
+    default to a generic SaaS-blue/Inter look unless the pillars genuinely
+    call for it.
+- **Hero**, in priority order:
+  1. If both `assets/hero.mp4` and `assets/hero-poster.jpg` exist: an
+     autoplay, muted, looping `<video>` background —
+     ```html
+     <video class="hero-bg" autoplay muted loop playsinline
+            poster="../../assets/hero-poster.jpg">
+       <source src="../../assets/hero.mp4" type="video/mp4">
+     </video>
+     ```
+     (relative paths back to the shared `records/assets/` folder — do not
+     copy the files). Headline text must sit in a layer above the video
+     with sufficient contrast (a scrim/overlay if `design.md`'s palette
+     doesn't already guarantee contrast) — this is a background for text,
+     not the reverse.
+  2. Else if a real static image asset exists from a prior
+     `hephaestus-production` build: `<img src="../../assets/<file>.png">`.
+  3. Else: a CSS gradient/pattern hero using the palette (from `design.md`
+     if present, else derived), clearly not a stock-photo placeholder.
+- **Fonts**: if `design.md` specifies font families, use exactly those (load
+  via `<link>` if a Google Fonts pairing, with the system-stack fallback
+  `design.md` lists). If no `design.md`, system font stack by default
+  (`-apple-system, "Segoe UI", ...`) unless the brand's visual pillars
+  specifically call for a distinct typographic feel — then load one Google
+  Fonts pairing via `<link>`, with a system fallback. Never more than two
+  font families.
 - **Sections** in the Step 1 order. Generous whitespace, one accent color
   used sparingly (status/CTA/emphasis only — never as a body color).
 - **Responsive**: collapse cleanly to one column under ~480px. No
