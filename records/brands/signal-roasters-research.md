@@ -1,25 +1,24 @@
-# Signal Roasters — Research
+# Research: Signal Roasters
 
-**⚠️ TEST FIXTURE, NOT LIVE RESEARCH.** Built to exercise `design-tokens` and
-`brand-guide` while `claude` CLI auth and web search were both down. No real
-competitor URLs or real customer quotes below — every "quote" here is
-authored for testing and is marked as such. Do not ship this file, don't
-treat its claims as sourced, and re-run `brand-foundation` for real before
-using this brand anywhere public.
+Grounding notes for `signal-roasters.json`. Fast single-pass search, not an exhaustive dossier.
 
-## Competitors (fabricated for fixture purposes — NOT real research)
-- Generic subscription roaster A: markets with hygge/lifestyle photography,
-  beach-blanket imagery, seasonal flavor gimmicks (pumpkin spice roast, etc).
-- Generic subscription roaster B: fixed calendar shipping (every 2 weeks
-  regardless of consumption), heavy merch upsell at checkout.
+## Competitors — what they actually promise
 
-## Customer language (fabricated for fixture purposes — NOT real quotes)
-- "test-fixture-quote: I ran out three days before my next bag showed up"
-- "test-fixture-quote: I don't need a blanket with my coffee, I need it to
-  show up on time"
+- **Trade Coffee** — 400+ coffees from partner roasters, an algorithm/quiz to pick for you, heavy emphasis on variety and customization ("more control than many other services"). Positioning is discovery, not reliability. [Corner Coffee Store: Trade vs Bean Box](https://cornercoffeestore.com/trade-vs-bean-box-coffee-subscriptions/), [Forbes Vetted](https://www.forbes.com/sites/forbes-personal-shopper/article/best-coffee-subscription/)
+- **Atlas Coffee Club** — "stylish, travel-themed," single-origin lot each month, "extravagant bags that look great on the counter with helpful postcards." Explicitly a lifestyle/education product ("surprise and education with every bag"), not a utility. [Corner Coffee Store: Atlas vs Trade](https://cornercoffeestore.com/atlas-vs-trade-coffee-subscriptions/), [Taste of Home](https://www.tasteofhome.com/article/i-tried-atlas-coffee-club/)
+- **Bean Box** — 4 different coffees/month from "artisanal, award-winning roasters," reviewers loved "packaging, variety, and extras" — resealable bags, roast-date printing, origin info. Freshness-adjacent (roast dates are printed) but the sell is variety + presentation, not timing to consumption. [CNN Underscored](https://www.cnn.com/cnn-underscored/reviews/best-coffee-subscription-boxes)
 
-## Opening found
-Subscription coffee treats delivery timing as a marketing beat (arrives on
-a cute day) rather than an operational problem (arrives when you're
-actually low). Nobody frames the product as equipment for starting a
-workday.
+**Pattern:** every major player competes on *variety, curation, discovery, and unboxing presentation*. None of them position around matching delivery timing to how fast the household actually drinks the coffee — that's an open lane.
+
+## Real customer language on scheduling
+
+- Search on subscription-coffee complaints surfaced a recurring, specific pain: **schedule rigidity** — "scheduling settings can be buggy, making it difficult to scale back delivery schedules when they have too much coffee," cited as an actual cancellation reason. [Home-Barista forum thread](https://www.home-barista.com/advice/subscription-coffee-your-experience-t96776.html)
+- The core tension named directly: people end up either **"too much coffee on hand or running out before the next package arrived."** [mysubscriptionaddiction.com Trade review](https://www.mysubscriptionaddiction.com/trade-coffee-review)
+- Framing that validates the angle: **"a subscription should fit your actual routine"** — if you receive too much at once, "you're wasting money even if the price looked good on paper." [Cumbre Coffee buyer's guide](https://www.cumbre.coffee/best-coffee-subscription-service/)
+- Services treat the fix as a manual workaround (skip-next-delivery, delay, swap), not a default — the subscriber has to notice and intervene rather than the service tracking consumption itself.
+
+## Opening
+
+No researched competitor ships on a cadence keyed to actual consumption — all of them ship on a fixed interval and expect the customer to manually skip/delay/pause when the timing is off. Every one of them also sells the unboxing (postcards, "extravagant bags," "packaging and extras") as part of the value. That leaves a clean, specific gap: a coffee subscription that treats timing-to-consumption as the core mechanic, not a support ticket, and that refuses the lifestyle/unboxing presentation entirely in favor of looking like a tool you use to start work.
+
+WFH-routine search results were mostly generic productivity-blog content (coffee as a ritual marker between "night and day," a signal to start the day) rather than sourced complaint language — used only as light color, not as a direct quote basis for the brand's audience description.

@@ -2,71 +2,37 @@
 
 ## Palette
 
-- `#111214` — ink (primary text and primary UI ink; near-black, not pure
-  black — pillar: "palette stays desaturated and utilitarian")
-- `#EDEAE3` — bone (page/section background; warm-neutral off-white, not
-  paper-white — pillar: "desaturated and utilitarian," avoids clinical
-  white)
-- `#6B6F76` — slate (secondary text, captions, metadata — muted, never
-  used for body copy longer than a line)
-- `#D63A2E` — signal red (the one accent: CTAs, live countdowns, delivery
-  status indicators only — never body text, never a background fill larger
-  than a button or badge, target under 5% of any layout's area — pillar:
-  "one signal accent color")
-- `#1F7A5C` — ready green (status-only: used exclusively for "shipped" /
-  "on schedule" state indicators, never decorative)
+- `#14151A` — ink (primary text, primary UI fill; near-black, cool not warm — avoids any brown/charcoal-coffee tint)
+- `#F3F1EC` — bone (background; warm-neutral off-white — the only "warm" value in the system, and it's a neutral, not a golden-hour tone)
+- `#6B6D73` — steel (secondary text, hairline borders, field labels on the schedule/data elements — the "spec sheet" gray)
+- `#E8232A` — signal red (accent only: CTAs, and the timing/schedule element required in every image — roast date, days-remaining, delivery window. Never body text, never a background fill, never more than one accent use per layout)
 
-No warm golden-hour tones, no browns/creams associated with coffee-shop
-branding — directly enforced by `avoid`: "no warm golden-hour coffee-shop
-tones."
+No other colors. No gradients. If a build needs a fifth color, it's not derived from this foundation — stop and ask rather than picking one.
 
 ## Typography
 
-- Display / headlines: `"IBM Plex Mono", ui-monospace, "SF Mono", Consolas,
-  monospace` — every H1/H2/eyebrow label, uppercase with wide letter-spacing
-  (`0.04em`+). Traces to pillar: "monospace or grotesk workhorse face."
-- Body: `"Inter", -apple-system, "Segoe UI", sans-serif` — sentence case,
-  never smaller than 15px, 1.5 line-height minimum, never used for
-  headlines.
-- Never a script or serif face anywhere — explicit exclusion from the same
-  pillar ("never a script or serif face associated with craft branding").
-- Max two font families total (Plex Mono + Inter). If Google Fonts fails to
-  load, fall back to the system stacks listed above — never fall back to a
-  serif.
+- Display/headlines: grotesk sans — `-apple-system, "Helvetica Neue", Arial, sans-serif`. Never a serif, never a script (foundation explicitly bans anything reading as "craft" branding).
+- Body: same grotesk family, regular weight, sentence case — never smaller than 15px, 1.5 line-height minimum.
+- Data/timing values (roast date, days-remaining countdown, delivery window): monospace — `ui-monospace, "SF Mono", "Roboto Mono", monospace`. This is the one place monospace is required, not optional — pillar 4 requires the schedule mechanism to be legible in every image, and monospace is what makes a date or countdown read as a readout instead of a caption.
+- Never pair a third typeface in. Two families total: grotesk + monospace.
 
 ## Voice
 
-```
-USE:    plain, on-schedule, equipment, workday, dependable, timed, signal
-AVOID:  cozy, artisanal, hand-crafted, curated, delight, journey, small-batch-as-vibe, hygge
-```
+USE: plain, operational, roast date, delivery window, days remaining, on-schedule, consumption-matched, equipment, workday, status
 
-`small-batch-as-vibe` (as opposed to a checkable claim like "roasted within
-48 hours") is called out separately per the foundation's `avoid` rule
-against "small-batch craft" claims with nothing checkable behind them —
-"small batch" is fine as a fact, banned as a mood word.
+AVOID: cozy, artisanal, hand-crafted, curated, small-batch (unless paired with a specific checkable number), surprise, discover, journey, delight, hygge
+
+Rule: state a fact (a date, a count, a window) instead of an adjective wherever one is available. If a sentence has no fact to state, it's probably not a sentence Signal needs.
 
 ## Components
 
-- Buttons: solid signal-red fill, white text, 0-2px corner radius, no
-  gradient, no drop shadow. Hover = flat opacity shift only (no lift/scale).
-- Cards / sections: 1px hairline border at 10% ink opacity, flat background,
-  never a drop shadow — traces to "flat lighting, no staging" (shadows read
-  as staged depth, which the pillar excludes).
-- Status/schedule element: every hero or product image must carry one
-  legible timing element in frame (a date, a countdown, a "ships in Nd"
-  badge) — this is a content rule, not just a style rule, and it is
-  load-bearing per pillar 4 ("the mechanism is always visible, not
-  implied").
-- Spacing: generous, utilitarian — no section under 64px vertical padding,
-  no dense grid-of-cards layouts (reads as e-commerce clutter, not
-  equipment documentation).
+- Buttons: solid fill (ink or signal red), 0–2px corner radius, no gradient, no shadow, no pill shapes.
+- Cards/sections: 1px hairline border at 8–12% opacity, never a drop shadow, aligned to a grid — no floating/shadowed cards.
+- Every product image or hero section includes a legible monospace timing element (roast date / days-remaining / delivery window) — this is not decorative, it's required per visual pillar 4. A layout without one is incomplete.
+- Layout: grid-based and symmetrical, like a spec sheet or dashboard — no asymmetric flat-lay compositions, no scattered props, no artful negative space for its own sake.
+- Photography direction (for any generated imagery): flat, even lighting, plain surface, no hands, no steam, no window light. Signal red never used as a background wash — it appears only as a small, precise mark (a button, a status dot, a countdown digit).
+- Spacing: functional, not generous-for-its-own-sake — spacing should read as alignment to a grid, not as breathing room for a lifestyle layout.
 
 ## Mood
 
-A page or asset that follows every rule above should feel like opening a
-piece of dependable equipment's spec sheet, not browsing a coffee-shop
-website — flat light, plain surfaces, a single red status light doing all
-the emotional work, and a visible countdown proving the timing claim rather
-than asserting it in copy. Nothing here should ever feel like it's trying
-to be liked; it should feel like it's trying to be on time.
+A finished asset should feel like glancing at an equipment status panel, not opening a care package — exact, quiet, and slightly clinical, the way a shipment tracker or a machine's readout is trusted precisely because it doesn't try to charm you. Nothing on the page should ask to be admired; every element either states a fact (roast date, days remaining, delivery window) or does a job (button, label, boundary). If a layout would look at home on a travel postcard or a hygge mood board, it has failed, no matter how polished it looks.
