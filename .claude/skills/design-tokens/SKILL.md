@@ -15,28 +15,29 @@ so, don't paper over it with an arbitrary pick.
 
 ## When this triggers
 
-A brand foundation already exists (`records/brands/<brand_id>.json`, built
-by `brand-foundation`) and the user wants a `design.md` — the file every
-later build (`brand-website`, `hephaestus-production`) reads for exact
+A brand foundation already exists (`records/brands/<brand_id>/brand_foundation.json`,
+built by `brand-foundation`) and the user wants a `design.md` — the file
+every later build (`brand-website`, `hephaestus-production`) reads for exact
 values instead of guessing.
 
 ## Prerequisite
 
-`records/brands/<brand_id>.json` must exist. If it doesn't, stop and tell
-the user to run `brand-foundation` first — never invent a design system
-with no foundation behind it. If more than one brand exists, ask which
-`brand_id`.
+`records/brands/<brand_id>/brand_foundation.json` must exist. If it doesn't,
+stop and tell the user to run `brand-foundation` first — never invent a
+design system with no foundation behind it. If more than one brand exists,
+ask which `brand_id`.
 
 ## What you do
 
 ### Step 0 — Read everything first
 
 Read in full:
-- `records/brands/<brand_id>.json` — `visual_pillars`, `avoid`, `tone`,
-  `positioning`. This is where every value below must trace back to.
-- `records/brands/<brand_id>.md` (the brand book) if present, for the fuller
+- `records/brands/<brand_id>/brand_foundation.json` — `visual_pillars`,
+  `avoid`, `tone`, `positioning`. This is where every value below must trace
+  back to.
+- `records/brands/<brand_id>/brand-book.md` if present, for the fuller
   prose version of the same decisions.
-- `records/brands/<brand_id>-research.md` if present — real competitor
+- `records/brands/<brand_id>/deepresearch.md` if present — real competitor
   palette/type notes can sharpen a choice (e.g. "everyone in this category
   uses warm serif type" is a reason to pick something else).
 

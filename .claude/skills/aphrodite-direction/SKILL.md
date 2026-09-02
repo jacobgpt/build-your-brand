@@ -18,7 +18,7 @@ built.
 
 ## Before you start: check for a brand foundation
 
-Look in `records/brands/` (repo root) for any `*.json` file.
+Look in `records/brands/` (repo root) for any `<brand_id>/brand_foundation.json`.
 - **None found**: proceed as normal — generic direction, no brand lock.
 - **One found**: read it. Fold its `positioning`, `audience`, `tone`,
   `visual_pillars`, and `avoid` into your reasoning for every field below —

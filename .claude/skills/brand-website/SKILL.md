@@ -13,7 +13,7 @@ manager, you've overbuilt it.
 
 ## Prerequisite
 
-A brand foundation must already exist: `records/brands/<brand_id>.json`
+A brand foundation must already exist: `records/brands/<brand_id>/brand_foundation.json`
 (built by the `brand-foundation` skill). If none exists, stop and tell the
 user to run that first — never invent a brand foundation here.
 
@@ -24,11 +24,16 @@ If more than one exists, ask which `brand_id` this site is for.
 ### Step 0 — Read everything before writing anything
 
 Read in full:
-- `records/brands/<brand_id>.json` — positioning, audience, tone, visual
-  pillars, avoid list. This is ground truth; never contradict or invent
-  beyond it.
-- `records/brands/<brand_id>-research.md` if it exists — real competitor
+- `records/brands/<brand_id>/brand_foundation.json` — positioning, audience,
+  tone, visual pillars, avoid list. This is ground truth; never contradict
+  or invent beyond it.
+- `records/brands/<brand_id>/deepresearch.md` if it exists — real competitor
   notes and quoted customer language. This is your proof source.
+- **`records/brands/<brand_id>/necessary-beliefs.md`, if it exists** (built
+  by `brand-foundation`). When present, this REPLACES the default section
+  map in Step 1 — build one section per belief instead of the default arc
+  (see Step 1). When absent, fall back to the default HERO → GAP →
+  MECHANISM → AUDIENCE → PROOF → CLOSE arc exactly as before.
 - **`design.md` at the repo root, if it exists** (built by the
   `design-tokens` skill). When present, this is the source of truth for
   every visual value — use its exact hex codes, named fonts, voice
@@ -50,8 +55,16 @@ Read in full:
 
 ### Step 1 — Map sections from the brand's actual argument
 
-One section per point the brand foundation makes, not a generic template.
-Default arc, adapted to what's actually in the foundation:
+**If `necessary-beliefs.md` exists**: build exactly one section per belief
+listed in that file, in the order they appear, plus a HERO section before
+them and a CLOSE (CTA) section after. Each belief's section argues that
+specific belief using the language and facts already in the foundation,
+research file, or offer brief — never inventing new support for a belief
+the source files don't back. Write the section map (belief → section name)
+before building anything, then skip straight to Step 2.
+
+**If `necessary-beliefs.md` does not exist**: use the default arc, adapted
+to what's actually in the foundation:
 
 ```
 HERO → THE GAP (why the obvious alternative falls short) → HOW THIS IS DIFFERENT
@@ -69,6 +82,16 @@ This is the discipline the whole build rests on. Draft every section's
 headline, sub-head, and body in the brand's actual `tone` field — not
 generic marketing voice.
 
+**If building one section per belief** (`necessary-beliefs.md` present):
+for each belief, write copy that makes the reader accept that specific
+"I believe that..." statement, using only facts already present in
+`brand_foundation.json`, `deepresearch.md`, or `offerbrief.md` — never
+inventing new proof for a belief the source files don't back. If a belief
+has no real supporting fact anywhere in the brand's files, say so and write
+the section on the positioning/mechanism alone rather than fabricating
+support.
+
+**Otherwise** (default arc):
 - **Hero**: the `positioning` statement, sharpened into a real headline +
   sub-hook. Emphasize the actual differentiator, not a vague claim.
 - **The Gap**: what the research file (if any) shows the obvious
@@ -80,7 +103,7 @@ generic marketing voice.
 - **Who this is for**: use the `audience` field's specific description, not
   a demographic bucket.
 - **Proof** (only if real material exists): quote real customer language
-  from `<brand_id>-research.md` verbatim if present. **Never fabricate a
+  from `deepresearch.md` verbatim if present. **Never fabricate a
   testimonial, stat, or customer quote.** If there's nothing real, cut this
   section — an honest 5-section page beats a 6-section page with an invented
   testimonial.

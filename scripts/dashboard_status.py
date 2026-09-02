@@ -28,7 +28,7 @@ def main() -> int:
     website_dir = ROOT / "records" / "website"
 
     status = {
-        "brand": has_files(brands_dir, "*.json"),
+        "brand": has_files(brands_dir, "*/brand_foundation.json"),
         "brief": has_files(briefs_dir, "*.json"),
         # "asset" done means at least one run record shows a successful build,
         # not just an attempt (a rejected run should not count as done).

@@ -14,14 +14,15 @@ in the foundation, brand book, research file, or `design.md`.
 
 ## When this triggers
 
-`records/brands/<brand_id>.json` exists (from `brand-foundation`) and the
-user wants a shareable brand guide — HTML they can open and read, PDF they
-can send.
+`records/brands/<brand_id>/brand_foundation.json` exists (from
+`brand-foundation`) and the user wants a shareable brand guide — HTML they
+can open and read, PDF they can send.
 
 ## Prerequisite
 
-`records/brands/<brand_id>.json` must exist. If not, stop and tell the user
-to run `brand-foundation` first. If more than one brand exists, ask which.
+`records/brands/<brand_id>/brand_foundation.json` must exist. If not, stop
+and tell the user to run `brand-foundation` first. If more than one brand
+exists, ask which.
 
 `design.md` at the repo root is **optional but preferred** — if present, use
 its exact palette/type/component values for Part II's rulebook instead of
@@ -32,14 +33,18 @@ and tell the user a `design-tokens` pass would sharpen this guide.
 
 ### Step 0 — Read everything before writing anything
 
-- `records/brands/<brand_id>.json` — positioning, audience, tone, visual
-  pillars, avoid list.
-- `records/brands/<brand_id>.md` (brand book) — the fuller prose version.
-- `records/brands/<brand_id>-research.md` if it exists — this is your ONLY
-  source for real customer quotes and competitor facts. If it doesn't
+- `records/brands/<brand_id>/brand_foundation.json` — positioning, audience,
+  tone, visual pillars, avoid list.
+- `records/brands/<brand_id>/brand-book.md` — the fuller prose version.
+- `records/brands/<brand_id>/deepresearch.md` if it exists — this is your
+  ONLY source for real customer quotes and competitor facts. If it doesn't
   exist, or is explicitly marked as a fixture/unverified, the "voice of the
   customer" section in Part II must say so plainly and skip inventing
   quotes.
+- `records/brands/<brand_id>/project-knowledge.md` if it exists — read its
+  `## VERIFIED` / `## UNVERIFIED` split directly. Every UNVERIFIED item
+  there is mandatory input to the "what we never claim" panel (Step 2.4) —
+  don't re-derive that list from scratch when this file already states it.
 - `design.md` at the repo root, if it exists — exact palette/type/component
   values for Part II.
 
@@ -60,7 +65,7 @@ that doesn't trace to one:
 1. **Positioning** — `positioning` field, verbatim or lightly tightened.
 2. **Audience** — `audience` field, expanded with any real detail from the
    research file (if present).
-3. **Voice of the customer** — real quotes from `records/brands/<brand_id>-research.md`
+3. **Voice of the customer** — real quotes from `records/brands/<brand_id>/deepresearch.md`
    ONLY, quoted verbatim with attribution to their source. **If the research
    file doesn't exist, or is a labeled fixture/test file, this section must
    say so explicitly instead of inventing quotes** — write "No sourced
