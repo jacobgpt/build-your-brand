@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "brand_foundation",
+  "type": "object",
+  "required": [
+    "brand_id",
+    "created_at",
+    "one_line_input",
+    "positioning",
+    "audience",
+    "tone",
+    "visual_pillars",
+    "avoid"
+  ],
+  "properties": {
+    "brand_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "URL-safe slug, unique per brand."
+    },
+    "created_at": {
+      "type": "string",
+      "description": "ISO 8601 timestamp."
+    },
+    "one_line_input": {
+      "type": "string",
+      "minLength": 10,
+      "description": "The raw description of the business/brand this foundation was built from."
+    },
+    "positioning": {
+      "type": "string",
+      "minLength": 10,
+      "description": "One or two sentences: what this brand is, for whom, and why it's different from the obvious alternative. Not a mission statement — a competitive stance."
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Who this is actually for, specific enough to picture one real person, not a demographic bucket."
+    },
+    "tone": {
+      "type": "string",
+      "minLength": 10,
+      "description": "How the brand sounds and feels across every asset — the voice, not just adjectives. What it never sounds like matters as much as what it does."
+    },
+    "visual_pillars": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 3,
+      "description": "3-6 concrete, checkable visual rules every asset should follow (palette direction, type feel, photography vs illustration, composition habits). Specific enough that a stranger could self-audit an asset against them."
+    },
+    "avoid": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1,
+      "description": "Visual or tonal cliches this brand explicitly refuses to look/sound like. The competitive fence, not just a style note."
+    }
+  },
+  "additionalProperties": false
+}

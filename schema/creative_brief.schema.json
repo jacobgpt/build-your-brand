@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "creative_brief",
+  "type": "object",
+  "required": [
+    "brief_id",
+    "created_at",
+    "one_line_input",
+    "big_idea",
+    "visual_description",
+    "style_notes",
+    "aspect_ratio",
+    "ad_copy",
+    "must_preserve",
+    "forbidden"
+  ],
+  "properties": {
+    "brief_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "URL-safe slug, unique per brief."
+    },
+    "created_at": {
+      "type": "string",
+      "description": "ISO 8601 timestamp."
+    },
+    "one_line_input": {
+      "type": "string",
+      "minLength": 3,
+      "description": "The raw one-line request the brief was generated from."
+    },
+    "big_idea": {
+      "type": "string",
+      "minLength": 3,
+      "description": "One sentence: the thought the asset expresses. Intent, not mechanism."
+    },
+    "visual_description": {
+      "type": "string",
+      "minLength": 10,
+      "description": "What should be seen in frame. Concrete, not vibes."
+    },
+    "style_notes": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Tone, mood, reference aesthetic. No tool/model names."
+    },
+    "aspect_ratio": {
+      "type": "string",
+      "enum": ["1:1", "16:9", "9:16", "4:5"]
+    },
+    "ad_copy": {
+      "type": "object",
+      "description": "The actual text that must render ON the asset. A static ad without copy is not a static ad — this is not optional for ad formats. Set has_copy false only for pure product/mood photography with no on-image text (e.g. a reference plate).",
+      "required": ["has_copy", "headline"],
+      "properties": {
+        "has_copy": {
+          "type": "boolean",
+          "description": "False only when the format genuinely carries no on-image text."
+        },
+        "headline": {
+          "type": "string",
+          "description": "The dominant line of copy. Short — this is a glance-and-go medium, not a paragraph. Empty string only if has_copy is false."
+        },
+        "subhead": {
+          "type": "string",
+          "description": "Optional supporting line. Empty string if unused."
+        },
+        "cta": {
+          "type": "string",
+          "description": "Optional call to action (e.g. 'Shop now', 'Learn more'). Empty string if unused."
+        },
+        "placement": {
+          "type": "string",
+          "description": "Where the copy sits in frame and why (e.g. 'lower third, left-aligned, clear of the product'). Required whenever has_copy is true."
+        }
+      },
+      "additionalProperties": false
+    },
+    "must_preserve": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1,
+      "description": "Load-bearing elements. Changing these breaks the idea. When has_copy is true, must include at least one entry about the headline staying legible/spelled correctly/unobstructed."
+    },
+    "forbidden": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Elements that would actively damage the idea. May be empty."
+    }
+  },
+  "additionalProperties": false
+}
