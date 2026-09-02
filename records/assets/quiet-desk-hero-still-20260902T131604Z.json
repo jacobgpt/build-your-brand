@@ -1,0 +1,23 @@
+[
+  {
+    "created_at": "2026-09-02T13:16:05.114324Z",
+    "display_name": "GPT Image 2",
+    "id": "d3b818bb-7b54-4e3c-9f2c-7624ae9af660",
+    "job_type": "gpt_image_2",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CBXQ1oK7x3t0ZrPNKdevSI5KMO/hf_20260902_131605_d3b818bb-7b54-4e3c-9f2c-7624ae9af660_min.webp",
+    "params": {
+      "aspect_ratio": "16:9",
+      "height": 1520,
+      "medias": [],
+      "model": "videotape-alpha",
+      "prompt": "The product is a measurement, not a mood — this switch set was tested, not just marketed as quiet. A mechanical keyboard switch set and its matched desk mat laid out on a measurement rig on a matte-black surface, shot top-down or at a low instrument angle under hard directional light. A visible metal ruler or scale bar runs along one edge of the frame as a measurement reference. A small dB-meter or waveform readout graphic sits near the switches, its digits picked out in calibration yellow — the only color accent in the frame. Composition is wide/landscape with the subject occupying the lower-center to center of the frame and generous clear matte-black space across the upper third, left open for a headline to be placed later; nothing in that upper zone competes with where text would sit. Reads like a photo pulled off a calibration bench, not a mood board — precise, plain, instrument-grade. Matte black and instrument grey dominate; calibration yellow (#FFC800) appears exactly once, on the dB figure or a tick mark, never as a fill or gradient. Hard, clinical lighting like a lab or test-bench photo, not warm ambient window light. No soft shadows, no bokeh, no styled props.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2688
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CBXQ1oK7x3t0ZrPNKdevSI5KMO/hf_20260902_131605_d3b818bb-7b54-4e3c-9f2c-7624ae9af660.png",
+    "status": "completed"
+  }
+]

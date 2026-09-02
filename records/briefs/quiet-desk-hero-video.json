@@ -1,0 +1,35 @@
+{
+  "brief_id": "quiet-desk-hero-video",
+  "created_at": "2026-09-02T21:30:00Z",
+  "one_line_input": "Quiet Desk hero video — animate the already-built hero still (records/assets/hero-still.png) into a subtle, looping 5-8s image-to-video background for a headline to sit on top of.",
+  "big_idea": "The measurement keeps running even when nothing else moves — proof, not a mood, stays alive in the frame.",
+  "visual_description": "The exact scene from the source still (the mechanical switch set and matched desk mat on a measurement rig, ruler/scale bar along one edge, calibration-yellow dB-meter or waveform readout near the switches, matte-black surface, clear matte-black/instrument-grey space across the upper third) with one subtle motion layered on top: either a slow, minimal camera push-in toward the rig, a faint ambient drift across the surface, or the dB-meter/waveform readout gently animating as if actively measuring. Only one of these motion types should drive the shot, kept understated enough that a still frame grabbed at any point looks nearly identical to the source image. The loop runs 5-8 seconds and returns seamlessly to its start with no visible jump or cut.",
+  "style_notes": "Same instrument-grade, precise, calibration-bench read as the source still — nothing about the motion should feel cinematic, lifestyle, or stylized. Motion reads like equipment quietly doing its job (a meter live-reading, a lens creeping in on a lab shot), not like a product video with camera work. Matte black and instrument grey dominate throughout; calibration yellow (#FFC800) stays exactly where it was in the source still, used only for the readout digits/tick marks.",
+  "aspect_ratio": "16:9",
+  "ad_copy": {
+    "has_copy": false,
+    "headline": "",
+    "subhead": "",
+    "cta": "",
+    "placement": ""
+  },
+  "must_preserve": [
+    "colors stay locked exactly to the source still — no new color grading, hue shift, or lighting change introduced by the motion",
+    "no new object enters the frame at any point in the loop — this is a background a headline sits on top of, so nothing may appear that competes with text legibility",
+    "motion stays subtle and singular — a slow push-in, ambient drift, or the dB-meter/waveform readout animating, never combined, never fast, never a pan or shake",
+    "the upper third of the frame stays clear, uncluttered matte-black/instrument-grey space reserved for a future headline overlay for the entire duration of the loop",
+    "the loop is seamless — the final frame returns to the first without a visible jump, cut, or reset",
+    "duration stays within 5-8 seconds",
+    "no readable text, logo, or wordmark renders anywhere in the video, at any frame — same rule as the source still",
+    "stays within the established visual pillars: instrument/lab palette, measurement-rig product photography with scale reference, spec-sheet dashboard layout language, no lifestyle staging"
+  ],
+  "forbidden": [
+    "no new text, logo, watermark, or on-screen graphic of any kind appearing at any point in the motion",
+    "no new object, prop, hand, or person entering frame during the loop",
+    "no camera movement beyond a slow, minimal push-in or ambient drift — no pans, zoom-outs, whip movements, handheld shake, or cuts",
+    "no color or lighting shift that diverges from the source still's locked palette",
+    "no scene changes, transitions, or multiple shots within the loop — one continuous take",
+    "no gamer-RGB aesthetic, glossy render motion, or esports visual language",
+    "no lifestyle desk flat-lay staging introduced through motion (e.g. steam, ambient warm light drift)"
+  ]
+}

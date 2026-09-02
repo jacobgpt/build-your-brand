@@ -1,0 +1,23 @@
+[
+  {
+    "created_at": "2026-09-02T13:22:30.717586Z",
+    "display_name": "GPT Image 2",
+    "id": "61c05e76-1b77-4f29-9685-6ce62e314507",
+    "job_type": "gpt_image_2",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CBXQ1oK7x3t0ZrPNKdevSI5KMO/hf_20260902_132230_61c05e76-1b77-4f29-9685-6ce62e314507_min.webp",
+    "params": {
+      "aspect_ratio": "16:9",
+      "height": 1520,
+      "medias": [],
+      "model": "videotape-alpha",
+      "prompt": "The product is a measurement, not a mood — this switch set was tested, not just marketed as quiet. A mechanical keyboard switch set and its matched desk mat laid out on a measurement rig on a matte-black surface, shot top-down or at a low instrument angle under hard directional light. A visible metal ruler or scale bar runs along one edge of the frame as a measurement reference; the ruler shows only plain tick marks and is otherwise blank — no manufacturer name, no unit label, no brand etching anywhere on its length. The desk mat is a single flat expanse of matte instrument-grey or matte black material with a completely blank, unmarked surface — no printed text, no embossed text, no stitched or debossed pattern resembling a wordmark, no logo, no brand mark, no model number, no SKU, no barcode, no QR code, anywhere on the mat. The switches themselves are plain unmarked switch housings — no printed or embossed part numbers, no manufacturer stamps, no brand stickers on the switch caps or stems. Any tray, stand, or rig hardware holding the switches is bare unfinished or matte-painted metal/plastic with no engraving, no silkscreened text, and no manufacturer plate. A small dB-meter or waveform readout display sits near the switches, its numeric digits (e.g. a dB figure) picked out in calibration yellow — this numeric readout is the one exception and is required, not forbidden, since it is the brand's core visual mechanism, but the readout housing around those digits is itself plain and unmarked with no brand name or logo printed on the meter body. Composition is wide/landscape with the subject occupying the lower-center to center of the frame and generous clear matte-black space across the upper third, left open for a headline to be placed later; nothing in that upper zone competes with where text would sit, and that upper-third space itself is also blank — no watermark, no faint texture resembling text. Reads like a photo pulled off a calibration bench, not a mood board — precise, plain, instrument-grade. Matte black and instrument grey dominate; calibration yellow (#FFC800) appears exactly once, on the dB figure or a tick mark, never as a fill or gradient. Hard, clinical lighting like a lab or test-bench photo, not warm ambient window light. No soft shadows, no bokeh, no styled props. Every physical surface in frame reads as a plain, unbranded test object — like equipment fresh from a machine shop before any labeling pass, not a retail product with packaging or branding applied.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2688
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CBXQ1oK7x3t0ZrPNKdevSI5KMO/hf_20260902_132230_61c05e76-1b77-4f29-9685-6ce62e314507.png",
+    "status": "completed"
+  }
+]

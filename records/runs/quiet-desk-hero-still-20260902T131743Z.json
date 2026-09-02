@@ -1,0 +1,42 @@
+{
+  "brief_id": "quiet-desk-hero-still",
+  "recorded_at": "2026-09-02T13:17:43Z",
+  "asked": "Quiet Desk brand hero still \u2014 wide composition with room for a headline to sit on top later, no on-image text, grounded in the quiet-desk brand foundation and design.md.",
+  "brief_snapshot": {
+    "brief_id": "quiet-desk-hero-still",
+    "created_at": "2026-09-02T00:00:00Z",
+    "one_line_input": "Quiet Desk brand hero still \u2014 wide composition with room for a headline to sit on top later, no on-image text, grounded in the quiet-desk brand foundation and design.md.",
+    "big_idea": "The product is a measurement, not a mood \u2014 this switch set was tested, not just marketed as quiet.",
+    "visual_description": "A mechanical keyboard switch set and its matched desk mat laid out on a measurement rig on a matte-black surface, shot top-down or at a low instrument angle under hard directional light. A visible metal ruler or scale bar runs along one edge of the frame as a measurement reference. A small dB-meter or waveform readout graphic sits near the switches, its digits picked out in calibration yellow \u2014 the only color accent in the frame. Composition is wide/landscape with the subject occupying the lower-center to center of the frame and generous clear matte-black space across the upper third, left open for a headline to be placed later; nothing in that upper zone competes with where text would sit.",
+    "style_notes": "Reads like a photo pulled off a calibration bench, not a mood board \u2014 precise, plain, instrument-grade. Matte black and instrument grey dominate; calibration yellow (#FFC800) appears exactly once, on the dB figure or a tick mark, never as a fill or gradient. Hard, clinical lighting like a lab or test-bench photo, not warm ambient window light. No soft shadows, no bokeh, no styled props.",
+    "aspect_ratio": "16:9",
+    "ad_copy": {
+      "has_copy": false,
+      "headline": "",
+      "subhead": "",
+      "cta": "",
+      "placement": ""
+    },
+    "must_preserve": [
+      "switch set and desk mat stay the visual anchor, shot as measurement subjects on a rig with a visible scale/ruler reference \u2014 not a lifestyle flat-lay",
+      "calibration yellow (#FFC800) appears as a single accent only \u2014 on a dB figure, readout, or tick mark \u2014 never decorative, never a gradient, never filling more than one element",
+      "the upper third of the frame stays clear, uncluttered matte-black/instrument-grey space reserved for a future headline overlay",
+      "no readable text or logo renders anywhere in the image itself \u2014 this is a text-free plate",
+      "stays within the established visual pillars: instrument/lab palette, measurement-rig product photography with scale reference, spec-sheet dashboard layout language, no lifestyle staging"
+    ],
+    "forbidden": [
+      "no lifestyle desk flat-lay staging \u2014 no plants, coffee cups, warm ambient window light, or styled desk-aesthetic props",
+      "no gamer-RGB aesthetic \u2014 no glossy renders, rainbow lighting, or esports visual language",
+      "no soft pastel or beige/cream lifestyle tones anywhere in the frame",
+      "no soft rounded 'app card' framing, drop shadows, or Instagram-square mood-board styling",
+      "no on-image text, logo, or wordmark of any kind"
+    ]
+  },
+  "decision": "built",
+  "produced": {
+    "asset_path": "/Users/monis/build-your-brand/records/assets/quiet-desk-hero-still-20260902T131604Z.png",
+    "bytes": 6180689,
+    "model": "gpt_image_2"
+  },
+  "error": null
+}

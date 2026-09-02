@@ -1,0 +1,50 @@
+{
+  "brief_id": "quiet-desk-hero-still-v2",
+  "recorded_at": "2026-09-02T13:24:00Z",
+  "asked": "Quiet Desk brand hero still, revision 2 \u2014 same measurement-rig composition as the v1 attempt, but with every surface explicitly specified as plain and unmarked after the v1 render hallucinated a fake 'ZERO-ZONE DESK MAT' logo and invented model numbers burned into the image.",
+  "brief_snapshot": {
+    "brief_id": "quiet-desk-hero-still-v2",
+    "created_at": "2026-09-02T13:30:00Z",
+    "one_line_input": "Quiet Desk brand hero still, revision 2 \u2014 same measurement-rig composition as the v1 attempt, but with every surface explicitly specified as plain and unmarked after the v1 render hallucinated a fake 'ZERO-ZONE DESK MAT' logo and invented model numbers burned into the image.",
+    "big_idea": "The product is a measurement, not a mood \u2014 this switch set was tested, not just marketed as quiet.",
+    "visual_description": "A mechanical keyboard switch set and its matched desk mat laid out on a measurement rig on a matte-black surface, shot top-down or at a low instrument angle under hard directional light. A visible metal ruler or scale bar runs along one edge of the frame as a measurement reference; the ruler shows only plain tick marks and is otherwise blank \u2014 no manufacturer name, no unit label, no brand etching anywhere on its length. The desk mat is a single flat expanse of matte instrument-grey or matte black material with a completely blank, unmarked surface \u2014 no printed text, no embossed text, no stitched or debossed pattern resembling a wordmark, no logo, no brand mark, no model number, no SKU, no barcode, no QR code, anywhere on the mat. The switches themselves are plain unmarked switch housings \u2014 no printed or embossed part numbers, no manufacturer stamps, no brand stickers on the switch caps or stems. Any tray, stand, or rig hardware holding the switches is bare unfinished or matte-painted metal/plastic with no engraving, no silkscreened text, and no manufacturer plate. A small dB-meter or waveform readout display sits near the switches, its numeric digits (e.g. a dB figure) picked out in calibration yellow \u2014 this numeric readout is the one exception and is required, not forbidden, since it is the brand's core visual mechanism, but the readout housing around those digits is itself plain and unmarked with no brand name or logo printed on the meter body. Composition is wide/landscape with the subject occupying the lower-center to center of the frame and generous clear matte-black space across the upper third, left open for a headline to be placed later; nothing in that upper zone competes with where text would sit, and that upper-third space itself is also blank \u2014 no watermark, no faint texture resembling text.",
+    "style_notes": "Reads like a photo pulled off a calibration bench, not a mood board \u2014 precise, plain, instrument-grade. Matte black and instrument grey dominate; calibration yellow (#FFC800) appears exactly once, on the dB figure or a tick mark, never as a fill or gradient. Hard, clinical lighting like a lab or test-bench photo, not warm ambient window light. No soft shadows, no bokeh, no styled props. Every physical surface in frame reads as a plain, unbranded test object \u2014 like equipment fresh from a machine shop before any labeling pass, not a retail product with packaging or branding applied.",
+    "aspect_ratio": "16:9",
+    "ad_copy": {
+      "has_copy": false,
+      "headline": "",
+      "subhead": "",
+      "cta": "",
+      "placement": ""
+    },
+    "must_preserve": [
+      "switch set and desk mat stay the visual anchor, shot as measurement subjects on a rig with a visible scale/ruler reference \u2014 not a lifestyle flat-lay",
+      "calibration yellow (#FFC800) appears as a single accent only \u2014 on a dB figure, readout, or tick mark \u2014 never decorative, never a gradient, never filling more than one element",
+      "the upper third of the frame stays clear, uncluttered matte-black/instrument-grey space reserved for a future headline overlay",
+      "the dB-meter or waveform readout digits are present and legible in calibration yellow \u2014 this is the required brand mechanism, not something to omit",
+      "the desk mat surface is entirely blank and unmarked \u2014 flat matte material with no printed, embossed, debossed, or stitched marks of any kind",
+      "the ruler/scale bar shows only plain measurement tick marks with no brand name, unit label, or etching",
+      "the switch housings and any tray/rig hardware are unmarked \u2014 no part numbers, stamps, stickers, or engraved text anywhere on them",
+      "stays within the established visual pillars: instrument/lab palette, measurement-rig product photography with scale reference, spec-sheet dashboard layout language, no lifestyle staging"
+    ],
+    "forbidden": [
+      "no printed text, embossed text, debossed text, or stitched lettering of any kind on the desk mat surface",
+      "no logo, brand mark, wordmark, or emblem of any kind on the desk mat, the switches, the switch tray, the rig hardware, or the ruler",
+      "no invented or fabricated model numbers, SKUs, barcodes, or QR codes anywhere in frame",
+      "no manufacturer name, brand name, or fictitious competing brand rendered anywhere on any surface, including surfaces not explicitly described above",
+      "no text or marking of any kind on the ruler/scale bar beyond plain measurement tick marks",
+      "the dB-meter readout digits themselves are the one required exception to 'no text' \u2014 do not remove them, but the meter's housing/casing must stay unmarked with no brand name printed on it",
+      "no lifestyle desk flat-lay staging \u2014 no plants, coffee cups, warm ambient window light, or styled desk-aesthetic props",
+      "no gamer-RGB aesthetic \u2014 no glossy renders, rainbow lighting, or esports visual language",
+      "no soft pastel or beige/cream lifestyle tones anywhere in the frame",
+      "no soft rounded 'app card' framing, drop shadows, or Instagram-square mood-board styling"
+    ]
+  },
+  "decision": "built",
+  "produced": {
+    "asset_path": "/Users/monis/build-your-brand/records/assets/quiet-desk-hero-still-v2-20260902T132229Z.png",
+    "bytes": 5857276,
+    "model": "gpt_image_2"
+  },
+  "error": null
+}
