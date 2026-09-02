@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ironhold Meals — Portioned to your macro spec, not a menu</title>
+<style>
+  /* design.md Palette */
+  :root {
+    --graphite: #212328;
+    --bone: #F2F0EA;
+    --steel: #75787D;
+    --cold-blue: #3E5C74;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* design.md Typography: precise grotesk sans for display/body */
+  body {
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bone);
+    color: var(--graphite);
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  /* design.md Typography: technical monospace for macro/spec values */
+  .mono {
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    border-bottom: 1px solid var(--steel);
+  }
+  nav .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  .logo {
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .logo span { color: var(--cold-blue); }
+  .nav-cta {
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 13px;
+    text-decoration: none;
+    background: var(--graphite);
+    color: var(--bone);
+    padding: 10px 18px;
+    border-radius: 0;
+  }
+
+  /* ===== HERO ===== */
+  /* No hero video/image asset exists yet for this brand — CSS-only hero
+     built from the design.md palette (grid of spec-labeled cells, echoing
+     the portioning/measurement-readout visual pillar) instead of a stock
+     photo or gradient. */
+  .hero {
+    border-bottom: 1px solid var(--steel);
+    background:
+      linear-gradient(var(--steel) 1px, transparent 1px),
+      linear-gradient(90deg, var(--steel) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-color: var(--bone);
+    background-position: -1px -1px;
+    position: relative;
+  }
+  .hero-inner {
+    padding: 96px 0 88px;
+  }
+  .hero-eyebrow {
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cold-blue);
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(34px, 5vw, 58px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    max-width: 18ch;
+    margin-bottom: 24px;
+  }
+  .hero-sub {
+    font-size: 19px;
+    color: var(--graphite);
+    max-width: 54ch;
+    margin-bottom: 36px;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+  }
+  .btn-primary {
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 14px;
+    text-decoration: none;
+    background: var(--cold-blue);
+    color: var(--bone);
+    padding: 14px 26px;
+    border-radius: 0;
+    display: inline-block;
+  }
+  .btn-secondary {
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 14px;
+    text-decoration: none;
+    background: transparent;
+    color: var(--graphite);
+    padding: 14px 26px;
+    border: 1px solid var(--graphite);
+    border-radius: 0;
+    display: inline-block;
+  }
+
+  /* Required in-frame spec block — meal-image macro readout stand-in,
+     since no product photography asset exists (design.md Components: every
+     meal/product image includes a legible in-frame spec block). */
+  .spec-block {
+    background: var(--graphite);
+    color: var(--bone);
+    max-width: 480px;
+    padding: 24px 28px;
+  }
+  .spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 13px;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(242,240,234,0.15);
+  }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-label { color: var(--steel); letter-spacing: 0.03em; text-transform: uppercase; }
+  .spec-value { font-weight: 600; }
+
+  /* ===== SECTION SHARED ===== */
+  section {
+    padding: 84px 0;
+    border-bottom: 1px solid var(--steel);
+  }
+  .section-label {
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cold-blue);
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: clamp(26px, 3.4vw, 36px);
+    font-weight: 700;
+    max-width: 22ch;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .lede {
+    font-size: 18px;
+    max-width: 62ch;
+    color: var(--graphite);
+    margin-bottom: 48px;
+  }
+
+  /* ===== THE GAP — grid of competitor cards, modular/equal cells ===== */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--steel);
+    border: 1px solid var(--steel);
+  }
+  .card {
+    background: var(--bone);
+    padding: 28px 24px;
+  }
+  .card-name {
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--steel);
+    margin-bottom: 10px;
+  }
+  .card-mech {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .gap-close {
+    margin-top: 32px;
+    font-size: 17px;
+    max-width: 62ch;
+    color: var(--graphite);
+  }
+
+  /* ===== HOW THIS IS DIFFERENT — 3-step readout ===== */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--steel);
+    border: 1px solid var(--steel);
+  }
+  .step {
+    background: var(--bone);
+    padding: 32px 26px;
+  }
+  .step-index {
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 13px;
+    color: var(--cold-blue);
+    margin-bottom: 14px;
+  }
+  .step-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .step-body {
+    font-size: 15px;
+    color: var(--graphite);
+  }
+
+  /* ===== WHO THIS IS FOR ===== */
+  .who-body {
+    font-size: 19px;
+    max-width: 66ch;
+    line-height: 1.6;
+  }
+  .who-not {
+    margin-top: 28px;
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 13px;
+    color: var(--steel);
+    letter-spacing: 0.02em;
+  }
+
+  /* ===== PROOF ===== */
+  .quotes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--steel);
+    border: 1px solid var(--steel);
+    margin-bottom: 1px;
+  }
+  .quote {
+    background: var(--bone);
+    padding: 30px 28px;
+  }
+  .quote-text {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+  .quote-src {
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 12px;
+    color: var(--steel);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .proof-note {
+    margin-top: 24px;
+    font-size: 15px;
+    color: var(--steel);
+    max-width: 62ch;
+  }
+
+  /* ===== CLOSE ===== */
+  .close-section {
+    border-bottom: none;
+    background: var(--graphite);
+    color: var(--bone);
+  }
+  .close-section .section-label { color: #8FA9BD; }
+  .close-section h2 { color: var(--bone); }
+  .close-section .lede { color: #C7C9CC; }
+  .close-cta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .close-note {
+    margin-top: 18px;
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 12px;
+    color: #8A8D91;
+  }
+
+  footer {
+    padding: 32px 0;
+  }
+  footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    font-size: 12px;
+    color: var(--steel);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 780px) {
+    .grid-3, .steps, .quotes { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 0 20px; }
+    .hero-inner { padding: 64px 0 48px; }
+    section { padding: 56px 0; }
+    .hero-ctas { flex-direction: column; align-items: stretch; }
+    .spec-block { max-width: 100%; }
+    footer .wrap { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">IRONHOLD<span>_</span>MEALS</div>
+    <a class="nav-cta" href="#close">GET THIS WEEK'S SPEC</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-eyebrow">MEAL DELIVERY / BUILT BACKWARD FROM YOUR NUMBER</div>
+    <h1>Your macros set the meal. Not the other way around.</h1>
+    <p class="hero-sub">Tell us your training block — cutting, bulking, maintenance — and this week's actual macro target. We portion each meal backward from that number. Fully cooked, ready in 90 seconds. No menu to shop, no math to do.</p>
+    <div class="hero-ctas">
+      <a class="btn-primary" href="#close">GET THIS WEEK'S SPEC</a>
+      <a class="btn-secondary" href="#how">SEE THE MECHANISM</a>
+    </div>
+    <div class="spec-block">
+      <div class="spec-row"><span class="spec-label">Training block</span><span class="spec-value">Cut — Week 4</span></div>
+      <div class="spec-row"><span class="spec-label">Protein</span><span class="spec-value">52g</span></div>
+      <div class="spec-row"><span class="spec-label">Carb</span><span class="spec-value">38g</span></div>
+      <div class="spec-row"><span class="spec-label">Fat</span><span class="spec-value">14g</span></div>
+      <div class="spec-row"><span class="spec-label">Prep time</span><span class="spec-value">90 sec</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="gap">
+  <div class="wrap">
+    <div class="section-label">01 / THE GAP</div>
+    <h2>Every competitor sells a menu you shop from.</h2>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-name">Trifecta Nutrition</div>
+        <div class="card-mech">Diet-tag driven — keto, paleo — with "fully customizable" swap-in, swap-out meal picks. Consistent macros, but the customer still shops a menu.</div>
+      </div>
+      <div class="card">
+        <div class="card-name">ICON Meals</div>
+        <div class="card-mech">Pick a goal tag — "Build Muscle" or "Get Lean" — from a fixed Signature Menu, then choose a pack size. A fixed calorie/goal tier, not a weekly number.</div>
+      </div>
+      <div class="card">
+        <div class="card-name">MealPro</div>
+        <div class="card-mech">Per-meal calorie ceiling with à la carte add-ons — extra protein, swap the starch. Still a menu built around what's offered, not your number.</div>
+      </div>
+    </div>
+    <p class="gap-close">None of them reverse the process. None of them ask what training block you're in this week and what your actual macro number is — then build the meal's portions to hit it exactly.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="section-label">02 / HOW THIS IS DIFFERENT</div>
+    <h2>The mechanism runs backward, on purpose.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-index mono">01</div>
+        <div class="step-title">State your block</div>
+        <div class="step-body">Cutting, bulking, or maintenance — and the macro target your program gives you for this week, not a fixed plan.</div>
+      </div>
+      <div class="step">
+        <div class="step-index mono">02</div>
+        <div class="step-title">We build to the number</div>
+        <div class="step-body">The meal's portions are engineered backward from that target. No tier, no bucket — this week's grams, exactly.</div>
+      </div>
+      <div class="step">
+        <div class="step-index mono">03</div>
+        <div class="step-title">Cooked. Ready in 90 seconds.</div>
+        <div class="step-body">No chopping, no math, no menu to shop. The spec is met before it arrives — you confirm it, you eat.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="section-label">03 / WHO THIS IS FOR</div>
+    <h2>Mid-block. Done doing the math.</h2>
+    <p class="who-body">Week 4 of a cut. Three weeks into a lean bulk. You already know your macro targets — your program gave them to you — and you're tired of doing the math to make food match them, or tired of the same fixed bodybuilder plate hitting a number a spreadsheet handed you. You don't want a menu of what looks good in a photo. You want the logistics of eating correctly during a hard training phase to stop being your problem.</p>
+    <p class="who-not mono">NOT FOR: casual "eat healthy" goals — this is instrumented for people already running a program.</p>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="wrap">
+    <div class="section-label">04 / PROOF</div>
+    <h2>What the category already says about itself.</h2>
+    <div class="quotes">
+      <div class="quote">
+        <p class="quote-text mono">"Macro burnout" — the fatigue from repetitive fixed meal plans (chicken/rice/broccoli), driving lifters to look for foundational meals that hit macros but can be flavored differently each day.</p>
+        <div class="quote-src">Category research — training forums</div>
+      </div>
+      <div class="quote">
+        <p class="quote-text mono">"Customer service was always excellent. The food was good. Packaging was convenient." — on losing weight and saving time on food prep.</p>
+        <div class="quote-src">Reddit, on Trifecta</div>
+      </div>
+    </div>
+    <p class="proof-note">Bodybuilding-forum sentiment has also shifted toward precision over volume — the "death of the dirty bulk," a slow 200–300 cal surplus replacing old-school "eat everything" bulking. The category is already moving toward exact numbers over aggressive excess.</p>
+  </div>
+</section>
+
+<section id="close" class="close-section">
+  <div class="wrap">
+    <div class="section-label">05 / THIS WEEK'S SPEC</div>
+    <h2>State your block. We'll build to the number.</h2>
+    <p class="lede">No plan to browse, no calorie tier to pick. Tell us where you are in your training block and the macro target you're working from.</p>
+    <div class="close-cta">
+      <a class="btn-primary" href="[FILL: CTA destination]">GET THIS WEEK'S SPEC</a>
+    </div>
+    <p class="close-note">[FILL: confirm CTA destination — email capture, waitlist form, or contact address]</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>IRONHOLD MEALS</div>
+    <div>PORTIONED, NOT CURATED</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "brand_id": "ironhold-meals",
+  "created_at": "2026-09-02T00:00:00Z",
+  "one_line_input": "Ironhold Meals is a subscription meal delivery service for people who strength train seriously. Every meal is portioned to match your program's actual macro targets - not a generic 'healthy' calorie count - based on the training block you tell us you're in (cutting, bulking, maintenance). Shipped fully cooked, ready in 90 seconds, no chopping or math required. Different from generic meal-kit or fitness-meal competitors because we don't do fixed calorie tiers or a menu built around what photographs well - the meal is built backward from your macro number for that week. We refuse to look like a bodybuilding-supplement brand with black-and-neon aggression, and we refuse to look like a bland corporate wellness brand - this should feel like precision equipment for someone who already trains hard and just wants the food logistics solved.",
+  "positioning": "Ironhold Meals builds each meal's portions backward from the customer's actual weekly macro target for their current training block (cutting, bulking, maintenance), fully cooked and ready in 90 seconds — for people who strength train seriously and want the food logistics solved, not curated. Every researched competitor (Trifecta, ICON Meals, MealPro) runs the process forward: pick a goal tag or calorie tier, then choose menu items that roughly fit it. Ironhold refuses that shape entirely — there is no tier or menu to shop, only this week's number and a meal engineered to hit it.",
+  "audience": "Someone mid-training-block — week 4 of a cut, or three weeks into a lean bulk — who already knows their macro targets from their program and is tired of doing the math to make food match them, or tired of 'macro burnout' from eating the same fixed bodybuilder plate to hit a number a spreadsheet gave them. They don't want to be sold a menu of what looks good in a photo; they want the logistics of eating correctly during a hard training phase to stop being their problem.",
+  "tone": "Precise, instrumented, unbothered — reads like a spec sheet or a piece of calibrated equipment, not a coach hyping you up and not a wellness app cheering for you. States the number and confirms it's been met; doesn't editorialize about effort, grind, or self-care. Never sounds like: bodybuilding-supplement hype copy (ALL CAPS, exclamation points, 'crush your goals'), and never sounds like soft corporate-wellness copy ('nourish your journey', 'balance', 'treat yourself').",
+  "visual_pillars": [
+    "Palette is restrained and mechanical — steel, graphite, bone/off-white, one muted structural accent (e.g. oxide red or cold blue) — never the neon-on-black of supplement branding, never the soft sage/blush of wellness branding",
+    "Every meal image shows the macro breakdown as a legible in-frame spec (protein/carb/fat grams, training-block label) laid out like a measurement readout, not a menu caption",
+    "Typography is a precise grotesk or technical monospace, used the way equipment manuals and spec sheets use type — no script, no rounded 'friendly' display face, no aggressive slab-serif gym lettering",
+    "Photography is flat, evenly lit, and product-forward like a tool on a bench — no dramatic gym lighting, no flexing/action shots of bodies, no soft natural-light lifestyle staging",
+    "Composition is grid-based and modular, echoing packaging/portioning itself (equal cells, aligned units) rather than an artfully scattered flat-lay or a collage of 'a day in the life'",
+    "Any icon or diagram work (macro rings, block indicators) is drawn like a technical schematic — thin lines, exact labels — never a gamified progress bar or badge"
+  ],
+  "avoid": [
+    "Black-and-neon bodybuilding-supplement aesthetics (neon green/orange on black, aggressive slab type, tribal/skull motifs, 'BEAST MODE' style shouting copy)",
+    "Bland corporate-wellness aesthetics (soft pastels, sage/blush palettes, hands holding a bowl, 'nourish/balance/journey' language, stock-photo smiling people eating salad)",
+    "Fixed calorie tiers or goal-tag menus ('Get Lean Plan', '1200 calorie box') presented as if they were personalization — the mechanism must always be this week's actual number, not a bucket",
+    "Menu items designed or chosen for how they photograph (glossy hero shots, garnish for visual appeal) rather than for hitting the macro spec",
+    "Motivational/hype fitness-influencer copy tone (exclamation points, 'crush it', 'no excuses') — the brand states facts, it doesn't coach",
+    "Flexing, gym-action, or physique-focused photography as a selling device — the product is the instrument, not a body as proof"
+  ]
+}

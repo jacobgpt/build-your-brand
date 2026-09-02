@@ -1,38 +1,38 @@
-# Design Tokens — signal-roasters
+# Design Tokens — ironhold-meals
 
 ## Palette
 
-- `#14151A` — ink (primary text, primary UI fill; near-black, cool not warm — avoids any brown/charcoal-coffee tint)
-- `#F3F1EC` — bone (background; warm-neutral off-white — the only "warm" value in the system, and it's a neutral, not a golden-hour tone)
-- `#6B6D73` — steel (secondary text, hairline borders, field labels on the schedule/data elements — the "spec sheet" gray)
-- `#E8232A` — signal red (accent only: CTAs, and the timing/schedule element required in every image — roast date, days-remaining, delivery window. Never body text, never a background fill, never more than one accent use per layout)
+- `#212328` — graphite (primary text, primary UI fill; near-black, cool/mechanical — never a warm charcoal)
+- `#F2F0EA` — bone (background; restrained off-white, not a golden or cream tone)
+- `#75787D` — steel (secondary text, hairline borders, spec labels — the "measurement readout" gray used for units and field labels)
+- `#3E5C74` — cold blue (structural accent only: CTAs and the one required in-frame macro/spec mark per layout — protein/carb/fat readout, block indicator. Never body text, never a fill larger than a control, never neon, never the black-and-neon of supplement branding)
 
-No other colors. No gradients. If a build needs a fifth color, it's not derived from this foundation — stop and ask rather than picking one.
+No other colors, no gradients, no soft sage/blush and no neon-on-black. If a build needs a fifth color, it isn't derived from this foundation — stop and ask.
 
 ## Typography
 
-- Display/headlines: grotesk sans — `-apple-system, "Helvetica Neue", Arial, sans-serif`. Never a serif, never a script (foundation explicitly bans anything reading as "craft" branding).
-- Body: same grotesk family, regular weight, sentence case — never smaller than 15px, 1.5 line-height minimum.
-- Data/timing values (roast date, days-remaining countdown, delivery window): monospace — `ui-monospace, "SF Mono", "Roboto Mono", monospace`. This is the one place monospace is required, not optional — pillar 4 requires the schedule mechanism to be legible in every image, and monospace is what makes a date or countdown read as a readout instead of a caption.
-- Never pair a third typeface in. Two families total: grotesk + monospace.
+- Display/headlines: precise grotesk sans — `-apple-system, "Helvetica Neue", Arial, sans-serif`. Never a script face, never a rounded "friendly" display face, never an aggressive slab-serif (gym lettering is explicitly banned by the foundation).
+- Body: same grotesk family, regular weight — never smaller than 15px, 1.5 line-height minimum.
+- Macro/spec values (protein/carb/fat grams, training-block label, any measurement readout): technical monospace — `ui-monospace, "SF Mono", "Roboto Mono", monospace`. Required, not optional — pillar 2 states every meal image must show the macro breakdown laid out like a measurement readout, and monospace is what makes a number read as an instrument spec instead of a menu caption.
+- Two families total: grotesk + monospace. Never a third typeface.
 
 ## Voice
 
-USE: plain, operational, roast date, delivery window, days remaining, on-schedule, consumption-matched, equipment, workday, status
+USE: precise, instrumented, spec, macro target, training block, this week's number, portioned, ready in 90 seconds, calibrated
 
-AVOID: cozy, artisanal, hand-crafted, curated, small-batch (unless paired with a specific checkable number), surprise, discover, journey, delight, hygge
+AVOID: crush, beast mode, hype, exclamation points, cozy, nourish, journey, balance, treat yourself, curated, artisanal
 
-Rule: state a fact (a date, a count, a window) instead of an adjective wherever one is available. If a sentence has no fact to state, it's probably not a sentence Signal needs.
+Rule: state the number and confirm it's been met — the brand doesn't editorialize about effort, grind, or self-care. If a sentence coaches or comforts instead of stating a fact, it's off-voice.
 
 ## Components
 
-- Buttons: solid fill (ink or signal red), 0–2px corner radius, no gradient, no shadow, no pill shapes.
-- Cards/sections: 1px hairline border at 8–12% opacity, never a drop shadow, aligned to a grid — no floating/shadowed cards.
-- Every product image or hero section includes a legible monospace timing element (roast date / days-remaining / delivery window) — this is not decorative, it's required per visual pillar 4. A layout without one is incomplete.
-- Layout: grid-based and symmetrical, like a spec sheet or dashboard — no asymmetric flat-lay compositions, no scattered props, no artful negative space for its own sake.
-- Photography direction (for any generated imagery): flat, even lighting, plain surface, no hands, no steam, no window light. Signal red never used as a background wash — it appears only as a small, precise mark (a button, a status dot, a countdown digit).
-- Spacing: functional, not generous-for-its-own-sake — spacing should read as alignment to a grid, not as breathing room for a lifestyle layout.
+- Buttons: solid graphite or cold-blue fill, 0–2px corner radius, no gradient, no shadow, no pill shapes.
+- Cards/sections: grid-based, modular, equal cells and aligned units (echoing portioning itself) — never an artfully scattered flat-lay, never a collage layout.
+- Every meal/product image includes a legible in-frame spec block (protein/carb/fat grams + training-block label) laid out like a measurement readout — this is required per visual pillar 2, not decorative.
+- Icons/diagrams (macro rings, block indicators): drawn as thin-line technical schematics with exact labels — never a gamified progress bar, badge, or streak counter.
+- Photography direction: flat, even, product-forward lighting like a tool on a bench — no dramatic gym lighting, no flexing/action shots, no soft natural-light lifestyle staging.
+- Spacing: functional and grid-aligned, not generous-for-its-own-sake — spacing should read as alignment to a measurement grid, not lifestyle breathing room.
 
 ## Mood
 
-A finished asset should feel like glancing at an equipment status panel, not opening a care package — exact, quiet, and slightly clinical, the way a shipment tracker or a machine's readout is trusted precisely because it doesn't try to charm you. Nothing on the page should ask to be admired; every element either states a fact (roast date, days remaining, delivery window) or does a job (button, label, boundary). If a layout would look at home on a travel postcard or a hygge mood board, it has failed, no matter how polished it looks.
+A finished asset should feel like reading a piece of calibrated equipment's spec sheet — exact, unbothered, and legible at a glance, the way a tool on a bench is trusted because it does its job without performing for the camera. Nothing should flex, coach, or comfort; every element either states a number (macro grams, training block, prep time) or does a job (button, boundary, label). If a layout would look at home on a bodybuilding-supplement label or a wellness-app onboarding screen, it has failed regardless of how polished it looks.
