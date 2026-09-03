@@ -48,7 +48,8 @@ it, don't proceed on a thin paragraph. Push back internally on generic
 answers ("premium quality" is not an answer to any of the seven).
 
 **Write `records/brands/<brand_id>/intake.md` first**, before anything
-else: the four questions and the user's answers, verbatim. Every later
+else: the seven questions, the feel question, and the user's answers,
+verbatim. Every later
 step reads this file — the customer description, pricing, and design
 preferences come from here, not from guessing.
 

@@ -56,22 +56,36 @@ backwards compatible with every earlier brief on disk.
    `python3 scripts/validate_brief.py records/briefs/<brief_id>.json`
    If it says `INVALID`, stop — send it back to Aphrodite, don't build a
    broken brief.
-2. Run the approval gate — this is the ONLY way a build happens:
-   `python3 scripts/approval_gate.py records/briefs/<brief_id>.json`
-   This will:
-   - print the brief for human review
-   - ask `Approve build? [y/N]`
-   - on `y`: call `scripts/hephaestus_build.py` for you, which runs the real
-     Higgsfield CLI, downloads the resulting asset into `records/assets/`,
-     and prints its path
-   - on anything else: reject, build nothing
-   - either way: write a dated record to `records/runs/`
-3. Read the gate's final output and report to the user:
+2. Show the student the brief, in this session: read
+   `records/briefs/<brief_id>.json` and print `big_idea`,
+   `visual_description`, `style_notes`, `aspect_ratio`, `must_preserve`
+   and `forbidden`. Say what the build will use — the image or video
+   model, quality and resolution constants at the top of
+   `scripts/hephaestus_build.py` — and tell them to check
+   `higgsfield account status` for their balance. Then ask, exactly:
+   `Approve build? [y/N]` — and STOP. Wait for their answer.
+3. Only after they answer, run the gate with their decision:
+   `python3 scripts/approval_gate.py --decision y records/briefs/<brief_id>.json`
+   on a `y`, or `--decision n` on anything else. Claude Code's
+   permission dialog shows the student that exact command; only they
+   can allow it. The gate then:
+   - on `y`: calls `scripts/hephaestus_build.py`, which runs the real
+     Higgsfield CLI, downloads the asset into `records/assets/`, and
+     prints its path
+   - on `n`: builds nothing
+   - either way: writes a dated record to `records/runs/` that names
+     how the decision was given
+4. Read the gate's final output and report to the user:
    - the asset file path and size (on approve+success), or
    - the rejection record path (on reject), or
    - the clean human-readable error (on failure — auth, rate limit, etc.)
-4. Never call `higgsfield` directly yourself outside of `scripts/hephaestus_build.py`
-   — the gate + record-writing must always wrap every build.
+5. Never pass `--decision y` unless the student typed `y` in this
+   session. Never pipe input into the gate — it refuses piped input.
+   Never call `higgsfield generate` or `scripts/hephaestus_build.py`
+   directly — `.claude/settings.json` denies both, and the gate plus
+   its record must wrap every build. The student may also run
+   `python3 scripts/approval_gate.py records/briefs/<brief_id>.json`
+   in their own terminal and answer there; that is the same gate.
 
 ## Hero production — still, then video, same gate both times
 
@@ -144,7 +158,7 @@ remember.
 Once both fixed files exist, `brand-website` picks them up automatically as
 an autoplay/muted/looping hero background — no separate wiring step needed.
 
-## Handling failures on camera
+## Handling failures
 
 `scripts/hephaestus_build.py` already converts these into clean messages
 instead of stack traces:

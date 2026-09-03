@@ -43,11 +43,13 @@ Read in full:
   explicitly which path you took (design.md vs. derived) at the end of the
   build.
 - `records/assets/*` if any exist for this brand:
-  - `assets/hero.mp4` + `assets/hero-poster.jpg` (built by
-    `hephaestus-production`'s hero-video step) — if both exist, this is the
-    hero background (see Step 3).
+  - `hero.mp4` + `hero-poster.jpg` (built by `hephaestus-production`'s
+    hero-video step) — if both exist, this is the hero background (see
+    Step 3). **Copy them into `records/website/<brand_id>/assets/`** so
+    the site folder is self-contained and deploys as-is.
   - Otherwise a static image asset from a prior `hephaestus-production`
-    build can become the hero image.
+    build (for example `hero-still.png`) can become the hero image —
+    copy it into the site's `assets/` too.
   - **Never generate a new image or video here** — this skill is HTML/CSS
     only. If nothing exists, use a CSS gradient/pattern hero built from the
     brand's palette (from `design.md` if present, else derived) instead.
@@ -134,17 +136,17 @@ One self-contained `records/website/<brand_id>/index.html`:
      autoplay, muted, looping `<video>` background —
      ```html
      <video class="hero-bg" autoplay muted loop playsinline
-            poster="../../assets/hero-poster.jpg">
-       <source src="../../assets/hero.mp4" type="video/mp4">
+            poster="assets/hero-poster.jpg">
+       <source src="assets/hero.mp4" type="video/mp4">
      </video>
      ```
-     (relative paths back to the shared `records/assets/` folder — do not
-     copy the files). Headline text must sit in a layer above the video
+     (paths into the site's own `assets/` folder, copied in Step 0 — the
+     folder must deploy on its own). Headline text must sit in a layer above the video
      with sufficient contrast (a scrim/overlay if `design.md`'s palette
      doesn't already guarantee contrast) — this is a background for text,
      not the reverse.
   2. Else if a real static image asset exists from a prior
-     `hephaestus-production` build: `<img src="../../assets/<file>.png">`.
+     `hephaestus-production` build: `<img src="assets/<file>.png">`.
   3. Else: a CSS gradient/pattern hero using the palette (from `design.md`
      if present, else derived), clearly not a stock-photo placeholder.
 - **Fonts**: if `design.md` specifies font families, use exactly those (load
@@ -163,19 +165,15 @@ One self-contained `records/website/<brand_id>/index.html`:
 
 ### Step 4 — Run it and verify before calling it done
 
-**Serve from the repo root, not the site's own folder** — `python3 -m
-http.server` refuses to serve anything above its working directory, and this
-site references shared assets via `../../assets/...` (outside
-`records/website/<brand_id>/`). Serving from the site's own folder will 404
-any real hero image. Print the correct instruction:
+Serve it and look. From the repo root:
 
 ```
-python3 -m http.server 8000   # run from the REPO ROOT
+python3 -m http.server 8000
 ```
 then open `http://localhost:8000/records/website/<brand_id>/index.html`.
-(Opening `index.html` directly as a `file://` URL also works, since relative
-`../../assets/...` paths resolve fine on a real filesystem — only the local
-dev server has the traversal restriction.)
+The site folder carries its own `assets/`, so serving from inside
+`records/website/<brand_id>/` or opening `index.html` directly also works,
+and the folder deploys as-is.
 
 Check, as the visitor would, not as the coder:
 - Every claim on the page traces to the brand foundation or research file —

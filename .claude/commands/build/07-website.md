@@ -59,9 +59,8 @@ the design just dresses them.
 
 ## STEP 2 — Build the site
 
-```bash
-claude -p "Use brand-website to build a website for the <brand_id> brand"
-```
+> **RUN (Claude, in this session):** Use the `brand-website` skill for
+> `<brand_id>` now, with the section map from STEP 1.
 
 It reads:
 - the foundation — `brand_foundation.json`
@@ -94,14 +93,15 @@ It reads:
 
 ## STEP 3 — Serve it and read it like a stranger
 
-Serve from the **repo root** (not the site's own folder — it
-references shared assets by relative path):
+Serve it from the repo root:
 
 ```bash
 python3 -m http.server 8000
 ```
 
 Open `http://localhost:8000/records/website/<brand_id>/index.html`.
+The site folder carries its own copy of the hero under `assets/`, so
+it also works served or deployed on its own.
 
 Then read it as a stranger would, holding it to this:
 

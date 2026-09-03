@@ -65,9 +65,9 @@ The build asks you three quick things — have answers ready:
 
 ## STEP 2 — Build the brand book
 
-```bash
-claude -p "Use brand-guide to build the guide for <brand_id>"
-```
+> **RUN (Claude, in this session):** Use the `brand-guide` skill for
+> `<brand_id>` now. Ask the three input questions from STEP 1 first if
+> they haven't been answered.
 
 This reads your foundation documents and `design.md`, and writes one
 self-contained scrollable `brand-guide.html`, then captures a cover
@@ -116,7 +116,8 @@ Should be well over 20KB. Then actually look at it:
 pdftoppm -r 100 -png brand-guide.pdf /tmp/brand-guide-check
 ```
 
-and view the resulting PNG(s). Confirm text isn't cut off, colours
+(`pdftoppm` comes with poppler: `brew install poppler`.) Then view the
+resulting PNG(s). Confirm text isn't cut off, colours
 rendered, no blank pages. A zero exit code is not proof the PDF is
 readable.
 

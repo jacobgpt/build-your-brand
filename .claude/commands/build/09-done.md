@@ -106,12 +106,13 @@ gh auth status      # GitHub authenticated?
 vercel whoami       # or: npx vercel login
 ```
 
-Then ask Claude to deploy: it inits git (sensible `.gitignore`
-included), commits, creates a private GitHub repo named after your
-brand, and ships to production, handing you back the live URL. Point
-your domain at it from the host's dashboard; from then on, any edit
-in Claude Code + `git push` redeploys in seconds. Files you own, no
-lock-in.
+Then ask Claude to deploy. It ships only `records/website/<brand_id>/`
+— the site and its own `assets/` folder — never this repo, so your
+intake, research and records stay on your machine. On the GitHub path
+it copies that folder out, inits git there, creates a private repo
+named after your brand, and turns on Pages. Point your domain at it
+from the host's dashboard; from then on, edit, redeploy, done. Files
+you own, no lock-in.
 
 **No credits required for the deploy itself** — only the hosting
 platform's normal free/paid tiers apply.

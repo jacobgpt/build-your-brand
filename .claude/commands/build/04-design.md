@@ -42,9 +42,9 @@ never build the guide and then go back.
 
 ## STEP 1 — See your options, pick one
 
-```bash
-claude -p "Use design-tokens to write design.md for <brand_id>"
-```
+> **RUN (Claude, in this session):** Use the `design-tokens` skill for
+> `<brand_id>` now. Present the options and wait for the pick — never
+> write `design.md` before the student has chosen.
 
 The skill reads your competitor teardown (`deepresearch.md`) and your
 interview answers (`intake.md`), then presents **2-3 real visual

@@ -1,165 +1,169 @@
 # Build Your Brand
 
-An interactive brand-building course that runs entirely inside Claude Code.
-Cold clone to a researched brand, a brand guide, a design system, a hero,
-a live one-page site, and one finished on-brand asset — approved by a
-human at every consequential step.
+An interactive brand-building course that runs inside Claude Code.
+Cold clone to a researched brand, a design system, a visual brand
+guide, a hero, a one-page site and one finished asset — with a human
+approval gate on anything that spends money, and a dated record of
+every decision, including the ones you said no to.
 
 ## Quickstart
 
 ```bash
-git clone <this-repo-url> build-your-brand
+git clone https://github.com/jacobgpt/build-your-brand.git
 cd build-your-brand
 claude
 ```
 
-Then run the lessons in order, either as slash commands or by asking Claude
-directly:
+Then type `/build:01-setup` and follow the lessons in order. Every
+lesson runs inside the Claude session you just opened: the lesson
+tells Claude which skill to run, Claude runs it, and it stops wherever
+you need to read, choose or approve. Don't run the lessons through
+`claude -p` — print mode can't ask you questions or wait for answers.
 
 | # | Command | What it does |
 |---|---|---|
-| 1 | `/build:01-setup` | Confirm both CLIs authenticated, skills visible, dashboard live |
-| 2 | `/build:02-research` | Real web research, sourced — deepresearch.md lands first |
-| 3 | `/build:03-foundation` | Validate + review the brand contract |
-| 4 | `/build:04-design` | design.md — pick a visual direction from real options, then lock exact hex, fonts, voice |
-| 5 | `/build:05-guide` | brand book (HTML + PDF) — scrollable, visual, screenshot-verified |
-| 6 | `/build:06-hero` | Hero still through the gate, film-safety-checked (video optional) |
-| 7 | `/build:07-website` | Copy-first, design.md-driven, hero-aware site |
-| 8 | `/build:08-assets` | A typed creative brief (Aphrodite), gated production (Hephaestus) |
-| 9 | `/build:09-done` | Review everything, the pattern behind it — and ship the site live if you want (gated, zero-cost default) |
+| 1 | `/build:01-setup` | Confirm the toolchain, skills visible, dashboard live |
+| 2 | `/build:02-research` | The interview, then real sourced research — `deepresearch.md` lands first |
+| 3 | `/build:03-foundation` | Validate and review the brand contract |
+| 4 | `/build:04-design` | `design.md` — pick a visual direction from real options, then lock exact hex, fonts, voice |
+| 5 | `/build:05-guide` | Brand book (HTML + PDF), scrollable, verified by looking at it |
+| 6 | `/build:06-hero` | Hero still through the gate, checked for fabricated text (video optional) |
+| 7 | `/build:07-website` | Copy-first, `design.md`-driven, hero-aware one-page site |
+| 8 | `/build:08-assets` | A typed creative brief (Aphrodite), gated production (Hephaestus), one rejection on purpose |
+| 9 | `/build:09-done` | Review everything, the pattern behind it, ship the site live if you want |
 | 10 | `/build:10-grow` | The engines: research-mined ads through the gate, a belief-mapped email sequence, a rendered content batch |
 
-Full lesson text lives in `course-copy.md`.
+Lessons 1 to 9 take about two and a half hours. Lesson 10 is another
+thirty to forty-five minutes and can be run any time after.
 
-**One honest gap:** the hero-video half of Lesson 6 is code-complete and
-unit-tested but has never been run for real against Higgsfield — that
-spend hasn't been approved in this repo yet. The still half has run for
-real, including a real rejection-and-rebuild cycle (a hallucinated logo,
-caught by a vision check and fixed) logged in `BUILD_LOG.md`.
+## What you need
 
-## Prerequisites
+- **macOS.** That is what this is tested on. Linux mostly works if you
+  point the skills at your Chrome binary. Windows is untested.
+- **Claude Code**, logged in, on a Claude subscription. Pro works; Max
+  is safer for Lesson 2's research pass, which runs Claude for half an
+  hour straight.
+- **Python 3.**
+- **Google Chrome** at its standard path — it renders the brand guide
+  PDF and the Lesson 10 emails and carousels.
+- **poppler** for the PDF check in Lesson 5: `brew install poppler`.
+- **Optional: a Higgsfield account with credits.** Only Lesson 6,
+  Lesson 8 and the ad plates in Lesson 10 generate images, and each
+  says so before it spends. Everything else runs without it, and the
+  site falls back to a CSS hero.
 
-Two CLIs, two logins — no API keys needed, both auth via browser/CLI login:
+No API keys.
 
-```bash
-claude --version
-claude /login
-
-higgsfield --version
-higgsfield auth login
-higgsfield account status   # must show your account + credits
-```
-
-No Firecrawl key required — `brand-foundation` uses Claude Code's own
-built-in web search. Verified from a plain terminal, not just through an
-agent harness.
-
-## What's actually in this repo
+## What's in the repo
 
 ```
+.claude/commands/build/   the ten /build: slash-command lessons
 .claude/skills/
   brand-foundation/       interview (intake.md) -> real web research ->
-                          nine files per brand:
-                          copywriter-prompt.md, deepresearch.md,
-                          avatar-sheet.md, offerbrief.md,
-                          necessary-beliefs.md, project-knowledge.md
-                          (VERIFIED/UNVERIFIED split), brand-book.md,
-                          brand_foundation.json (authoritative schema)
-  design-tokens/          foundation + brand book -> design.md: exact hex,
-                          named fonts, voice USE/AVOID, component rules
-  brand-guide/            foundation + design.md -> the visual brand
-                          book: brand-guide.html (scrollable, with
-                          swatches, type specimens, components) + PDF
-                          (story + book) and brand-guide.pdf via headless
-                          Chrome
+                          nine files per brand: intake, copywriter
+                          prompt, deepresearch, avatar-sheet, offerbrief,
+                          necessary-beliefs, project-knowledge
+                          (VERIFIED / UNVERIFIED split), brand-book,
+                          brand_foundation.json (the machine contract)
+  design-tokens/          foundation + research -> 2-3 real options ->
+                          design.md: exact hex, named fonts, voice
+                          USE/AVOID, component rules
+  brand-guide/            foundation + design.md -> brand-guide.html
+                          (scrollable, swatches, type specimens,
+                          components) + brand-guide.pdf via headless
+                          Chrome, rasterised and looked at
   aphrodite-direction/    one-line idea -> typed creative_brief.json
-                          (never picks a tool/model; asset_type-aware:
-                          general/poster/hero-still/hero-video/ad-plate)
-  ad-factory/             research-mined ad angles -> Meta-ready copy
-                          bank -> gated text-free plates + brand-locked
-                          HTML overlay (never image-model text)
+                          (never picks a tool or model; asset_type-aware)
+  hephaestus-production/  validated brief -> the gate -> real Higgsfield
+                          CLI build -> asset + dated run record. Also the
+                          hero still and hero video.
+  brand-website/          foundation + necessary-beliefs.md (one section
+                          per belief) + design.md + hero -> a single
+                          self-contained index.html with its own assets/
+  ad-factory/             research-mined angles -> Meta-ready copy bank
+                          -> gated text-free plates + brand-locked HTML
+                          overlay (never image-model text)
   email-sequence/         belief-mapped 5-7 email arc, A/B subjects,
                           inline-style HTML templates, render-verified
-  content-engine/         pillars + sourced ideas -> carousels built
-                          as HTML and rendered to PNG + captions +
-                          2-week calendar
-  hephaestus-production/  validated brief -> approval gate -> real
-                          Higgsfield CLI build -> asset + dated run record.
-                          Also handles hero-still and hero-video briefs
-                          (brief_id ending -hero-still / -hero-video)
-  brand-website/          foundation + necessary-beliefs.md (one section
-                          per belief) + design.md + hero (if built) ->
-                          single self-contained index.html
-
-.claude/commands/build/   the nine /build: slash-command lessons
-
-schema/
-  brand_foundation.schema.json
-  creative_brief.schema.json
-
+  content-engine/         pillars + sourced ideas -> carousels built as
+                          HTML and rendered to PNG + captions + calendar
+.claude/settings.json     the permission rules that make the gate hold
+schema/                   brand_foundation.schema.json, creative_brief.schema.json
 scripts/
   validate_brief.py       stdlib-only schema validator (both schemas)
   approval_gate.py        the human approval gate — the only path to a build
-  hephaestus_build.py     calls the real Higgsfield CLI, downloads the
-                          asset (still, video, or general creative asset)
-  dashboard_status.py     writes status.json from what's actually on disk,
-                          nine stages
+  hephaestus_build.py     calls the real Higgsfield CLI, downloads the asset
+  dashboard_status.py     writes status.json from what is actually on disk
   serve_dashboard.py      serves dashboard.html, refreshes on load
-
-dashboard.html            live build-progress view, reads status.json only
-course-copy.md            the lesson script / voiceover source, 9 lessons
-BUILD_LOG.md              dated record of significant build events — the
-                          gate working, including rejections
-records/                  everything the skills write, gitkept empty dirs
+dashboard.html            build-progress view, reads status.json only
+records/                  everything the skills write (gitignored; empty
+                          folders tracked)
 ```
 
 ## How it works
 
-- **Brand Foundation** (once per brand) does real research first, then
-  reasons about the customer, the offer, the beliefs someone must accept,
-  and separates VERIFIED claims from UNVERIFIED ones — writing nine files
-  plus a validated `brand_foundation.json` that stays authoritative; the
-  six `.md` files are the human layer and must not contradict it.
-- **Design Tokens** distills the brand book into `design.md` — specific
-  values only, no line that could describe two different brands.
-- **Brand Guide** turns the documents into one shareable HTML file (plus a
-  PDF export) that answers a designer's or client's questions before they
-  ask, including a "what we never claim" panel for anything UNVERIFIED.
-- **Hephaestus (hero)** builds a still first, always — a strong still makes
-  a strong video, a weak one doesn't. Reviewed pixel-by-pixel before
-  animating (a real run once caught a hallucinated logo this way).
-- **Aphrodite** reads the foundation and turns a one-line idea into a typed
-  creative brief. She decides *what* should exist, never *how*.
-- **Hephaestus (assets)** reads the brief exactly as written, runs the
-  approval gate, and — only on human `y` — calls the real Higgsfield CLI.
-  Every decision, approved or rejected, is written to `records/runs/`
-  dated.
-- **Brand Website** reads the foundation, `necessary-beliefs.md` (one
-  section per belief), `design.md`, and the hero if one exists — copy
-  first, then styled, no framework, no external tool.
+- **Brand Foundation** interviews you first and writes `intake.md`
+  before anything else. Then real research, with URLs, before any
+  reasoning about positioning. It separates VERIFIED claims from
+  UNVERIFIED ones and writes nine files; `brand_foundation.json` is the
+  contract every later skill reads.
+- **Design Tokens** presents two or three real directions grounded in
+  the competitor teardown and your stated preferences, waits for your
+  pick, then locks `design.md`. Specific values only.
+- **Brand Guide** turns the documents into one shareable HTML file and
+  a PDF, including a "what we never claim" panel for anything
+  UNVERIFIED.
+- **Aphrodite** turns a one-line idea into a typed creative brief. She
+  decides what should exist, never how.
+- **Hephaestus** reads the brief exactly as written, runs the gate, and
+  only on a human `y` calls the Higgsfield CLI. Every decision, built
+  or rejected, is a dated file in `records/runs/`.
+- **Brand Website** reads the foundation, the beliefs, `design.md` and
+  the hero if one exists. Copy first, then styled. One file plus its
+  own `assets/` folder, so it deploys as-is.
 
-Nothing in this loop invents a claim, a testimonial, or a stat that isn't
-in the foundation or research file. If a section needs something the
-research doesn't have, the skills ask or leave a marked placeholder — they
-don't make it up. This has been tested for real, more than once — see
-`BUILD_LOG.md`.
+Nothing in this loop invents a claim, a testimonial or a stat that
+isn't in the foundation or the research file. If a section needs
+something the research doesn't have, the skills ask or leave a marked
+placeholder.
 
 ## The gate
 
-`scripts/approval_gate.py` is the only path a build (still, video, or
-general asset) can take. It prints the brief, asks `Approve build? [y/N]`,
-and only proceeds on `y`. Every outcome — built or rejected — gets a dated
-record in `records/runs/`. This is not decoration: an ungated agent loop's
-failure mode isn't one bad output, it's forty overnight, discovered after
-the fact.
+A build is two keystrokes, and neither belongs to Claude.
+
+1. Claude shows you the brief and asks `Approve build? [y/N]` in the
+   session. You answer.
+2. Claude runs `python3 scripts/approval_gate.py --decision y <brief>`.
+   Claude Code's own permission dialog shows you that exact command,
+   your answer included, and only you can allow it. `.claude/settings.json`
+   lists the gate script under `ask`, so the dialog appears even if
+   you've allowed other Python commands.
+
+The gate refuses piped input, so `echo y |` writes no record and builds
+nothing. Direct calls to `hephaestus_build.py` and `higgsfield generate`
+are denied for Claude in the same settings file, so the gate and its
+record wrap every build. You can also run the gate yourself in a
+second terminal and answer there; it's the same prompt and the same
+record. A rejection needs no Higgsfield account and spends nothing.
+
+One caveat, stated plainly: if you start Claude Code in
+`bypassPermissions` mode, the dialog is skipped and the gate is only as
+good as Claude's instructions. Don't run this course in that mode.
+
+## Your files stay yours
+
+Everything the skills write — your intake with its pricing, your
+competitor research, your brand foundation, your assets, your records —
+is gitignored. So are `design.md` and the brand guide at the repo root.
+If you fork this repo and push, none of that leaves your machine.
+Lesson 9 deploys only `records/website/<brand_id>/`, never this repo.
 
 ## Serving the site or dashboard
-
-Both must be served from the **repo root**, not their own folders — they
-reference shared files by relative path and Python's `http.server` refuses
-to serve above its working directory.
 
 ```bash
 python3 scripts/serve_dashboard.py     # -> localhost:8787/dashboard.html
 python3 -m http.server 8000            # -> localhost:8000/records/website/<brand_id>/index.html
 ```
+
+The site folder carries its own `assets/`, so it also serves or
+deploys on its own.

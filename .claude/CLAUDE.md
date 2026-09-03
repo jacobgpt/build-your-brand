@@ -41,6 +41,31 @@ lesson at a time, by typing `/build:NN` commands themselves.
   whole repo. Hand back the live URL and verify it returns 200
   before calling it shipped.
 
+## How skills run
+
+- Every lesson's build step is run by you, in this session, by
+  invoking the named skill. Never tell the student to open another
+  terminal for a skill, never run `claude -p`, never spawn a nested
+  `claude`. Print mode cannot interview, cannot present options and
+  wait, and cannot gate.
+- The interview in `brand-foundation` and the option pick in
+  `design-tokens` are conversations here. Ask, then stop and wait.
+
+## The gate
+
+- A build is two keystrokes, and neither is yours. Show the student
+  the brief and ask `Approve build? [y/N]` in this session, then stop.
+  Only after they answer, run
+  `python3 scripts/approval_gate.py --decision <y|n> <brief>`.
+  Claude Code's permission dialog shows that exact command to the
+  student, and only they can allow it.
+- Never pass `--decision y` unless the student typed `y` in this
+  session. Never pipe input into the gate. Never call
+  `hephaestus_build.py` or `higgsfield generate` directly — both are
+  denied in `.claude/settings.json`, on purpose.
+- A rejection needs no Higgsfield account and spends nothing; it
+  still writes a dated record.
+
 ## Voice
 
 - Terminal output is a lesson, not a build log. Announce each lesson

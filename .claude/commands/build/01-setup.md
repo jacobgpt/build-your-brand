@@ -1,5 +1,5 @@
 ---
-description: "Build Your Brand — Lesson 1: Setup. Confirm both CLIs and skills, launch the dashboard."
+description: "Build Your Brand — Lesson 1: Setup. Confirm the toolchain and skills, launch the dashboard."
 ---
 
 # /build:01-setup
@@ -22,7 +22,7 @@ THE TOOLCHAIN
 ```
 
 > **Timing**     ~5 minutes
-> **Goal**       Both CLIs authenticated, skills visible, dashboard live
+> **Goal**       Toolchain confirmed, skills visible, dashboard live
 > **Progress**   `[░░░░░░░░░░] 0/9`
 
 ---
@@ -56,7 +56,8 @@ machine, in files you can inspect.
 Everything lands as files on your machine, in a structure you can
 audit — nothing lives inside a chat you'll never reopen.
 
-Nine lessons, one at a time:
+Nine lessons build the brand, one at a time. A tenth keeps it showing
+up afterwards:
 
 | # | Lesson | Time |
 |---|--------|------|
@@ -77,36 +78,46 @@ up after the course ends.
 
 ---
 
-**Before you start, you'll want:** both CLIs installed, a Higgsfield
-account with some credits (only Lessons 6 and 8 spend any), and about
-2.5 hours total for the course. Nothing else — no design tools, no
-API keys.
+**Before you start, you'll want:** a Mac, Claude Code logged in on a
+Claude subscription (Pro works; Max is safer for Lesson 2's research),
+Python 3, Google Chrome, and about three hours. Nothing else — no
+design tools, no API keys. A Higgsfield account with credits is only
+needed for Lesson 6, Lesson 8 and the ad plates in Lesson 10, and
+those steps can be skipped.
 
 ---
 
-## STEP 1 — Authenticate both CLIs
+## STEP 1 — Confirm the toolchain
 
-Two CLIs, two logins. Run each and check the output:
+You're already inside Claude Code, so the first check is done. Two
+quick ones in a second terminal:
 
 ```bash
-claude --version
-claude /login
+python3 --version
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --version
+```
 
-higgsfield --version
+Both should print a version. Chrome renders the brand guide PDF and
+the Lesson 10 assets; if it isn't at that path, install it before
+Lesson 5.
+
+**Higgsfield is optional here.** Only Lesson 6, Lesson 8 and the ad
+plates in Lesson 10 generate images, and each of those says so before
+it spends anything. If you already have an account, check it now —
+otherwise skip this and come back when Lesson 6 asks:
+
+```bash
 higgsfield auth login
 higgsfield account status
 ```
 
-That last one must show your account and a credit balance. If it
-doesn't, the auth didn't take — run the login again before you go on.
-
-> **ACTION:** Run the five commands above. `higgsfield account status`
-> must show your account + credits. When it's green, type `1`.
+> **ACTION:** Python and Chrome report versions. Higgsfield checked or
+> deferred. Type `1`.
 
 ```
 ┌─────────────────────────────────────────────────┐
 │  ACHIEVEMENT UNLOCKED                            │
-│  Both CLIs authenticated                         │
+│  Toolchain confirmed                             │
 └─────────────────────────────────────────────────┘
 ```
 
@@ -117,18 +128,23 @@ doesn't, the auth didn't take — run the login again before you go on.
 ## STEP 2 — Confirm the skills loaded
 
 Claude Code picks up any skill in the project folder automatically.
-Nothing to install:
+Nothing to install. Ask, right here in this session:
 
-```bash
-claude -p "list your available skills"
-```
+> list your available skills
 
-You should see `brand-foundation`, `design-tokens`, `brand-guide`,
-`hephaestus-production`, `aphrodite-direction`, and `brand-website`.
-If you see none, you're running `claude` from the wrong directory —
-skills are project-scoped, so `cd` into the repo and try again.
+You should see all nine: `brand-foundation`, `design-tokens`,
+`brand-guide`, `aphrodite-direction`, `hephaestus-production`,
+`brand-website`, `ad-factory`, `email-sequence`, `content-engine`.
+If you see none, you opened `claude` from the wrong directory —
+skills are project-scoped, so `cd` into the repo and start again.
 
-> **ACTION:** Run the skills check. All six names listed? Type `1`.
+**How every lesson runs from here:** the lesson text tells Claude
+which skill to run, and Claude runs it in this session, pausing
+wherever you need to read, choose or approve. You never open another
+terminal to run a skill, and you never use `claude -p` — print mode
+can't ask you questions or wait for your answers.
+
+> **ACTION:** All nine names listed? Type `1`.
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -169,8 +185,9 @@ what exists on disk. It'll fill in as you build.
 ## DONE
 
 **What you have now:**
-- Both CLIs authenticated, credits confirmed
-- All six skills visible to Claude Code
+- Claude Code running; Python and Chrome confirmed; Higgsfield
+  checked or deferred until Lesson 6
+- All nine skills visible to Claude Code
 - A live dashboard showing the real state of your build
 
 **Next lesson:** `/build:02-research` — the interview, then real

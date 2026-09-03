@@ -33,7 +33,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS_DIR = ROOT / "records" / "assets"
-IMAGE_MODEL = "gpt_image_2"  # Hephaestus's tool choice per Pantheon OS catalog default (gpt_image_2 / nano_banana_2 / seedance_2_0) — production decides mechanism, not the brief.
+IMAGE_MODEL = "gpt_image_2"  # production decides the mechanism, never the brief. Change here if Higgsfield renames or retires the model.
 VIDEO_MODEL = "seedance_2_0"  # supports image-to-video via --start-image; chosen for quality/cost balance at time of writing — production's call, not the brief's.
 QUALITY = "high"
 RESOLUTION = "2k"

@@ -62,9 +62,8 @@ all type overlaid in post as brand-locked HTML, never generated.
 
 ### STEP 1 — Angles and the copy bank (free, your review)
 
-```
-claude -p "Use ad-factory to mine ad angles for <brand_id>"
-```
+> **RUN (Claude, in this session):** Use `ad-factory` to mine ad angles
+> for `<brand_id>`.
 
 It reads your avatar's pains/fears/objections verbatim, your
 necessary beliefs, and the competitor teardown, then writes 5-8
@@ -88,14 +87,13 @@ Read and edit this file. It's your campaign's source of truth.
 
 For each concept you approve for production:
 
-```
-claude -p "Use ad-factory to produce a static ad for concept N of <brand_id>"
-```
+> **RUN (Claude, in this session):** Use `ad-factory` to produce a static
+> ad for concept N of `<brand_id>`.
 
 Two layers, and this is the anti-trash trick:
 1. **The plate** — a text-free background in your exact
    `design.md` palette, built through the approval gate (real
-   credits — check cost before `y`). Briefs carry
+   credits — check your balance before `y`). Briefs carry
    `asset_type: ad-plate`; the build prompt explicitly forbids any
    text, logos, or fabricated characters.
 2. **The overlay** — your hook, headline, and CTA rendered on top
@@ -129,9 +127,8 @@ provides exact commands and naming, spends nothing uninvited.
 
 ### The arc before the emails
 
-```
-claude -p "Use email-sequence to plan a welcome sequence for <brand_id>"
-```
+> **RUN (Claude, in this session):** Use `email-sequence` to plan a
+> welcome sequence for `<brand_id>`.
 
 It maps a 5-7 email arc to your beliefs in funnel order —
 `sequence-plan.md` for your review BEFORE any body is written.
@@ -169,9 +166,8 @@ your account.
 
 ### Pillars, then carousels as finished files
 
-```
-claude -p "Use content-engine to build a content batch for <brand_id>"
-```
+> **RUN (Claude, in this session):** Use `content-engine` to build a
+> content batch for `<brand_id>`.
 
 1. **Plan** — 4-5 pillars + 15-20 post ideas in
    `records/content/<brand_id>/content-plan.md`, each idea mapped

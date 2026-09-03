@@ -34,13 +34,18 @@ with motion on it. Two moves: generate the still, approve it, then
 animate it. And this lesson spends real credits — that's why the gate
 is here: nothing gets built until you read the brief and type `y`.
 
+**Needs a Higgsfield account with credits** (`higgsfield auth login`,
+then `higgsfield account status`). Don't have one? Skip to
+`/build:07-website` — the site falls back to a CSS hero, and Lesson 8's
+rejection record still works with no account at all.
+
 ---
 
 ## STEP 1 — Write the brief
 
-```bash
-claude -p "Use aphrodite-direction to write a creative brief for the <brand_id> hero image, brief_id ending in -hero-still"
-```
+> **RUN (Claude, in this session):** Use `aphrodite-direction` to write
+> the hero-still brief for `<brand_id>`, `brief_id` ending in
+> `-hero-still`, `asset_type: hero-still`.
 
 Be explicit in the brief about what's forbidden. Image models can
 sometimes render fabricated text or a logo onto a textured surface
@@ -64,14 +69,16 @@ specifically rather than once in general.
 
 ## STEP 2 — Run it through the gate
 
-```bash
-claude -p "Use hephaestus-production to build the brief at records/briefs/<brief_id>.json"
-```
+> **RUN (Claude, in this session):** Use `hephaestus-production` on
+> `records/briefs/<brief_id>.json`.
 
-This step **spends real credits** — check the cost it reports before
-typing `y`. Read the brief on screen, then approve. Lands at
-`records/assets/hero-still.png` + `hero-poster.jpg`, with a dated run
-record in `records/runs/`.
+The gate is two keystrokes, and neither is Claude's. First Claude shows
+you the brief and asks `Approve build? [y/N]` — answer here. Then Claude
+Code's own permission dialog shows the exact gate command, including
+your answer, and you allow it. Claude can't click that dialog. This
+step **spends real credits**: check `higgsfield account status` before
+you answer, and again after. Lands at `records/assets/hero-still.png`
++ `hero-poster.jpg`, with a dated run record in `records/runs/`.
 
 **Judge it like an art director would.** A "fine" still is a bad
 still. Zoom in: are the colours exactly your palette hex?
@@ -82,8 +89,8 @@ If it comes back mediocre, iterate — it's cheaper to rebuild with a
 sharper brief than to animate a weak image. A great still makes a
 great video; a "fine" one makes a video nobody remembers.
 
-> **ACTION:** Read the brief at the gate. Check the cost. Type `y`
-> only if you actually want this build.
+> **ACTION:** Read the brief. Check your balance. Type `y` only if you
+> actually want this build, then allow the command in the dialog.
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -136,14 +143,12 @@ Subtle only: slow push-in, ambient drift, colours locked to the
 source, no new objects. It's a background for text and must stay
 readable underneath. Five to eight seconds, looping.
 
-```bash
-claude -p "Use aphrodite-direction to write a creative brief for the <brand_id> hero video, brief_id ending in -hero-video"
-claude -p "Use hephaestus-production to build the brief at records/briefs/<brief_id>.json"
-```
+> **RUN (Claude, in this session):** Use `aphrodite-direction` for the
+> `<brand_id>` hero video, `brief_id` ending in `-hero-video`, then
+> `hephaestus-production` on the resulting brief.
 
-Same gate — and this step spends more credits than the still, so
-check the real cost before approving. Lands at
-`records/assets/hero.mp4`.
+Same gate — and video costs more than a still, so check your balance
+before approving. Lands at `records/assets/hero.mp4`.
 
 Fine to stop at the still — the website in the next lesson works
 either way.

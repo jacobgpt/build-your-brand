@@ -5,3 +5,14 @@ __pycache__/
 course-copy.md
 BUILD_LOG.md
 BACKLOG.md
+
+# Student output stays on the student's machine. Everything the skills
+# write is ignored; only the empty folders (.gitkeep) are tracked.
+records/*/*
+!records/*/.gitkeep
+design.md
+brand-guide.html
+brand-guide.pdf
+brand-guide-cover.png
+.claude/settings.local.json
+.omc/

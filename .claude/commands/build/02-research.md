@@ -74,8 +74,15 @@ the gaps. Your answers are written to
 every later step reads what YOU said. Guessing is what produces the
 generic output you've seen everywhere else.
 
-> **ACTION:** Answer the four questions. When `intake.md` exists with
-> your answers in it, type `1`.
+> **RUN (Claude, in this session):** Start the `brand-foundation` skill
+> now. Ask the seven questions above and the feel question, one at a
+> time or as one list, and wait for real answers — never fill one in.
+> Write `records/brands/<brand_id>/intake.md`, then continue straight
+> into the research in STEP 2. Never `claude -p`, never a second
+> terminal.
+
+> **ACTION:** Answer the questions here. When `intake.md` exists with
+> your answers in it, type `1` — the research is already running.
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -90,11 +97,8 @@ generic output you've seen everywhere else.
 
 ## STEP 2 — Run the research
 
-Now the real work:
-
-```bash
-claude -p "Use brand-foundation to build a brand foundation for the brand I described in intake.md"
-```
+Now the real work. The same `brand-foundation` run continues from
+your `intake.md` — nothing new to type.
 
 Real web search first, and it runs long. The dossier needs to reach
 a ~3,000-word deepresearch.md with a per-competitor teardown (visual
@@ -123,7 +127,7 @@ brand_foundation.json   the structured contract
 This takes the longest — the research is doing real work across the
 web. Let it cook.
 
-> **ACTION:** Run the command. When all nine files exist, type `1`.
+> **ACTION:** Let it run. When all nine files exist, type `1`.
 
 ```
 ┌─────────────────────────────────────────────────┐

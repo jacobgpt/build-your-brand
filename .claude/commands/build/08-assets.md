@@ -41,9 +41,8 @@ continuing.
 
 Think of one line: a product, scene, or concept for the asset. Then:
 
-```bash
-claude -p "Use aphrodite-direction to write a creative brief for: <your one-liner>"
-```
+> **RUN (Claude, in this session):** Use `aphrodite-direction` to write
+> a creative brief for: `<your one-liner>`.
 
 This reads your foundation and folds positioning, audience, tone,
 `visual_pillars`, and `avoid` into the brief automatically.
@@ -82,17 +81,23 @@ Must print `VALID`.
 
 ## STEP 2 — Build it through the gate
 
-```bash
-claude -p "Use hephaestus-production to build the brief at records/briefs/<brief_id>.json"
-```
+> **RUN (Claude, in this session):** Use `hephaestus-production` on
+> `records/briefs/<brief_id>.json`.
 
-`scripts/approval_gate.py` prints the brief and asks
-`Approve build? [y/N]` live in the terminal. Read it properly, then
-type `y` yourself — the build waits on your answer, nothing else.
-This
-step **spends real credits**, so check the cost before approving. On
+Two keystrokes, neither of them Claude's. Claude shows you the brief
+and asks `Approve build? [y/N]` — you answer here. Then Claude Code's
+permission dialog shows the exact gate command with your answer in it,
+and you allow it. If you'd rather, open a second terminal and run
+`python3 scripts/approval_gate.py records/briefs/<brief_id>.json`
+yourself — same prompt, same record. This step **spends real
+credits**, so check `higgsfield account status` before approving. On
 approve, the real Higgsfield CLI builds it, downloads to
 `records/assets/`, and a dated record writes to `records/runs/`.
+
+One honest note: this lesson lets the image model render your headline
+so you can judge it. Lesson 10 shows the production-grade way — a
+text-free plate with the type overlaid afterwards — because image
+models garble text often enough that ads can't rely on it.
 
 **Then actually look at the result and judge it hard.**
 Does it obey every `must_preserve`? Does it break any `forbidden`?
@@ -100,9 +105,9 @@ Zoom in and check. A clean exit code isn't proof the image is right
 — you are the proof step. If it breaks a rule, that's a rebuild
 with a tighter brief, and both attempts stay on record.
 
-> **ACTION:** Read the brief at the gate, check the cost, type `y`.
-> Then open the asset and actually look at it. Type `1` when you've
-> seen it.
+> **ACTION:** Read the brief, check your balance, type `y`, allow the
+> command. Then open the asset and actually look at it. Type `1` when
+> you've seen it.
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -117,8 +122,9 @@ with a tighter brief, and both attempts stay on record.
 
 ## STEP 3 — Reject one on purpose
 
-Run STEP 2 again with any brief — and this time type anything other
-than `y`. Open the resulting record in `records/runs/`: the rejection
+Run STEP 2 again with any brief — and this time answer anything other
+than `y`. No Higgsfield account is needed for this: a rejection spends
+nothing. Open the resulting record in `records/runs/`: the rejection
 is on file too, dated, with no asset produced and no credits spent.
 
 A record holding only the wins is a highlight reel. The rejections
