@@ -73,6 +73,13 @@ things people can see and click.
 
 ---
 
+**Before you start, you'll want:** both CLIs installed, a Higgsfield
+account with some credits (only Lessons 6 and 8 spend any), and about
+2.5 hours total for the course. Nothing else — no design tools, no
+API keys.
+
+---
+
 ## STEP 1 — Authenticate both CLIs
 
 Two CLIs, two logins. Run each and check the output:

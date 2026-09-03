@@ -88,6 +88,13 @@ real change in `brand_foundation.json` too: the JSON is what every
 later skill actually reads, so it needs to stay in sync with the
 readable version.
 
+**The bar for positioning:** read it aloud. If a competitor could
+paste it onto their homepage unchanged, it isn't yours yet. If it
+makes you slightly uncomfortable because it commits to something
+checkable, it's right. "Premium coffee for people who care" is the
+former. "Beans that arrive when you're actually running low — not
+when a calendar says so" is the latter.
+
 > **ACTION:** Read the brand book. Edit anything that isn't you.
 > Type `1` when it reads like your brand, not a brand.
 

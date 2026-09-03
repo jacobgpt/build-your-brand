@@ -69,15 +69,37 @@ your real files, not self-reported status.
 ## STEP 2 — Ship it (optional but do it)
 
 A brand that isn't public is a document, not a brand. If you want the
-site on a real URL now, Claude can deploy it — static one-page site,
-so any static host takes it as-is.
+site on a real URL now, Claude can deploy it — the site is a single
+static `index.html` (+ assets), so any static host takes it as-is.
+Claude picks the path based on what's on your machine:
 
-**Nothing deploys until you say the words.** When you reach this
-step, Claude shows you exactly what it's about to run (git init,
-commit, repo create, deploy) and asks `Ship it? [y/N]`. Read it, then
-answer. The deploy itself costs nothing — only the hosting
-platform's normal free/paid tiers apply. Skipping is a real choice:
-the site stays local and you ship later.
+| What you have | How it ships |
+|---|---|
+| `vercel` CLI + login | `vercel --prod --yes` → live `*.vercel.app` URL |
+| `netlify` CLI + login | `netlify deploy --prod` → live URL |
+| `gh` CLI + login | GitHub repo → GitHub Pages → live `*.github.io` URL |
+| Nothing installed yet | Claude offers to set one up — takes ~2 min; `gh` + Pages is the zero-cost default |
+
+**Nothing deploys until you say the words.** Claude checks what's
+installed, tells you which path applies, shows you exactly what it's
+about to run, and asks `Ship it? [y/N]`. Read it, then answer. The
+deploy itself costs nothing — only the host's normal free tiers
+apply. Skipping is a real choice: the site stays local and you ship
+later.
+
+**Pre-flight before you ship:**
+- [ ] Every link on the page works (click them)
+- [ ] Mobile pass done — the page reads well at phone width
+- [ ] No claim, stat, or testimonial you can't back
+- [ ] The hero loads (video or fallback) and the CTA does something
+- [ ] You've read the whole page top to bottom as a stranger
+
+If any box is unticked, that's a "N" — fix it, then come back.
+
+**After it's live:** the deploy hands you a URL. Point your domain
+at it from the host's dashboard (or hand the URL to your client).
+From then on, edit anything in Claude Code, `git push`, and the
+site updates in seconds. Files you own, no lock-in.
 
 ```bash
 gh auth status      # GitHub authenticated?

@@ -26,7 +26,7 @@ directly:
 | 6 | `/build:06-hero` | Hero still through the gate, film-safety-checked (video optional) |
 | 7 | `/build:07-website` | Copy-first, design.md-driven, hero-aware site |
 | 8 | `/build:08-assets` | A typed creative brief (Aphrodite), gated production (Hephaestus) |
-| 9 | `/build:09-done` | Review everything you built, and the pattern behind it |
+| 9 | `/build:09-done` | Review everything, the pattern behind it — and ship the site live if you want (gated, zero-cost default) |
 
 Full lesson text lives in `course-copy.md`.
 

@@ -73,9 +73,14 @@ typing `y`. Read the brief on screen, then approve. Lands at
 `records/assets/hero-still.png` + `hero-poster.jpg`, with a dated run
 record in `records/runs/`.
 
-If the first still comes back mediocre, it's cheaper to rebuild with
-a sharper brief than to animate a weak image — a great still makes a
-great video, every time.
+**Judge it like an art director, not a customer.** A "fine" still
+is a bad still. Zoom in: are the colours exactly your palette hex?
+Is the mood your `design.md` mood, or the model's default mood? Is
+there fabricated text anywhere?
+
+If it comes back mediocre, iterate — it's cheaper to rebuild with a
+sharper brief than to animate a weak image. A great still makes a
+great video; a "fine" one makes a video nobody remembers.
 
 > **ACTION:** Read the brief at the gate. Check the cost. Type `y`
 > only if you actually want this build.

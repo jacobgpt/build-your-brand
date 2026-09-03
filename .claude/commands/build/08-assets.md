@@ -53,6 +53,13 @@ not prose — every field is a slot the next skill reads directly, so a
 vague `placement` or missing `must_preserve` entry becomes a real
 production bug, not just a stylistic nitpick.
 
+**The brief quality bar:** read it as the image model would. If any
+field could produce two different images, tighten it now — "a
+premium scene" is empty; "deep green #1E3A2F background, cream product,
+soft morning side-light, no people" is a slot the model can fill
+exactly. Fixing a vague brief costs a minute here; a vague brief
+that reaches the gate costs credits.
+
 ```bash
 python3 scripts/validate_brief.py records/briefs/<brief_id>.json
 ```
@@ -85,6 +92,12 @@ type `y` yourself — that's the actual gate, not decoration. This
 step **spends real credits**, so check the cost before approving. On
 approve, the real Higgsfield CLI builds it, downloads to
 `records/assets/`, and a dated record writes to `records/runs/`.
+
+**Then actually look at the result like a judge, not a customer.**
+Does it obey every `must_preserve`? Does it break any `forbidden`?
+Zoom in and check. A clean exit code isn't proof the image is right
+— you are the proof step. If it breaks a rule, that's a rebuild
+with a tighter brief, and both attempts stay on record.
 
 > **ACTION:** Read the brief at the gate, check the cost, type `y`.
 > Then open the asset and actually look at it. Type `1` when you've

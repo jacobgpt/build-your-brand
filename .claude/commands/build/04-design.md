@@ -82,11 +82,30 @@ brand every day.
 
 ---
 
-## STEP 2 — Specific beats vague
+## STEP 2 — Sharpen it (cross-check)
 
-Check the `design.md` that landed. If any line in it could describe
-two different brands, it isn't finished — tighten it now. `#1B4B8F`
-is a decision; "warm blue" is not.
+Unsure between options, or want to stress-test the one you picked?
+Answer five questions — specific answers only, hex codes and named
+brands, never "clean" or "modern":
+
+1. Brand name + what do you do?
+2. Three words that describe the brand?
+3. Colours? (hex codes, not "blue")
+4. Three reference brands + what you want to take from each?
+5. Tone of voice? (always / never)
+
+Give Claude these answers and it re-derives the tokens and tells you
+where they differ from your picked option — that disagreement is
+where the real decision lives.
+
+---
+
+## STEP 3 — Specific beats vague
+
+Check the `design.md` that landed. If any line in it could describe two different brands, it isn't
+finished — tighten it now. `#1B4B8F` is a decision; "warm blue" is
+not. Every colour, font, and word must earn its place — if you can't
+say which research line or interview answer forced it, cut it.
 
 > If you already have a `design.md` from a different brand at the
 > repo root, the skill stops and asks before overwriting it. Answer

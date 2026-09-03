@@ -30,6 +30,16 @@ lesson at a time, by typing `/build:NN` commands themselves.
   `Ship it? [y/N]` prompt for that specific deploy. Show them
   exactly what will run first. `n` means stop — no deploy, no
   retry, no asking again in the same lesson.
+- **Deploy path selection (Lesson 9):** detect what's installed and
+  authenticated (`vercel whoami`, `netlify status`, `gh auth
+  status`) before proposing anything. Offer, in order: Vercel,
+  Netlify, gh + GitHub Pages. If nothing is set up, say so and
+  offer to walk the student through `gh` + Pages (zero cost) before
+  touching any install. Never install a CLI or create an account on
+  the student's behalf without asking. The site is static — deploy
+  the built `records/website/<brand_id>/` folder as-is, never the
+  whole repo. Hand back the live URL and verify it returns 200
+  before calling it shipped.
 
 ## Voice
 

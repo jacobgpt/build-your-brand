@@ -151,6 +151,26 @@ the one people believe.
 > **ACTION:** Read `deepresearch.md` and sanity-check it against what
 > you know. Check the UNVERIFIED section. Type `1` when it holds up.
 
+---
+
+## If the dossier is weak, make it redo the work
+
+A dossier earns its name only if it passes this:
+
+- **Every market claim has a URL next to it.** A claim with no source
+  is a guess wearing a suit — tell Claude to source it or cut it.
+- **The competitor teardown describes things you can SEE** — actual
+  colours, actual type, an actual promise from their homepage — not
+  "they focus on quality."
+- **At least 20 verbatim customer quotes.** Fewer means it
+  paraphrased, and paraphrased research is worth nothing.
+- **It found something you didn't know.** If everything matches what
+  you could have said before the run, tell Claude which competitor
+  or angle to dig into harder and run it again.
+
+Weak research is not a phase — everything downstream will be
+confidently wrong. Redo it here.
+
 ```
 ┌─────────────────────────────────────────────────┐
 │  ACHIEVEMENT UNLOCKED                            │

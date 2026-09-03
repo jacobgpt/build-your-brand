@@ -103,13 +103,21 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000/records/website/<brand_id>/index.html`.
 
-Then read it as a stranger would:
-- Does the first line say what this is?
-- Is there a claim on that page you couldn't back up if someone
-  asked?
-- Any invented testimonial, stat, or logo means something went wrong
-  upstream — go back and check the source documents rather than
-  publishing it.
+Then read it as a stranger would, holding it to this:
+
+- **The 5-second test** — does the hero say what this is, who it's
+  for, and why it's different, before any scrolling?
+- **One belief per section** — does each section move exactly one
+  belief from your map, in order? A section that exists because
+  "websites have those" dilutes the page — cut it.
+- **The claims check** — is there anything on that page you couldn't
+  back up if someone asked? Any invented testimonial, stat, or logo
+  means something went wrong upstream — go back and check the
+  source documents rather than publishing it.
+- **The CTA test** — is there exactly one clear action, and does
+  every section lead to it?
+- **The mobile pass** — check it at phone width. Half your visitors
+  see it there first.
 
 > **ACTION:** Site renders (hero video or fallback), first line
 > works, no unprovable claims. Type `1`.

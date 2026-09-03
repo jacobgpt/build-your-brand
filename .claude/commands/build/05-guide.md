@@ -120,12 +120,20 @@ and view the resulting PNG(s). Confirm text isn't cut off, colours
 rendered, no blank pages. A zero exit code is not proof the PDF is
 readable.
 
-Then read the HTML and the PDF both:
-- Are the customer quotes real ones from `deepresearch.md`, or
-  invented?
-- Does the "what we never claim" panel name real gaps (no pricing
-  set, no measured results yet), not generic hedging?
-- Does the story sound like your brand, or like a brand?
+Then read the HTML and the PDF both, and hold it to this:
+
+- **Real quotes** — are the customer quotes verbatim ones from
+  `deepresearch.md` with sources, or invented?
+- **The honesty panel** — does "what we never claim" name real gaps
+  (no pricing set, no measured results yet), not generic hedging?
+- **The voice test** — read the story aloud; does it sound like YOUR
+  brand, or like a brand?
+- **The stranger test** — hand the HTML to someone (or imagine
+  handing it) who knows nothing about you: can they say what this
+  brand is, who it's for, and what it looks like, without asking?
+- **The designer test** — could a designer build the NEXT page from
+  Part II alone, without asking you a single question about colour,
+  type, or tone? If they'd have to ask, Part II isn't done.
 
 Anything off — say exactly what, and re-export.
 
