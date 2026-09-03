@@ -176,15 +176,13 @@ record instead of a highlight reel.
 
 **Three concrete next steps, in order:**
 
-1. **Run the course on your real brand.** Start at
-   `/build:02-research` with your own business. Everything you just
-   learned applies unchanged — the interview, the research, the
-   options.
-2. **Ship the site.** Put the website on a real domain and point one
-   traffic source at it. A brand that isn't public is a document,
-   not a brand.
-3. **Reuse the pattern.** Split decisions from execution, type the
-   handoff, gate the spend, record everything. Take that shape to
-   the next thing you build with agents.
+1. **Ship the site.** You did that in STEP 2 — or you can, whenever
+   you're ready. A brand that isn't public is a document, not a
+   brand.
+2. **Run the engines.** `/build:10-grow` — ads, email, and content,
+   all reading this same foundation. That's how the brand shows up.
+3. **Run the course on your real brand.** Start at
+   `/build:02-research` with your own business. Faster this time —
+   you know the pattern.
 
 The brand you built here was the exercise. Yours is the point.

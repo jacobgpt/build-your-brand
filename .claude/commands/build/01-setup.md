@@ -42,6 +42,8 @@ machine, in files you can inspect.
 **By the end you'll have, all built from zero:**
 - A researched brand foundation — 9 files, including a ready-to-paste
   AI copywriter prompt
+- (After Lesson 10) launch-ready ads, a belief-mapped email
+  sequence, and a 2-week content calendar
 - A `design.md` — your visual direction, chosen from real options
 - A scrollable visual brand book (HTML + PDF) — palette, type, and
   components shown live
@@ -67,9 +69,11 @@ Nine lessons, one at a time:
 | 7 | The website — copy-first, on-brand | 20 min |
 | 8 | Direction + production — asset + the gate tested | 15 min |
 | 9 | What you built — review + launch | 10 min |
+| 10 | Grow — ads, email, content engines | 30-45 min |
 
 The first half builds the foundation; the second half turns it into
-things people can see and click.
+things people can see and click; the tenth lesson keeps it showing
+up after the course ends.
 
 ---
 

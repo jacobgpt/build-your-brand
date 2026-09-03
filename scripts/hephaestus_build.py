@@ -130,6 +130,14 @@ def build_prompt_from_brief(brief: dict) -> str:
             copy_instruction += f'. Placement: {ad_copy["placement"]}.'
         copy_instruction += " Spell the text exactly as given, no substitutions."
         prompt_parts.append(copy_instruction)
+    elif brief.get("asset_type") == "ad-plate":
+        prompt_parts.append(
+            "This is a text-free background plate. Absolutely no text, no words, "
+            "no letters, no numbers, no logos, no wordmarks, no watermarks, no "
+            "signage, no labels, no fabricated readable characters anywhere in "
+            "the image — on any surface, in any style, however subtle. All type "
+            "is added later in post."
+        )
     return " ".join(p for p in prompt_parts if p).strip()
 
 

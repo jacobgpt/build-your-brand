@@ -29,6 +29,24 @@ Look in `records/brands/` (repo root) for any `<brand_id>/brand_foundation.json`
 - **More than one found**: stop and ask the user which `brand_id` this brief
   is for before writing anything.
 
+## Asset types — set `asset_type` on every brief
+
+Every brief carries an `asset_type` so production routes correctly:
+
+- `general` — default, any one-off asset
+- `poster` — a poster/announcement
+- `hero-still` / `hero-video` — the brand hero (set by the hero flow;
+  Hephaestus recognizes these brief_id suffixes)
+- `ad-plate` — **a text-free background plate for an ad.** The ad
+  factory overlays all type itself (image-model text is garbled
+  garbage — this is how ads avoid it). For an `ad-plate` brief:
+  - `ad_copy.has_copy` MUST be `false`, headline `""` — the plate
+    carries NO text, and `visual_description` must say where the
+    negative space sits (top/bottom/side) for the overlay.
+  - `forbidden` MUST include: on-image text, logos, wordmarks,
+    watermarks — per-surface if the plate has multiple surfaces.
+  - `aspect_ratio` is the ad's ratio (1:1 or 9:16).
+
 ## What you do
 
 1. Read the one-line input.

@@ -24,10 +24,31 @@ run `higgsfield auth login` first. Do not attempt to build without it.
 
 A validated brief exists at `records/briefs/<brief_id>.json` (produced by the
 `aphrodite-direction` skill) and the user wants to actually build it. This
-covers two shapes:
+covers three shapes:
 - **A normal one-off asset** — any brief.
 - **The brand's hero** — two briefs in sequence, `<brand_id>-hero-still`
   then `<brand_id>-hero-video` (see "Hero production" below).
+- **An ad plate** — `asset_type: "ad-plate"` (see "Ad plates" below).
+
+## Ad plates
+
+Briefs with `asset_type: "ad-plate"` are text-free background plates
+the ad factory will overlay type onto. Two extra rules when building
+one:
+
+1. **Zero text is the success bar.** After the build, inspect the
+   plate for ANY readable fabricated text or logo — the same
+   failure mode as the hero still, and MORE likely on ad plates
+   because ad-style compositions tempt the model into adding fake
+   headlines. If any text is present, the plate failed: reject it,
+   revise the brief (make each surface's "must stay blank"
+   explicit), rebuild.
+2. **The palette is load-bearing.** Check the built plate against
+   `design.md`'s hex values — an ad that drifts off-brand by one
+   accent colour isn't an A/B variant, it's a defect.
+
+If the brief doesn't carry `asset_type`, treat it as `general` —
+backwards compatible with every earlier brief on disk.
 
 ## What you do (any brief)
 

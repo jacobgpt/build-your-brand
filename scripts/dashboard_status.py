@@ -66,6 +66,17 @@ def main() -> int:
                 for p in runs_dir.glob("*.json")
             ) if runs_dir.exists() else False
         ),
+        # Lesson 10: any of the three engine outputs on disk.
+        "grow": (
+            ROOT.joinpath("records/ads").exists()
+            and any(ROOT.joinpath("records/ads").glob("*/ad-concepts.md"))
+        ) or (
+            ROOT.joinpath("records/email").exists()
+            and any(ROOT.joinpath("records/email").glob("*/emails.md"))
+        ) or (
+            ROOT.joinpath("records/content").exists()
+            and any(ROOT.joinpath("records/content").glob("*/calendar.md"))
+        ),
         # Lesson 9: no new artifact of its own — done once everything
         # upstream is done.
         "done": False,  # computed below

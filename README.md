@@ -27,6 +27,7 @@ directly:
 | 7 | `/build:07-website` | Copy-first, design.md-driven, hero-aware site |
 | 8 | `/build:08-assets` | A typed creative brief (Aphrodite), gated production (Hephaestus) |
 | 9 | `/build:09-done` | Review everything, the pattern behind it — and ship the site live if you want (gated, zero-cost default) |
+| 10 | `/build:10-grow` | The engines: research-mined ads through the gate, a belief-mapped email sequence, a rendered content batch |
 
 Full lesson text lives in `course-copy.md`.
 
@@ -72,7 +73,16 @@ agent harness.
                           (story + book) and brand-guide.pdf via headless
                           Chrome
   aphrodite-direction/    one-line idea -> typed creative_brief.json
-                          (never picks a tool/model)
+                          (never picks a tool/model; asset_type-aware:
+                          general/poster/hero-still/hero-video/ad-plate)
+  ad-factory/             research-mined ad angles -> Meta-ready copy
+                          bank -> gated text-free plates + brand-locked
+                          HTML overlay (never image-model text)
+  email-sequence/         belief-mapped 5-7 email arc, A/B subjects,
+                          inline-style HTML templates, render-verified
+  content-engine/         pillars + sourced ideas -> carousels built
+                          as HTML and rendered to PNG + captions +
+                          2-week calendar
   hephaestus-production/  validated brief -> approval gate -> real
                           Higgsfield CLI build -> asset + dated run record.
                           Also handles hero-still and hero-video briefs

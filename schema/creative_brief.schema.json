@@ -46,12 +46,32 @@
     },
     "aspect_ratio": {
       "type": "string",
-      "enum": ["1:1", "16:9", "9:16", "4:5"]
+      "enum": [
+        "1:1",
+        "16:9",
+        "9:16",
+        "4:5"
+      ]
+    },
+    "asset_type": {
+      "type": "string",
+      "enum": [
+        "general",
+        "poster",
+        "hero-still",
+        "hero-video",
+        "ad-plate"
+      ],
+      "description": "What kind of asset this brief produces. Drives Hephaestus's post-build routing (e.g. ad-plate = text-free background plate for the ad overlay; hero-still copies to fixed hero paths).",
+      "default": "general"
     },
     "ad_copy": {
       "type": "object",
       "description": "The actual text that must render ON the asset. A static ad without copy is not a static ad — this is not optional for ad formats. Set has_copy false only for pure product/mood photography with no on-image text (e.g. a reference plate).",
-      "required": ["has_copy", "headline"],
+      "required": [
+        "has_copy",
+        "headline"
+      ],
       "properties": {
         "has_copy": {
           "type": "boolean",
@@ -78,13 +98,17 @@
     },
     "must_preserve": {
       "type": "array",
-      "items": {"type": "string"},
+      "items": {
+        "type": "string"
+      },
       "minItems": 1,
       "description": "Load-bearing elements. Changing these breaks the idea. When has_copy is true, must include at least one entry about the headline staying legible/spelled correctly/unobstructed."
     },
     "forbidden": {
       "type": "array",
-      "items": {"type": "string"},
+      "items": {
+        "type": "string"
+      },
       "description": "Elements that would actively damage the idea. May be empty."
     }
   },
