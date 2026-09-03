@@ -71,7 +71,8 @@ answer in your own words, as much or as little as you like:
 Don't have perfect answers? Good enough is fine — the research fills
 the gaps. Your answers are written to
 `records/brands/<brand_id>/intake.md` before anything else happens:
-every later step reads what YOU said, not a guess.
+every later step reads what YOU said. Guessing is what produces the
+generic output you've seen everywhere else.
 
 > **ACTION:** Answer the four questions. When `intake.md` exists with
 > your answers in it, type `1`.
@@ -95,7 +96,7 @@ Now the real work:
 claude -p "Use brand-foundation to build a brand foundation for the brand I described in intake.md"
 ```
 
-Real web search first — this is a proper dossier, not a quick pass:
+Real web search first, and it runs long. The dossier needs to reach
 a ~3,000-word deepresearch.md with a per-competitor teardown (visual
 language, type, palette, positioning, pricing, weaknesses), the
 category landscape and its openings, 20+ verbatim customer quotes
@@ -188,7 +189,7 @@ confidently wrong. Redo it here.
 - Your interview answers on record (`intake.md`)
 - A ready-to-paste AI copywriter prompt (`copywriter-prompt.md`) —
   drop it into any AI assistant and every piece of copy it writes is
-  grounded in your brand, not generic AI copy
+  grounded in your brand so nothing it writes comes out generic
 - A ~3,000-word sourced dossier: competitor teardown (visual +
   strategic), category landscape, 20+ verbatim customer quotes, proof
   points, mechanism opportunities

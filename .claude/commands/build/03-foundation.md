@@ -30,8 +30,8 @@ THE CONTRACT
 ## The agent proposes, you decide
 
 The `brand-foundation` run from Lesson 2 already wrote all nine files
-to `records/brands/<brand_id>/`. This lesson is about verifying and
-owning the contract, not building anything new.
+to `records/brands/<brand_id>/`. This lesson is about verifying the
+contract and making it yours. Nothing new gets built here.
 
 ---
 
@@ -96,7 +96,8 @@ former. "Beans that arrive when you're actually running low — not
 when a calendar says so" is the latter.
 
 > **ACTION:** Read the brand book. Edit anything that isn't you.
-> Type `1` when it reads like your brand, not a brand.
+> Type `1` when every line sounds like something you would actually
+say about your own business.
 
 ```
 ┌─────────────────────────────────────────────────┐

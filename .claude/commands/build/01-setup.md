@@ -53,8 +53,8 @@ machine, in files you can inspect.
 - One finished on-brand asset, plus a rejection record proving the
   gate works
 
-Owned, not rented: files on your machine, in a structure you can
-audit.
+Everything lands as files on your machine, in a structure you can
+audit — nothing lives inside a chat you'll never reopen.
 
 Nine lessons, one at a time:
 

@@ -33,8 +33,8 @@ Markdown files are raw material. A brand guide is the thing you send
 someone — a designer, a client, a collaborator — that answers their
 questions before they ask.
 
-And it isn't a wall of text. It's a book you scroll: every rule
-**shown**, not just stated.
+The format matters: a book you scroll, with every rule **shown**
+rendered on the page.
 
 ---
 
@@ -101,7 +101,7 @@ brand instead of describing it.
 
 ---
 
-## STEP 3 — Verify with your eyes, not the exit code
+## STEP 3 — Verify by looking at the pages
 
 **Don't assume the export worked because the command exited zero.**
 Check the file size:
@@ -125,7 +125,7 @@ Then read the HTML and the PDF both, and hold it to this:
 - **Real quotes** — are the customer quotes verbatim ones from
   `deepresearch.md` with sources, or invented?
 - **The honesty panel** — does "what we never claim" name real gaps
-  (no pricing set, no measured results yet), not generic hedging?
+  (no pricing set, no measured results yet)? Generic hedging means the panel isn't doing its job.
 - **The voice test** — read the story aloud; does it sound like YOUR
   brand, or like a brand?
 - **The stranger test** — hand the HTML to someone (or imagine
@@ -143,7 +143,7 @@ Anything off — say exactly what, and re-export.
 ```
 ┌─────────────────────────────────────────────────┐
 │  ACHIEVEMENT UNLOCKED                            │
-│  Brand book verified — seen, not assumed         │
+│  Brand book verified by looking         │
 └─────────────────────────────────────────────────┘
 ```
 

@@ -103,8 +103,8 @@ where the real decision lives.
 ## STEP 3 — Specific beats vague
 
 Check the `design.md` that landed. If any line in it could describe two different brands, it isn't
-finished — tighten it now. `#1B4B8F` is a decision; "warm blue" is
-not. Every colour, font, and word must earn its place — if you can't
+finished yet. Tighten it now. `#1B4B8F` is a decision. "Warm blue" leaves the model
+guessing. Every colour, font, and word must earn its place — if you can't
 say which research line or interview answer forced it, cut it.
 
 > If you already have a `design.md` from a different brand at the
@@ -129,7 +129,7 @@ say which research line or interview answer forced it, cut it.
 **What you have now:**
 - A `design.md` at the repo root: exact palette with hex + roles,
   named fonts, USE/AVOID voice, component rules, mood
-- A direction you chose from evidence, not a default
+- A direction you chose yourself, with the evidence for it on record
 
 **Next lesson:** `/build:05-guide` — turn it into a scrollable visual
 brand book.

@@ -54,10 +54,10 @@ between marketing a real brand and impersonating one.
 
 ### Why ads fail the naive way
 
-Two ways AI ads go wrong: the angles are generic ("quality matters")
-because they were imagined, not mined from research. And the image
-model renders the text — garbled headlines, fake logos, the trash
-look. This engine fixes both: angles mined from YOUR research, and
+Two ways AI ads go wrong. First: the angles come from imagination, so
+they say nothing ("quality matters"). Second: the image model renders
+the text, which is where garbled headlines and fake logos come
+from. This engine fixes both: angles mined from YOUR research, and
 all type overlaid in post as brand-locked HTML, never generated.
 
 ### STEP 1 — Angles and the copy bank (free, your review)
@@ -80,7 +80,7 @@ Read and edit this file. It's your campaign's source of truth.
 ```
 ┌─────────────────────────────────────────────────┐
 │  ACHIEVEMENT UNLOCKED                            │
-│  Angles mined from research, not imagination     │
+│  Angles mined from the research                   │
 └─────────────────────────────────────────────────┘
 ```
 
@@ -103,7 +103,8 @@ Two layers, and this is the anti-trash trick:
    screenshotted to PNG. Crisp type every time.
 
 **Then judge it:** copy legible, palette exact, no garbled text.
-Weak plate = new plate brief, not a patched overlay.
+Weak plate? Write a new plate brief and rebuild. Patching the
+overlay hides the problem instead of fixing it.
 
 > **ACTION:** Statics judged — every one legible and on-palette.
 > Type `1`.
@@ -178,9 +179,9 @@ claude -p "Use content-engine to build a content batch for <brand_id>"
    Your review first.
 2. **Carousels** — the best 3-4 built as slide-by-slide HTML in
    your EXACT design tokens and rendered to PNG at 1080×1350.
-   These aren't instructions — they're finished, postable images.
-   Fonts-actually-loaded is verified by looking at the render, not
-   assumed.
+   These are finished, postable images. The renders get checked
+   that the fonts actually loaded — headless Chrome fails silently
+   on web fonts.
 3. **Captions + calendar** — per-asset captions and a balanced
    2-week calendar that starts with assets that already exist.
 

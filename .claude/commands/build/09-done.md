@@ -50,7 +50,7 @@ python3 scripts/dashboard_status.py
 ```
 
 `http://localhost:8787/dashboard.html` now shows it confirmed against
-your real files, not self-reported status.
+your real files on disk.
 
 > **ACTION:** Run the status check. Dashboard matches what's on
 > disk? Type `1`.
@@ -68,8 +68,8 @@ your real files, not self-reported status.
 
 ## STEP 2 — Ship it (optional but do it)
 
-A brand that isn't public is a document, not a brand. If you want the
-site on a real URL now, Claude can deploy it — the site is a single
+An unshipped brand stays a private document. If you want the
+site on a live URL, Claude can deploy it — the site is a single
 static `index.html` (+ assets), so any static host takes it as-is.
 Claude picks the path based on what's on your machine:
 
@@ -130,7 +130,7 @@ platform's normal free/paid tiers apply.
 
 ---
 
-## STEP 3 — The pattern, not the parts
+## STEP 3 — The pattern behind the parts
 
 The reusable thing here isn't Aphrodite and Hephaestus specifically.
 It's the shape: split the decision from the execution, type the
@@ -177,12 +177,12 @@ record instead of a highlight reel.
 **Three concrete next steps, in order:**
 
 1. **Ship the site.** You did that in STEP 2 — or you can, whenever
-   you're ready. A brand that isn't public is a document, not a
-   brand.
+   you're ready. An unshipped brand stays a private document.
 2. **Run the engines.** `/build:10-grow` — ads, email, and content,
    all reading this same foundation. That's how the brand shows up.
 3. **Run the course on your real brand.** Start at
    `/build:02-research` with your own business. Faster this time —
    you know the pattern.
 
-The brand you built here was the exercise. Yours is the point.
+You built this brand to learn the moves. The real run starts when
+you do it for yours.

@@ -51,7 +51,7 @@ This reads your foundation and folds positioning, audience, tone,
 Open the resulting `records/briefs/<brief_id>.json`. It's typed JSON,
 not prose — every field is a slot the next skill reads directly, so a
 vague `placement` or missing `must_preserve` entry becomes a real
-production bug, not just a stylistic nitpick.
+production bug the moment it reaches the build.
 
 **The brief quality bar:** read it as the image model would. If any
 field could produce two different images, tighten it now — "a
@@ -88,12 +88,13 @@ claude -p "Use hephaestus-production to build the brief at records/briefs/<brief
 
 `scripts/approval_gate.py` prints the brief and asks
 `Approve build? [y/N]` live in the terminal. Read it properly, then
-type `y` yourself — that's the actual gate, not decoration. This
+type `y` yourself — the build waits on your answer, nothing else.
+This
 step **spends real credits**, so check the cost before approving. On
 approve, the real Higgsfield CLI builds it, downloads to
 `records/assets/`, and a dated record writes to `records/runs/`.
 
-**Then actually look at the result like a judge, not a customer.**
+**Then actually look at the result and judge it hard.**
 Does it obey every `must_preserve`? Does it break any `forbidden`?
 Zoom in and check. A clean exit code isn't proof the image is right
 — you are the proof step. If it breaks a rule, that's a rebuild
@@ -120,8 +121,8 @@ Run STEP 2 again with any brief — and this time type anything other
 than `y`. Open the resulting record in `records/runs/`: the rejection
 is on file too, dated, with no asset produced and no credits spent.
 
-A record that only contains what worked isn't a record, it's a
-highlight reel.
+A record holding only the wins is a highlight reel. The rejections
+are what make it a real record.
 
 > **ACTION:** One rejection on file in `records/runs/`. Type `1`.
 
@@ -146,8 +147,7 @@ of stack traces:
 - **Content filter** (false-positive on brand names) → re-run
   `aphrodite-direction` dropping the specific brand/trademark name
 
-A raw Python traceback instead of one of these is a real bug, not a
-normal failure — worth digging into rather than just retrying.
+A raw Python traceback instead of one of these is a real bug. Normal failures look like the list above; — worth digging into rather than just retrying.
 
 ---
 

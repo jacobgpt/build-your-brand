@@ -73,8 +73,8 @@ typing `y`. Read the brief on screen, then approve. Lands at
 `records/assets/hero-still.png` + `hero-poster.jpg`, with a dated run
 record in `records/runs/`.
 
-**Judge it like an art director, not a customer.** A "fine" still
-is a bad still. Zoom in: are the colours exactly your palette hex?
+**Judge it like an art director would.** A "fine" still is a bad
+still. Zoom in: are the colours exactly your palette hex?
 Is the mood your `design.md` mood, or the model's default mood? Is
 there fabricated text anywhere?
 
