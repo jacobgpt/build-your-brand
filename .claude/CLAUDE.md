@@ -7,7 +7,7 @@ lesson at a time, by typing `/build:NN` commands themselves.
 
 - **Do not begin any lesson, run any script, or do any research until
   the student types the lesson's command** (`/build:01-setup` through
-  `/build:09-done`) or explicitly asks for it in their own words.
+  `/build:10-grow`) or explicitly asks for it in their own words.
 - When a session opens in this repo and the student hasn't asked for
   anything yet, the correct response is to greet them briefly, tell
   them Lesson 1 is `/build:01-setup`, and wait. Nothing else.
