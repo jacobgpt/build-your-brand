@@ -1,14 +1,8 @@
 ---
-description: "Build Your Brand — Lesson 4: The brand guide. Build brand-guide.html + PDF, screenshot-verify the export."
+description: "Build Your Brand — Lesson 4: The brand guide. Build brand-guide.html + PDF, verify the export by looking at it."
 ---
 
 # /build:04-guide
-
-> **Repo-reality note:** the `brand-guide` skill exists and has been
-> reviewed, but has NOT yet been run end to end against a real brand in
-> this repo. Run it for real here — this lesson doubles as that
-> verification. If it breaks, that's real signal, fix the skill before
-> filming, don't paper over it.
 
 1. Confirm a validated foundation exists (`/build:03-foundation`).
 
@@ -16,12 +10,12 @@ description: "Build Your Brand — Lesson 4: The brand guide. Build brand-guide.
    ```
    claude -p "Use brand-guide to build the guide for <brand_id>"
    ```
-   Reads the foundation documents and writes one self-contained
+   This reads your foundation documents and writes one self-contained
    `brand-guide.html` — Part I the story (what this brand believes, who
    it's for, what it's against), Part II the book (positioning, audience,
    voice of the customer with real quotes from `deepresearch.md`, colour
    with hex codes, type, components, messaging library, and a "what we
-   never claim" panel for anything UNVERIFIED). Then exports
+   never claim" panel for anything UNVERIFIED). Then it exports
    `brand-guide.pdf` via headless Chrome.
 
 3. **Don't assume the export worked because the command exited zero.**
@@ -33,9 +27,9 @@ description: "Build Your Brand — Lesson 4: The brand guide. Build brand-guide.
    ```
    pdftoppm -r 100 -png brand-guide.pdf /tmp/brand-guide-check
    ```
-   and view the resulting PNG(s) — via `vision_analyze` if working through
-   an agent, or just open the PNG yourself. Confirm text isn't cut off,
-   colours rendered, no blank pages.
+   and view the resulting PNG(s). Confirm text isn't cut off, colours
+   rendered, no blank pages. A zero exit code is not proof the PDF is
+   readable.
 
 4. Read the HTML and the PDF both. Are the customer quotes real ones from
    `deepresearch.md`, or invented? Does the "what we never claim" panel

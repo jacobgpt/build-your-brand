@@ -11,18 +11,18 @@ description: "Build Your Brand — Lesson 7: The website. Copy-first, design.md-
    ```
    claude -p "Use brand-website to build a website for the <brand_id> brand"
    ```
-   Reads the foundation, `necessary-beliefs.md` (one section per belief —
-   verified in testing), `design.md` if present (exact values win over
-   deriving from `visual_pillars`), and the hero from `/build:06-hero` if
-   it exists:
-   - `assets/hero.mp4` + `hero-poster.jpg` → autoplay muted looping video
-     background, verified working (200s, correct video tag) in testing
-   - no hero assets → falls back to a CSS-only hero built from `design.md`,
-     also verified working — no broken references, no 404s
+   This reads the foundation, `necessary-beliefs.md` (one section per
+   belief), `design.md` if present (exact values win over deriving from
+   `visual_pillars`), and the hero from `/build:06-hero` if you built it:
+   - `assets/hero.mp4` + `hero-poster.jpg` present → autoplay muted
+     looping video background
+   - no hero assets → a CSS-only hero built from `design.md` instead, no
+     broken references
 
-   > If the skill stops to ask about the CTA (no pricing/backend set yet),
-   > answer it — a waitlist `[FILL: connect to real signup]` placeholder is
-   > fine pre-launch. It will not invent a CTA destination.
+   > If the skill stops to ask about the CTA (no pricing/backend set
+   > yet), answer it — a waitlist `[FILL: connect to real signup]`
+   > placeholder is fine pre-launch. It won't invent a CTA destination
+   > for you.
 
 3. Serve it from the **repo root** (not the site's own folder — it
    references shared assets by relative path):
@@ -33,9 +33,10 @@ description: "Build Your Brand — Lesson 7: The website. Copy-first, design.md-
 
 4. Read it as a stranger would:
    - Does the first line say what this is?
-   - Is there a claim on the page you couldn't back up if someone asked?
-   - No invented testimonials, stats, or logos — if you see one, that's a
-     bug in the build, flag it.
+   - Is there a claim on that page you couldn't back up if someone asked?
+   - Any invented testimonial, stat, or logo means something went wrong
+     upstream — go back and check the source documents rather than
+     publishing it.
 
 **Done when:** site running locally, hero renders (video or fallback), no
 unprovable claims.
