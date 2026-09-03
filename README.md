@@ -20,9 +20,9 @@ directly:
 |---|---|---|
 | 1 | `/build:01-setup` | Confirm both CLIs authenticated, skills visible, dashboard live |
 | 2 | `/build:02-research` | Real web research, sourced — deepresearch.md lands first |
-| 3 | `/build:03-foundation` | Validate + review the seven-file brand contract |
-| 4 | `/build:04-guide` | brand-guide.html + PDF, screenshot-verified |
-| 5 | `/build:05-design` | design.md — exact hex, fonts, voice every build inherits |
+| 3 | `/build:03-foundation` | Validate + review the brand contract |
+| 4 | `/build:04-design` | design.md — pick a visual direction from real options, then lock exact hex, fonts, voice |
+| 5 | `/build:05-guide` | brand book (HTML + PDF) — scrollable, visual, screenshot-verified |
 | 6 | `/build:06-hero` | Hero still through the gate, film-safety-checked (video optional) |
 | 7 | `/build:07-website` | Copy-first, design.md-driven, hero-aware site |
 | 8 | `/build:08-assets` | A typed creative brief (Aphrodite), gated production (Hephaestus) |
@@ -57,14 +57,18 @@ agent harness.
 
 ```
 .claude/skills/
-  brand-foundation/       real web research -> seven files per brand:
-                          deepresearch.md, avatar-sheet.md, offerbrief.md,
+  brand-foundation/       interview (intake.md) -> real web research ->
+                          nine files per brand:
+                          copywriter-prompt.md, deepresearch.md,
+                          avatar-sheet.md, offerbrief.md,
                           necessary-beliefs.md, project-knowledge.md
                           (VERIFIED/UNVERIFIED split), brand-book.md,
                           brand_foundation.json (authoritative schema)
   design-tokens/          foundation + brand book -> design.md: exact hex,
                           named fonts, voice USE/AVOID, component rules
-  brand-guide/            foundation + design.md -> brand-guide.html
+  brand-guide/            foundation + design.md -> the visual brand
+                          book: brand-guide.html (scrollable, with
+                          swatches, type specimens, components) + PDF
                           (story + book) and brand-guide.pdf via headless
                           Chrome
   aphrodite-direction/    one-line idea -> typed creative_brief.json
@@ -103,7 +107,7 @@ records/                  everything the skills write, gitkept empty dirs
 
 - **Brand Foundation** (once per brand) does real research first, then
   reasons about the customer, the offer, the beliefs someone must accept,
-  and separates VERIFIED claims from UNVERIFIED ones — writing seven files
+  and separates VERIFIED claims from UNVERIFIED ones — writing nine files
   plus a validated `brand_foundation.json` that stays authoritative; the
   six `.md` files are the human layer and must not contradict it.
 - **Design Tokens** distills the brand book into `design.md` — specific

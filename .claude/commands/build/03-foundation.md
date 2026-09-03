@@ -1,32 +1,112 @@
 ---
-description: "Build Your Brand — Lesson 3: Brand foundation. Validate the six-document + JSON contract, review, edit if wrong."
+description: "Build Your Brand — Lesson 3: Brand foundation. Validate the contract, review, edit if wrong."
 ---
 
 # /build:03-foundation
 
-The `brand-foundation` run from `/build:02-research` already wrote all
-seven files to `records/brands/<brand_id>/`. This lesson is about
-verifying and owning the contract, not building anything new.
+```ansi
+     ██  [38;5;208m█████[0m  [38;5;208m██[0m  ██████  ██████  ██████
+     ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
+     ██ [38;5;208m███████[0m [38;5;208m██[0m ██      ██    ██ ██████
+██   ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
+ █████  [38;5;208m██   ██[0m [38;5;208m██[0m  ██████  ██████  ██████
 
-1. Validate the JSON:
-   ```
-   python3 scripts/validate_brief.py records/brands/<brand_id>/brand_foundation.json --schema brand_foundation
-   ```
-   Must print `VALID`. If it doesn't, fix the JSON or re-run
-   `brand-foundation` until it does — don't move on with an unvalidated
-   foundation.
+          T H E   C R E A T I V E   A R C H I T E C T
+```
 
-2. Open `brand-book.md` and read it. Check:
-   - the positioning is actually yours, not something a competitor could
-     paste onto their own business unchanged
-   - the `avoid` list has teeth — "we never show a person smiling at a
-     laptop" beats "we avoid clichés"
+```
+──────────────────────────────────────────────────
+LESSON 3 · BRAND FOUNDATION
+THE CONTRACT
+──────────────────────────────────────────────────
+```
 
-3. It's your file — edit it by hand if anything's wrong. The agent
-   proposes, you decide. If you hand-edit `brand-book.md`, mirror any
-   real change in `brand_foundation.json` too: the JSON is what every
-   later skill actually reads, so it needs to stay in sync with the
-   readable version.
+> **Timing**     ~10 minutes
+> **Goal**       A validated brand contract, reviewed and edited where you disagreed
+> **Progress**   `[██░░░░░░░░] 2/9 · starting`
 
-**Done when:** `VALID`, brand book read, edited if needed.
-**Next:** `/build:04-guide`
+---
+
+## The agent proposes, you decide
+
+The `brand-foundation` run from Lesson 2 already wrote all nine files
+to `records/brands/<brand_id>/`. This lesson is about verifying and
+owning the contract, not building anything new.
+
+---
+
+## STEP 1 — Validate the JSON
+
+The JSON is what every later skill actually reads — so it goes through
+a validator first:
+
+```bash
+python3 scripts/validate_brief.py records/brands/<brand_id>/brand_foundation.json --schema brand_foundation
+```
+
+Must print `VALID`. If it doesn't, fix the JSON or re-run
+`brand-foundation` until it does — never move on with an unvalidated
+foundation.
+
+> **ACTION:** Run the validator. `VALID` on screen? Type `1`.
+
+```
+┌─────────────────────────────────────────────────┐
+│  ACHIEVEMENT UNLOCKED                            │
+│  Contract validated                              │
+└─────────────────────────────────────────────────┘
+```
+
+> **Progress**  `[██░░░░░░░░] 2/9 · Step 1/2`
+
+---
+
+## STEP 2 — Review every file, edit what's wrong
+
+Read them all. This is where a wrong assumption is cheap to fix and
+expensive later.
+
+- **`avatar-sheet.md`** — does the customer sound like someone you
+  recognize? Are the pains the ones you hear on sales calls? Any
+  pain stated as fact that's actually just inference?
+- **`offerbrief.md`** — is the promise one a real customer would
+  repeat back to you? Is the mechanism ownable, or could a
+  competitor claim it tomorrow? Pricing matches what you said?
+- **`necessary-beliefs.md`** — could you sell someone who believed
+  these six things? If any belief is something everyone already
+  believes, it isn't earning its place.
+- **`brand-book.md`** — is the positioning actually yours, not
+  something a competitor could paste onto their own business
+  unchanged? Does the `avoid` list have teeth — "we never show a
+  person smiling at a laptop" beats "we avoid clichés"?
+- **`deepresearch.md`** — spot-check two or three cited claims. Do
+  the URLs actually say what the file says they say?
+
+It's your files — edit by hand where anything's wrong. The agent
+proposes, you decide. If you hand-edit `brand-book.md`, mirror any
+real change in `brand_foundation.json` too: the JSON is what every
+later skill actually reads, so it needs to stay in sync with the
+readable version.
+
+> **ACTION:** Read the brand book. Edit anything that isn't you.
+> Type `1` when it reads like your brand, not a brand.
+
+```
+┌─────────────────────────────────────────────────┐
+│  ACHIEVEMENT UNLOCKED                            │
+│  Foundation reviewed, owned                       │
+└─────────────────────────────────────────────────┘
+```
+
+> **Progress**  `[███░░░░░░░] 3/9 · Lesson 3 complete`
+
+---
+
+## DONE
+
+**What you have now:**
+- A validated `brand_foundation.json` — the contract every later skill reads
+- A brand book you've actually read and edited where needed
+
+**Next lesson:** `/build:04-design` — choose your visual direction from
+real options, and lock it into `design.md`.

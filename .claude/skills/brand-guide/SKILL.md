@@ -24,12 +24,27 @@ can open and read, PDF they can send.
 and tell the user to run `brand-foundation` first. If more than one brand
 exists, ask which.
 
-`design.md` at the repo root is **optional but preferred** — if present, use
-its exact palette/type/component values for Part II's rulebook instead of
-re-deriving from `visual_pillars`. If absent, derive as `brand-website` does
-and tell the user a `design-tokens` pass would sharpen this guide.
+`design.md` at the repo root is **required** — the guide is built *after*
+colour and type are settled there, and Part II shows off those exact
+values. If it's absent, stop and tell the user to run `design-tokens`
+first (`/build:04-design`).
 
 ## What you do
+
+### Step — Brand inputs (ask before building)
+
+Before designing, ask the user:
+
+1. **Logo** — do they have one? Have them drop it in
+   `records/brands/<brand_id>/assets/`. Light or dark? Transparent?
+   Wordmark? If none exists, render a typographic wordmark lockup
+   from `design.md` values — never invent an image file.
+2. **Photography** — any founder, product, or environment shots to
+   use? Drop in `assets/`. If none, skip photography sections —
+   don't fabricate placeholder imagery.
+3. **Mood check** — the three words from the interview that describe
+   the brand's feel, plus one or two sites whose look they admire
+   (reference only — never copy).
 
 ### Step 0 — Read everything before writing anything
 
@@ -45,8 +60,8 @@ and tell the user a `design-tokens` pass would sharpen this guide.
   `## VERIFIED` / `## UNVERIFIED` split directly. Every UNVERIFIED item
   there is mandatory input to the "what we never claim" panel (Step 2.4) —
   don't re-derive that list from scratch when this file already states it.
-- `design.md` at the repo root, if it exists — exact palette/type/component
-  values for Part II.
+- `design.md` at the repo root — required; exact palette/type/component
+  values rendered throughout Part II.
 
 ### Step 1 — Part I: The Story
 
@@ -80,24 +95,68 @@ that doesn't trace to one:
      clients who haven't agreed, before/after stats with no source).
      Anything flagged UNVERIFIED anywhere in the research or foundation
      goes here, named specifically, not softened into "we're honest."
-5. **Colour** — exact hex + role from `design.md` if present; else derive
-   from `visual_pillars` and say so.
-6. **Type** — exact font names + usage rules from `design.md` if present;
-   else derive and say so.
-7. **Components** — button/card/spacing rules from `design.md` if present;
-   else a short derived set from the pillars.
+5. **Colour** — exact hex + role from `design.md`, rendered as swatches.
+6. **Type** — exact font names + usage rules from `design.md`, rendered as
+   live specimens.
+7. **Components** — button/card/spacing rules from `design.md`, rendered as
+   working components.
 8. **Messaging library** — 4-8 real example lines (headline-length, in the
    brand's `tone`, using the voice USE words from `design.md` if present)
    that a copywriter could lift directly. These are examples, not claims —
    don't put a specific number or stat in one unless it's sourced.
+9. **Atmosphere & imagery** — what the brand's world looks like:
+   photography style (or none), lighting, textures, the settings
+   the brand lives in — derived from `design.md`'s mood and the
+   foundation's visual pillars. If the user provided photos, name
+   how they're used; if not, describe the photographic direction
+   without inventing specific images.
 
-### Step 3 — Build `brand-guide.html`
+### Step 3 — Build `brand-guide.html`: a scrollable visual brand book
 
 One self-contained file at the **repo root**: `brand-guide.html`. Inline
-CSS, no external JS framework. Style it using the same palette/type as
-`design.md` (if present) so the guide itself demonstrates the brand instead
-of contradicting it. Two visually distinct parts (Story, then Book), a
-table of contents linking to Book subsections.
+CSS, no external JS framework. Style it using the exact palette/type from
+`design.md` so the guide itself demonstrates the brand instead of
+contradicting it.
+
+This is NOT a document of prose blocks — it's a **brand book you scroll
+through**, where every rule is shown visually, not just stated:
+
+- **Hero/cover section** — brand name, positioning line, in the brand's
+  own type and palette.
+- **Sticky table of contents** or a top nav linking to every section
+  below.
+- **Palette section** — a row of large colour swatches, each rendered in
+  its actual colour with name + hex + role printed on/under it. The
+  student sees the palette, not a list of hex codes.
+- **Type specimens** — the display and body font families actually
+  rendered at heading and body sizes, with the usage rule next to each
+  ("this face, uppercase tracked, every H1").
+- **Components section** — a real rendered button, card, and section
+  rule built live from the component rules in `design.md`, next to the
+  rule text. Demo, not description.
+- **Voice section** — USE and AVOID as two side-by-side columns of
+  rendered example words, not a comma list.
+- **Messaging library** — the example lines rendered as they'd look in
+  the brand's type, not as plain bullets.
+- **Logo lockup** — if the foundation/intake references a wordmark or
+  logo, render it typographically from `design.md` values; never invent
+  an image file.
+
+Two visually distinct parts (Story, then Book), every Book section both
+**showing** the element and **stating** the rule beside it. Scroll-friendly:
+one long page, clear section anchors, generous spacing per `design.md`.
+
+### Step 3.5 — Capture a cover screenshot
+
+Screenshot the top of `brand-guide.html` with headless Chrome:
+
+```
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+  --headless --disable-gpu --screenshot=brand-guide-cover.png \
+  --window-size=1280,900 "file://$(pwd)/brand-guide.html"
+```
+
+(On Linux, substitute the system `google-chrome`/`chromium`.)
 
 ### Step 4 — Export `brand-guide.pdf`
 

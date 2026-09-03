@@ -48,10 +48,10 @@ def main() -> int:
         # Lesson 2/3: brand-foundation's seven-file output, per brand.
         "research": has_files(brands_dir, "*/deepresearch.md"),
         "foundation": has_files(brands_dir, "*/brand_foundation.json"),
-        # Lesson 4: brand-guide HTML + PDF.
-        "guide": guide_html.exists() and guide_pdf.exists(),
-        # Lesson 5: design.md at the repo root.
+        # Lesson 4: design.md at the repo root.
         "design": design_md.exists(),
+        # Lesson 5: brand-guide HTML + PDF.
+        "guide": guide_html.exists() and guide_pdf.exists(),
         # Lesson 6: hero-still is the bar for "done" here — hero-video is
         # optional/unapproved-spend in this repo, so it's not required.
         "hero": has_files(assets_dir, "hero-still.png"),

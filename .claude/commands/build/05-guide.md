@@ -1,0 +1,155 @@
+---
+description: "Build Your Brand — Lesson 5: The brand guide. Build the scrollable visual brand book (HTML + PDF), verify the export by looking at it."
+---
+
+# /build:05-guide
+
+```ansi
+     ██  [38;5;208m█████[0m  [38;5;208m██[0m  ██████  ██████  ██████
+     ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
+     ██ [38;5;208m███████[0m [38;5;208m██[0m ██      ██    ██ ██████
+██   ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
+ █████  [38;5;208m██   ██[0m [38;5;208m██[0m  ██████  ██████  ██████
+
+          T H E   C R E A T I V E   A R C H I T E C T
+```
+
+```
+──────────────────────────────────────────────────
+LESSON 5 · THE BRAND GUIDE
+THE BOOK
+──────────────────────────────────────────────────
+```
+
+> **Timing**     ~15 minutes
+> **Goal**       A scrollable visual brand book in HTML and PDF, verified by looking at it
+> **Progress**   `[████░░░░░░] 4/9 · starting`
+
+---
+
+## Documents aren't a brand guide
+
+Markdown files are raw material. A brand guide is the thing you send
+someone — a designer, a client, a collaborator — that answers their
+questions before they ask.
+
+And it isn't a wall of text. It's a book you scroll: every rule
+**shown**, not just stated.
+
+---
+
+## STEP 1 — Brand inputs
+
+The build asks you three quick things — have answers ready:
+
+1. **Logo** — got one? Drop it in
+   `records/brands/<brand_id>/assets/`. No logo yet? The book renders
+   a typographic wordmark lockup from your `design.md` instead.
+2. **Photos** — any founder, product, or environment shots? Drop
+   them in `assets/` too. None is fine.
+3. **Mood** — your three words for the brand's feel, plus one or two
+   sites whose look you admire.
+
+> **ACTION:** Answers ready (or "skip"). Type `1`.
+
+```
+┌─────────────────────────────────────────────────┐
+│  ACHIEVEMENT UNLOCKED                            │
+│  Brand inputs ready                              │
+└─────────────────────────────────────────────────┘
+```
+
+> **Progress**  `[████░░░░░░] 4/9 · Step 1/3`
+
+---
+
+## STEP 2 — Build the brand book
+
+```bash
+claude -p "Use brand-guide to build the guide for <brand_id>"
+```
+
+This reads your foundation documents and `design.md`, and writes one
+self-contained scrollable `brand-guide.html`, then captures a cover
+screenshot and exports `brand-guide.pdf` via headless Chrome:
+
+- Part I — the story: what this brand believes, who it's for, what
+  it's against
+- Part II — the book, every rule rendered: palette as large colour
+  swatches with hex + role, type as live specimens at real sizes, a
+  real button and card built from your component rules, USE/AVOID
+  voice as side-by-side columns, a messaging library in your brand's
+  own type
+- An atmosphere & imagery section — the brand's photographic
+  direction
+- A "what we never claim" panel for anything UNVERIFIED
+
+The guide itself is styled in your palette — it demonstrates the
+brand instead of describing it.
+
+> **ACTION:** Run the build. When `brand-guide.html`,
+> `brand-guide-cover.png`, and `brand-guide.pdf` exist, type `1`.
+
+```
+┌─────────────────────────────────────────────────┐
+│  ACHIEVEMENT UNLOCKED                            │
+│  Brand book built                                │
+└─────────────────────────────────────────────────┘
+```
+
+> **Progress**  `[████░░░░░░] 4/9 · Step 2/3`
+
+---
+
+## STEP 3 — Verify with your eyes, not the exit code
+
+**Don't assume the export worked because the command exited zero.**
+Check the file size:
+
+```bash
+ls -la brand-guide.pdf
+```
+
+Should be well over 20KB. Then actually look at it:
+
+```bash
+pdftoppm -r 100 -png brand-guide.pdf /tmp/brand-guide-check
+```
+
+and view the resulting PNG(s). Confirm text isn't cut off, colours
+rendered, no blank pages. A zero exit code is not proof the PDF is
+readable.
+
+Then read the HTML and the PDF both:
+- Are the customer quotes real ones from `deepresearch.md`, or
+  invented?
+- Does the "what we never claim" panel name real gaps (no pricing
+  set, no measured results yet), not generic hedging?
+- Does the story sound like your brand, or like a brand?
+
+Anything off — say exactly what, and re-export.
+
+> **ACTION:** File size checked, pages rasterized and viewed, both
+> files read. Type `1` when it's clean.
+
+```
+┌─────────────────────────────────────────────────┐
+│  ACHIEVEMENT UNLOCKED                            │
+│  Brand book verified — seen, not assumed         │
+└─────────────────────────────────────────────────┘
+```
+
+> **Progress**  `[█████░░░░░] 5/9 · Lesson 5 complete`
+
+---
+
+## DONE
+
+**What you have now:**
+- A scrollable visual brand book (`brand-guide.html`) — palette,
+  type, components shown live, styled in your own design tokens
+- A cover screenshot and a PDF export you verified by actually
+  looking at them
+
+**Next lesson:** `/build:06-hero` — a hero image for the brand, built
+through the approval gate.

@@ -1,6 +1,6 @@
 ---
 name: brand-foundation
-description: Use when the user wants to build, define, or establish their brand from scratch before making any assets — e.g. "build my brand", "let's define my brand foundation", "I'm starting a new brand for X". Produces a structured brand_foundation.json that aphrodite-direction reads automatically for every future brief, so all assets come out on-brand instead of generic.
+description: Use when the user wants to build, define, or establish their brand from scratch before making any assets — e.g. "build my brand", "let's define my brand foundation", "I'm starting a new brand for X". Interviews the user first (who they are, what they're building, visual preferences, pricing), then does sourced competitor research, and produces a structured brand_foundation.json that aphrodite-direction reads automatically for every future brief, so all assets come out on-brand instead of generic.
 ---
 
 # Brand Foundation
@@ -11,22 +11,67 @@ session instead of weeks of back-and-forth. This is not a form-fill: reason
 about the input the way a strategist would, push back internally on generic
 answers, and only write down what's actually specific and defensible.
 
+## Interview first — never skip this
+
+Before any research or reasoning, interview the user. Ask your questions
+one at a time or in one clear list, and **wait for real answers** — never
+fill in a plausible default for them. You must get answers (or an explicit
+"I don't know / undecided") to at least these seven:
+
+1. **Who are you?** Background — what they've done, built, or sold
+   before, and what they want to be known for.
+2. **What are you building?** What it is, who it's for, why it's
+   different, what it refuses to look like. Two to four sentences.
+3. **Who exactly is it for?** The ideal customer — demographics plus a
+   one-line psychographic sketch if they know it.
+4. **What does it cost?** Price, range, or model (one-time,
+   subscription, bundle) — or an explicit "undecided."
+5. **Do you have an existing sales page, site, or ads?** If yes, get
+   the URL or have them drop the file into the repo.
+6. **Who are the top 2-3 competitors** they already know of?
+7. **The single biggest result** the customer wants, and the single
+   biggest fear or frustration they have — plus anything else worth
+   knowing (founder story, unique mechanism, testimonials, press).
+
+Plus one more that feeds Lesson 4: **how do they want it to feel?**
+Colour/type preferences, and any look they hate.
+
+**If they provided an existing sales page or site: audit it before
+researching.** Read it properly and write a written analysis of: hook
+strength, claim specificity, mechanism clarity, proof, objection
+handling, and call-to-action. Save that analysis at the TOP of
+`deepresearch.md` under `## Existing Sales Page Audit`.
+
+If the input is under ~2 sentences or too thin to research (see
+Boundaries), the interview is where you get the missing depth — extend
+it, don't proceed on a thin paragraph. Push back internally on generic
+answers ("premium quality" is not an answer to any of the seven).
+
+**Write `records/brands/<brand_id>/intake.md` first**, before anything
+else: the four questions and the user's answers, verbatim. Every later
+step reads this file — the customer description, pricing, and design
+preferences come from here, not from guessing.
+
 ## When this triggers
 
-The user describes their business/brand in a paragraph and wants a brand
-foundation established before (or instead of) making a specific asset. This
+The user describes their business/brand and wants a brand foundation
+established before (or instead of) making a specific asset. This
 runs ONCE per brand, not per asset — after it exists, `aphrodite-direction`
 picks it up automatically for every brief.
 
 ## Output layout
 
 Everything for one brand lives in **one directory**:
-`records/brands/<brand_id>/`, containing seven files:
+`records/brands/<brand_id>/`, containing nine files (intake + copywriter prompt + seven):
 
 ```
 records/brands/<brand_id>/
-  deepresearch.md          research dossier — market, competitors, real
-                            customer language, proof points. Sourced.
+  intake.md                the user's interview answers, written first
+  copywriter-prompt.md     ready-to-paste AI copywriter system prompt
+  deepresearch.md          research dossier — per-competitor visual/type/
+                            palette/positioning teardown, category
+                            pattern, real customer language, the opening.
+                            Sourced.
   avatar-sheet.md           the customer — pains, desires, beliefs,
                             objections, verbatim language
   offerbrief.md             product, promise, unique mechanism, proof,
@@ -51,49 +96,135 @@ Write each file **as it completes**, not all at the end — the user should
 see `deepresearch.md` land before you've even started reasoning about
 positioning.
 
-1. Read the user's description of their business, product, or brand. If it's
-   under ~2 sentences or too thin to research (see Boundaries), ask for more
-   before continuing.
+1. Read `intake.md` (written in the interview step). Everything below
+   reasons from it plus real research — never from guesses about the
+   user or their market.
 
 2. **Deep research first — do not skip this, and do not reason about the
-   brand before this file exists.** Use web search/fetch to actually look at
-   the real market:
-   - Search for 2-3 direct competitors or category leaders. Note what they
-     promise, how they look/sound, and where they're generic or weak.
-   - Search for how real customers in this space talk about the problem
-     (reviews, forums, social — whatever surfaces fastest). Pull a few actual
-     phrases, not paraphrases — real language beats invented language.
-   - Note anything timely (a trend, a common complaint, a gap) that makes a
-     specific angle defensible right now.
-   - Keep this proportionate — a fast, single-pass research step (5-10
-     minutes of searching, not an exhaustive dossier).
-   - **Write `records/brands/<brand_id>/deepresearch.md` now**, before doing
-     anything else: competitor notes, real customer language (quoted
-     verbatim), the opening you found. Cite sources (URLs) inline for every
-     claim. This file is the ONLY place external market facts get sourced —
-     everything downstream cites back to it, never re-sources independently.
+   brand before this file exists.** Use web search/fetch to actually look
+   at the real market. This is the highest-leverage step in the whole
+   pipeline — everything downstream inherits its quality — so do it
+   properly, not as a checkbox:
 
-3. **Write `avatar-sheet.md`** — the customer, built only from what
-   `deepresearch.md` actually contains plus direct inference from the user's
-   own description of who it's for:
-   - Pains, desires, beliefs, objections — each one either a direct quote
-     from `deepresearch.md` (attributed) or explicitly marked
-     `(inferred, not sourced)` if it's a reasonable inference with no direct
-     quote behind it. Never state an inferred pain/desire as if it were a
-     sourced fact.
-   - Verbatim language: pull actual phrases from `deepresearch.md`'s
-     customer-language section — do not paraphrase them here.
+   **Competitor teardown (3-5 direct competitors or category leaders).**
+   For each one, actually visit or research their site/presence and
+   record:
+   - **Visual language** — imagery style, photography vs illustration,
+     colour saturation, whitespace, overall feel
+   - **Type** — serif/sans/mono, weight, any distinctive typographic move
+   - **Palette** — actual dominant colours they use (approximate hex if
+     you can see them), accent colour
+   - **Positioning** — the promise they lead with, the words they
+     overuse, who they're talking to
+   - **Where they're weak** — generic, interchangeable, clichéd, or
+     neglected angles. This is the map of openings you'll use to present
+     the user real options later.
+   - A one-line "category pattern" synthesis at the end: what everyone
+     in this space looks like (e.g. "all five use warm serif + cream
+     backgrounds") — patterns are what a new brand can break.
+
+   Plus the strategic layer, not just the visual one, per competitor:
+   - **What they charge** and their offer structure, where findable.
+   - **What they get right** — copy, proof, mechanism — not just where
+     they're weak.
+   - **Category landscape**: how the category is positioned today,
+     where it's saturated, where the openings are, where it's heading.
+
+   **Customer language — deep, not a garnish.** Search Reddit, Amazon
+   reviews, YouTube comments, forums, and review sites for how real
+   customers talk about the problem AND the dream outcome. Pull 20+
+   actual phrases, verbatim, in blockquotes so later lessons can lift
+   them directly — paraphrases are worthless here. Alongside the
+   phrases, capture:
+   - **Failed solutions**: what have customers already tried? Why
+     didn't it work, in their words? What do they blame?
+   - **Fears**: what do they secretly fear is true about themselves
+     because the problem persists?
+   - **Dream outcomes**: what does life look like when it's solved —
+     the identity-level transformation, not just the feature win.
+
+   **Proof points.** Studies, certifications, founder credentials,
+   manufacturing/sourcing facts, anything in the category that lends
+   rock-solid credibility — captured, not invented.
+
+   **Unique mechanism opportunities.** What proprietary angle,
+   process, or framing could this brand claim and defend as "only
+   available here"?
+
+   **Timeliness.** Any trend, news, regulatory shift, or seasonal
+   driver that makes a specific angle defensible right now.
+
+   **Depth bar: this is a dossier, not a summary.** Minimum ~3,000
+   words of dense, structured research (H2/H3 sections, customer
+   quotes in blockquotes). Use web search/fetch liberally — many
+   queries, many sources. Cite URLs inline for EVERY claim. A thin
+   deepresearch.md fails the whole foundation: everything downstream
+   inherits its quality.
+   - **Write `records/brands/<brand_id>/deepresearch.md` now**, before
+     doing anything else, with these sections in order: Existing Sales
+     Page Audit (if one was provided), the per-competitor teardown
+     (visual + strategic), the category pattern, customer language
+     (verbatim blockquotes + failed solutions + fears + dream
+     outcomes), proof points, mechanism opportunities, the opening you
+     found. This file is the ONLY place
+     external market facts get sourced — everything downstream cites
+     back to it, never re-sources independently.
+
+3. **Write `avatar-sheet.md`** — the customer, in full. Build it from
+   what `deepresearch.md` actually contains plus direct inference from
+   the user's own description of who it's for, covering ALL of:
+   - **Identity**: archetypal name, age range, income, location/lifestyle,
+     occupation, day-to-day reality.
+   - **Psychographics**: core identity (how they see themselves), the
+     identity they aspire to, the identity they fear becoming, top
+     values, daily emotional state.
+   - **The problem, three layers deep**: surface pain (what they'd say
+     out loud), deeper pain (what they wouldn't admit at a dinner
+     party), identity-level pain (what the problem says about who they
+     are). How long they've had it, what it has cost them.
+   - **Failed solutions**: what they've tried, why it didn't work (in
+     their words), who they blame, what they secretly fear is true
+     about themselves because it failed.
+   - **Desired outcome**: surface want, deeper want, identity-level
+     transformation, life 6 months after it's solved.
+   - **Current beliefs** about the category, about solutions like
+     this, about themselves.
+   - **Objections**: top 5 ranked by likelihood, plus the single one
+     most likely to kill the sale.
+   - **Language patterns**: 10 verbatim phrases about the problem +
+     10 about the dream outcome, from research. Words they trust,
+     words they find salesy.
+   - **Where they are**: platforms they live on, authorities they
+     trust, communities, what they already buy in adjacent categories.
+
+   Every pain/desire/belief must be either a direct quote from
+   `deepresearch.md` (attributed) or explicitly marked `(inferred, not
+   sourced)`. Never state an inferred item as if it were sourced fact.
+   Do not leave any section blank — if the research doesn't cover
+   something, do additional targeted research to fill it in.
 
 4. **Write `offerbrief.md`** — product, promise, unique mechanism, proof,
-   pricing, built from the user's own input about their own product (this is
-   self-reported, not something you need to externally source — the user
-   describing their own mechanism is not a claim requiring proof) plus the
-   competitive contrast from `deepresearch.md`:
-   - Product / promise / mechanism: from the user's description.
+   pricing, built from the user's interview answers in `intake.md` about
+   their own product (this is self-reported, not something you need to
+   externally source — the user describing their own mechanism is not a
+   claim requiring proof) plus the competitive contrast from
+   `deepresearch.md`:
+   - Product / promise / mechanism: from `intake.md`.
    - Proof: only real, checkable claims (from the user's input or
      `deepresearch.md`) — no invented stats or results.
-   - Pricing: only if the user actually stated a price or model. If they
-     didn't, write "Not yet specified" — never invent a number, tier, or
+   - **Unique mechanism**: the proprietary, ownable angle — named, in
+     plain English, why it works, why it beats the category's existing
+     solutions, and why competitors can't or haven't replicated it.
+     All roads lead back to this. If the user's input doesn't give you
+     one, propose the strongest candidate from the research's
+     "mechanism opportunities" and mark it for their confirmation.
+   - **Risk reversal**: guarantee terms if any, and the confidence
+     story behind them. Only from user input — never invent.
+   - **Bonuses**: only ones the user actually mentioned. Never invent
+     a bonus or a stated value.
+   - Pricing: from `intake.md`. If they answered with a price, range,
+     or model, use it as stated. If they explicitly said "undecided,"
+     write "Not yet specified" — never invent a number, tier, or
      price point.
 
 5. **Write `necessary-beliefs.md`** — the 4-6 things someone must accept
@@ -103,6 +234,16 @@ positioning.
    will need to earn, so keep them specific to this offer (e.g. "I believe
    that a coffee subscription CAN be timed to my actual consumption, not a
    calendar" — not "I believe good coffee matters").
+
+   For EACH belief, also write:
+   - **Current belief**: what the prospect believes today instead.
+   - **Bridge**: the argument, proof, and emotional payoff that moves
+     them from current → destination. Every future piece of copy
+     installs or reinforces exactly one of these beliefs.
+
+   Six beliefs maximum — fewer is stronger. Order them the way a
+   prospect should encounter them in a funnel: problem-aware →
+   solution-aware → product-aware → ready-to-buy.
 
 6. Now reason through the core brand decisions — same bar as before, do not
    accept the first generic answer for any of these:
@@ -119,8 +260,23 @@ positioning.
      prefer cliches actually observed in `deepresearch.md` over generic
      guesses.
 
-7. **Write `project-knowledge.md`** — the synthesis, with two explicit,
-   clearly headed sections:
+7. **Write `project-knowledge.md`** — the synthesis, structured so a
+   copywriter, media buyer, or AI assistant could read it once and
+   operate from it:
+   - **Snapshot** — product, promise, customer (one paragraph), unique
+     mechanism, price.
+   - **Customer** — the condensed avatar.
+   - **Offer** — the condensed offer brief.
+   - **Necessary beliefs** — just the I-believe-that statements + a
+     one-line bridge each.
+   - **Voice & language** — words to use, words to avoid, top 15
+     customer-voice phrases.
+   - **Proof inventory** — all available proof points, ranked by
+     strength.
+   - **Open questions / research gaps** — anything still unknown that
+     would strengthen the funnel if answered.
+
+   Then two explicit, clearly headed sections:
    - `## VERIFIED` — every claim used anywhere in this foundation that
      traces to a cited source in `deepresearch.md`, or to the user's own
      stated facts about their own product/pricing/mechanism.
@@ -128,7 +284,7 @@ positioning.
      source: market-size guesses, assumed customer behavior beyond what
      `deepresearch.md` actually found, pricing not yet set, any competitor
      detail you couldn't confirm. **This is where an unsourced claim goes —
-     it must not appear as fact anywhere else in these seven files.** If
+     it must not appear as fact anywhere else in these other files.** If
      nothing is genuinely unverified, say so explicitly rather than leaving
      the section thin without comment.
 
@@ -149,7 +305,25 @@ positioning.
     `deepresearch.md` at the top (e.g. "grounded in: `deepresearch.md`").
     This must not contradict the JSON — it's the same reasoning, prose form.
 
-11. Tell the user it's ready. Print all seven file paths (in the order
+11. **Write `copywriter-prompt.md`** — a ready-to-paste system prompt
+    the user can drop into any AI assistant (Claude Project, custom
+    GPT, etc) so every future piece of copy is grounded in this brand.
+    Copy-paste ready, no commentary inside the file. It must:
+    - Declare the assistant the in-house direct-response copywriter
+      for THIS specific brand.
+    - Reference the foundation files by name as ground truth.
+    - Encode the methodology: argument-first, mechanism-driven,
+      belief-led, customer-language-faithful.
+    - Define the default tone from the foundation and the forbidden
+      tones from `avoid`.
+    - List the asks it should handle (ad copy, email sequences,
+      landing sections, hooks, angles, objection handlers).
+    - Require it to ask which necessary belief a given piece of copy
+      targets before writing.
+    - Forbid claims, stats, or proof not in the foundation — flag
+      gaps, never invent.
+
+12. Tell the user it's ready. Print all nine file paths (in the order
     above) and the `VALID` line. Tell them: from now on, `aphrodite-direction`
     will automatically use `brand_foundation.json` for every brief unless
     told otherwise, and `brand-website` will read `necessary-beliefs.md` if
@@ -172,6 +346,8 @@ the user which `brand_id` applies before writing anything.
 - Never write a brand foundation from a one-word input ("make my brand
   cool") — push back and ask what the business actually is first if the
   input is too thin to reason about.
+- Never skip or shorten the interview — no intake.md, no foundation. If
+  the user won't answer, stop and tell them why it matters.
 - Never accept an `avoid` list that's empty — every real brand has refused
   something. If the user can't name one, ask "what does everyone else in
   this space do that you don't want to look like?"
@@ -184,3 +360,7 @@ the user which `brand_id` applies before writing anything.
   unsourced claim surface as fact in any of the other six files.
 - Never write `deepresearch.md` after reasoning about positioning has
   already started — research always lands first.
+- Never ship a thin dossier — if `deepresearch.md` is under ~3,000
+  words or short on verbatim customer quotes, keep researching. "It
+  was fast" is not a defence; everything downstream inherits this
+  file's quality.

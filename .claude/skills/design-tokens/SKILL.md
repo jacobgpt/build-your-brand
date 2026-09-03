@@ -17,8 +17,10 @@ so, don't paper over it with an arbitrary pick.
 
 A brand foundation already exists (`records/brands/<brand_id>/brand_foundation.json`,
 built by `brand-foundation`) and the user wants a `design.md` — the file
-every later build (`brand-website`, `hephaestus-production`) reads for exact
-values instead of guessing.
+every later build (`brand-guide`, `brand-website`, `hephaestus-production`)
+reads for exact values instead of guessing. design.md is written BEFORE the
+brand guide — colour and type get settled here, and the guide then shows
+them off.
 
 ## Prerequisite
 
@@ -37,9 +39,30 @@ Read in full:
   back to.
 - `records/brands/<brand_id>/brand-book.md` if present, for the fuller
   prose version of the same decisions.
-- `records/brands/<brand_id>/deepresearch.md` if present — real competitor
-  palette/type notes can sharpen a choice (e.g. "everyone in this category
-  uses warm serif type" is a reason to pick something else).
+- `records/brands/<brand_id>/deepresearch.md` if present — the competitor
+  teardown (visual language, type, palette, positioning per competitor, plus
+  the category pattern) is your map of what's already taken and what's
+  open. "Everyone in this category uses warm serif type" is a reason to
+  pick something else — use it.
+- `records/brands/<brand_id>/intake.md` if present — the user's stated
+  colour/type preferences and any look they explicitly hated. These
+  constrain every option you present.
+
+### Step 0.5 — Present options first, never default silently
+
+Before locking anything, present **2-3 real options** for the visual
+direction, each grounded in evidence: what the competitors already look
+like (from `deepresearch.md`'s teardown), what the user said they want
+and hate (from `intake.md`), and what the foundation's visual pillars
+demand. For each option give: a one-line concept, the palette (exact
+hex), the type pairing, and one sentence on how it breaks or uses the
+category pattern. Then **ask the user to pick and wait for their answer.**
+Only after they choose do you write the final values below.
+
+Never just pick one direction and write the file — that's the exact
+defaulting this step exists to prevent. If the user says "you decide,"
+pick the one with the strongest grounding and say why, but still show
+them the others first.
 
 ### Step 1 — Palette: exact hex, named role, one line each
 
@@ -71,6 +94,22 @@ never more than two families total), and the rule for when each is used:
 If the foundation's visual pillars call for a distinct typographic feel
 ("monospace workhorse," "never a script face"), the choice must satisfy
 that constraint explicitly — say which pillar drove it.
+
+### Step 2.5 — Type scale, motion, and signature structures
+
+Deepen the typography section beyond families:
+
+```
+- Type scale: display 48/1.1, h2 32/1.2, body 16/1.5, caption 13/1.4
+- Motion: 150-200ms ease-out for hover/fade, never bouncy, never
+  parallax-scroll sections
+```
+
+And in Voice (Step 3), add **signature sentence structures** — the
+2-3 constructions this brand uses so often they become recognizable
+(e.g. "X, not Y" contrast lines; one-sentence paragraphs for
+emphasis; colon-then-payoff lists). A copywriter should be able to
+hear this brand with their eyes closed.
 
 ### Step 3 — Voice: USE and AVOID words
 
@@ -134,6 +173,20 @@ Print the `design.md` path. Tell them: `brand-website` (and
 `hephaestus-production`, once it reads design tokens too) will pick this up
 automatically on the next build.
 
+## Cross-check interview (optional but recommended)
+
+If anything feels off after Step 0.5's options, run the 5-question
+interview to sanity-check or build from scratch:
+
+1. Brand name + what do you do?
+2. Three words that describe the brand?
+3. Colors? (hex codes, not "blue")
+4. Three reference brands + what to take from each?
+5. Tone of voice? (always / never)
+
+Specific answers only — hex codes and named reference brands, not
+"clean" or "modern."
+
 ## Boundaries — never do these
 
 - Never invent a palette, font, or voice rule that doesn't trace back to
@@ -143,5 +196,7 @@ automatically on the next build.
   "bold" with no further specificity).
 - Never overwrite an existing `design.md` silently — if one exists, tell the
   user and ask whether to revise it or start over.
+- Never skip the options step (Step 0.5) — write design.md only after the
+  user has chosen from real, evidence-grounded options.
 - Never write outside the repo root (`design.md` lives at the root, not in
   `records/`).
