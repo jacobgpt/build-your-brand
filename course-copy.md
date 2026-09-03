@@ -1,14 +1,15 @@
 # Build Your Brand — Course Copy
 
-**STATUS: draft script, ahead of the repo.** Originally written for nine
-lessons; this repo only has skills for seven. Lessons 4 (brand guide) and 5
-(design.md) below describe skills that DO NOT EXIST here — see the note in
-each and the gap list at the bottom before recording anything. Command
-labels below (`/build:0N-...`) are the ORIGINAL draft numbering and no
-longer match the real slash commands shipped in `.claude/commands/build/`
-(`01-setup`, `02-research`, `03-foundation`, `04-website`, `05-brief`,
-`06-build`, `07-done`). Use the real commands when actually filming; treat
-everything below as narration material to adapt, not a literal script.
+Nine lessons. Every command is real and already in the repo, matching
+`.claude/commands/build/01-setup.md` through `09-done.md`. First draft,
+not a finished script — cut what sounds wrong, rewrite anything that
+doesn't sound like you.
+
+One honest gap: Lesson 6's hero-video half is code-complete and unit-
+tested but has never been run for real against Higgsfield (that spend
+hasn't been approved yet in this repo). The still half has run for real,
+including a rejection-and-rebuild cycle logged in `BUILD_LOG.md`. Say so
+on camera rather than promising a video you haven't shown working.
 
 ---
 

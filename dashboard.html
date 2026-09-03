@@ -49,7 +49,7 @@
 
   <div class="bar-wrap">
     <div class="bar"><div class="fill" id="fill"></div></div>
-    <div class="bar-num" id="barnum">0<small>/4</small></div>
+    <div class="bar-num" id="barnum">0<small>/9</small></div>
   </div>
   <div class="meta" id="statusline">checking records/ …</div>
 
@@ -65,14 +65,19 @@
 
 <script>
 const STAGES = [
-  {key: "brand", title: "Build your brand", cmd: "Use brand-foundation to build a brand foundation from: ...", desc: "Real research + positioning, audience, tone, visual pillars"},
-  {key: "brief", title: "Write a creative brief", cmd: "Use aphrodite-direction to write a creative brief for: ...", desc: "On-brand brief, schema-validated"},
-  {key: "asset", title: "Build the asset", cmd: "Use hephaestus-production to build the brief at ...", desc: "Approval gate → real Higgsfield build → dated record"},
-  {key: "website", title: "Build the website", cmd: "Use brand-website to build a website for the <brand_id> brand", desc: "Copy-first, on-brand, self-contained HTML — no external tools"}
+  {key: "setup", title: "Setup", cmd: "/build:01-setup", desc: "Both CLIs authenticated, skills visible, dashboard running"},
+  {key: "research", title: "Deep research", cmd: "/build:02-research", desc: "Real research, sourced — deepresearch.md lands first"},
+  {key: "foundation", title: "Brand foundation", cmd: "/build:03-foundation", desc: "Seven documents + brand_foundation.json, validated"},
+  {key: "guide", title: "The brand guide", cmd: "/build:04-guide", desc: "brand-guide.html + PDF, screenshot-verified"},
+  {key: "design", title: "design.md", cmd: "/build:05-design", desc: "Exact hex, fonts, voice — every future build inherits it"},
+  {key: "hero", title: "The hero", cmd: "/build:06-hero", desc: "Still through the gate, film-safety-checked (video optional)"},
+  {key: "website", title: "The website", cmd: "/build:07-website", desc: "Copy-first, design.md-driven, hero-aware"},
+  {key: "assets", title: "Direction and production", cmd: "/build:08-assets", desc: "Typed brief, gate, one built + one rejected on record"},
+  {key: "done", title: "What you built", cmd: "/build:09-done", desc: "Every file reviewed, the pattern, run it on your own brand"}
 ];
 
 async function load() {
-  let status = {brand: false, brief: false, asset: false};
+  let status = {setup: false, research: false, foundation: false, guide: false, design: false, hero: false, website: false, assets: false, done: false};
   try {
     const res = await fetch("status.json", {cache: "no-store"});
     if (res.ok) status = await res.json();
