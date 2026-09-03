@@ -5,22 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quiet Desk — Quiet is a number. We publish it.</title>
 <meta name="description" content="A quarterly switch set and matched desk mat, selected and pre-lubed for measured sound output — not a marketing adjective. Join the waitlist.">
-<!-- pillar: monospace/technical-grotesk pairing, spec-sheet numerals -->
+<!-- design.md Typography: exactly IBM Plex Mono (numerals/headlines/figures) + IBM Plex Sans (body/labels/chrome) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* pillar: palette restricted to instrument/lab tones — matte black, neutral greys, one calibration accent (safety orange), no RGB/pastel */
-    --bg-0:#101113;      /* matte black — hero / close */
-    --bg-1:#17181B;      /* alternate panel for section rhythm */
-    --line: rgba(237,237,236,0.09);
-    --text-0:#EDEDEC;    /* primary, off-white — never pure white (avoids glare/sheen) */
-    --text-1:#8B8F94;    /* steel grey — secondary text, labels, spec meta */
-    --accent:#FF6A1A;    /* calibration safety-orange — CTA / index numerals / ticks only */
-    --accent-dim: rgba(255,106,26,0.14);
-    --font-grotesk: "Space Grotesk", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    /* design.md Palette — exact hex values, no derivation */
+    --bg-0:#121316;      /* matte black — instrument casing */
+    --bg-1:#1A1B1F;      /* alternate panel for section rhythm, kept within the matte-black family */
+    --line: rgba(233,233,234,0.10);
+    --text-0:#E9E9EA;    /* cool off-white — primary text on dark */
+    --text-1:#8A8D93;    /* instrument grey — secondary text, axis labels, unit labels */
+    --accent:#FFC800;    /* calibration yellow — single accent: dB figures, primary CTA, tick marks only */
     --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", "Roboto Mono", monospace;
+    --font-sans: "IBM Plex Sans", -apple-system, Helvetica, sans-serif;
   }
 
   *,*::before,*::after{ box-sizing:border-box; }
@@ -29,22 +28,24 @@
     margin:0;
     background:var(--bg-0);
     color:var(--text-0);
-    font-family:var(--font-grotesk);
+    font-family:var(--font-sans);
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
   }
-  img,svg{ display:block; max-width:100%; }
+  img,svg,video{ display:block; max-width:100%; }
   a{ color:inherit; }
+  /* design.md Voice: body copy never below 14px, never italic */
+  em{ font-style:normal; color:var(--text-0); }
 
   .wrap{ max-width:1040px; margin:0 auto; padding:0 24px; }
 
-  /* pillar: layouts read like dashboards/data sheets — hairline rules, tick marks, axis labels */
+  /* design.md Components: hairline border, instrument grey, 10-15% opacity */
   .rule{ border-top:1px solid var(--line); }
 
   /* ---------- nav ---------- */
   header.site{
     position:sticky; top:0; z-index:20;
-    background:rgba(16,17,19,0.86);
+    background:rgba(18,19,22,0.86);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
   }
@@ -62,6 +63,7 @@
     color:var(--text-0);
   }
   .wordmark span{ color:var(--accent); }
+  /* design.md Components: Buttons — flat calibration-yellow fill on dark, 0-2px radius, no shadow, no gradient, no hover-glow */
   .nav-cta{
     font-family:var(--font-mono);
     font-size:12px;
@@ -77,24 +79,33 @@
 
   /* ---------- hero ---------- */
   .hero{
-    padding:96px 0 88px;
-    background:var(--bg-0);
     position:relative;
     overflow:hidden;
+    min-height:min(88vh, 760px);
+    display:flex;
+    align-items:flex-end;
   }
-  /* pillar: dashboard/graph-paper grid motif, kept faint */
-  .hero::before{
-    content:"";
+  /* Step 3 priority 3: no hero.mp4/hero-poster.jpg and no static image asset exist (records/assets is empty) —
+     CSS-only hero built from design.md's palette + "layout motifs: tick marks, axis labels" component rule,
+     not a stock-photo placeholder */
+  .hero-bg{
     position:absolute; inset:0;
+    background-color:var(--bg-0);
     background-image:
-      linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size:64px 64px;
-    mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 72%);
-    opacity:0.5;
-    pointer-events:none;
+      radial-gradient(ellipse 60% 50% at 84% 6%, rgba(255,200,0,0.09) 0%, transparent 70%),
+      repeating-linear-gradient(90deg, var(--line) 0, var(--line) 1px, transparent 1px, transparent 64px),
+      repeating-linear-gradient(0deg, var(--line) 0, var(--line) 1px, transparent 1px, transparent 64px);
+    mask-image: linear-gradient(180deg, black 0%, black 55%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, black 0%, black 55%, transparent 100%);
   }
-  .hero-inner{ position:relative; }
+  /* tick-mark ruler motif along the hero's baseline — echoes the belief-index .tick component */
+  .hero-bg::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:0; height:40px;
+    background-image: repeating-linear-gradient(90deg, var(--text-1) 0, var(--text-1) 1px, transparent 1px, transparent 24px);
+    opacity:0.22;
+  }
+  .hero-inner{ position:relative; padding:96px 0 72px; width:100%; }
   .eyebrow{
     font-family:var(--font-mono);
     font-size:12px;
@@ -104,12 +115,13 @@
     margin:0 0 20px;
   }
   .hero h1{
-    font-size:clamp(34px, 6vw, 60px);
-    line-height:1.06;
+    font-family:var(--font-mono);
+    font-size:clamp(34px, 6vw, 58px);
+    line-height:1.08;
     letter-spacing:-0.01em;
     margin:0 0 22px;
-    max-width:16ch;
-    font-weight:700;
+    max-width:17ch;
+    font-weight:600;
   }
   .hero .sub{
     font-size:18px;
@@ -138,29 +150,6 @@
     color:var(--text-1);
   }
 
-  /* decorative acoustic-meter motif — not a data claim, styling only */
-  .meter{
-    margin-top:64px;
-    display:flex; align-items:flex-end; gap:6px;
-    height:64px;
-  }
-  .meter i{
-    display:block;
-    width:5px;
-    background:var(--text-1);
-    opacity:0.35;
-    border-radius:1px;
-  }
-  .meter i:nth-child(3n){ background:var(--accent); opacity:0.7; }
-  .meter-caption{
-    margin-top:10px;
-    font-family:var(--font-mono);
-    font-size:11px;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--text-1);
-  }
-
   /* ---------- belief sections ---------- */
   .belief{
     padding:72px 0;
@@ -179,6 +168,7 @@
     letter-spacing:0.04em;
     white-space:nowrap;
   }
+  /* design.md Components: tick marks as layout motif */
   .belief-index .tick{
     display:block;
     width:28px;
@@ -188,10 +178,12 @@
     opacity:0.6;
   }
   .belief h2{
-    font-size:clamp(22px, 3vw, 30px);
-    line-height:1.2;
+    font-family:var(--font-mono);
+    font-size:clamp(20px, 2.6vw, 27px);
+    font-weight:500;
+    line-height:1.25;
     margin:0 0 16px;
-    max-width:22ch;
+    max-width:24ch;
   }
   .belief p{
     color:var(--text-1);
@@ -201,7 +193,17 @@
   }
   .belief p:last-child{ margin-bottom:0; }
   .belief strong{ color:var(--text-0); font-weight:600; }
-  .belief q{ color:var(--text-0); font-style:normal; }
+  /* design.md Components: data display — figure + unit + test condition rendered together, in mono */
+  .spec{
+    font-family:var(--font-mono);
+    color:var(--text-0);
+    background:var(--bg-0);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:2px 6px;
+    white-space:nowrap;
+  }
+  .belief.alt .spec{ background:var(--bg-1); }
 
   /* ---------- close / waitlist ---------- */
   .close{
@@ -217,13 +219,15 @@
     background-image: linear-gradient(var(--line) 1px, transparent 1px);
     background-size: 100% 48px;
     mask-image: radial-gradient(ellipse at 50% 100%, black 0%, transparent 70%);
-    opacity:0.5;
+    opacity:0.6;
     pointer-events:none;
   }
   .close-inner{ position:relative; max-width:560px; }
   .close h2{
-    font-size:clamp(28px, 4.5vw, 42px);
-    line-height:1.12;
+    font-family:var(--font-mono);
+    font-size:clamp(26px, 4.2vw, 40px);
+    font-weight:600;
+    line-height:1.14;
     margin:0 0 18px;
   }
   .close p.lead{
@@ -314,7 +318,8 @@
   @media (max-width:480px){
     .nav{ padding:14px 18px; }
     .wordmark{ font-size:12px; }
-    .hero{ padding:64px 0 56px; }
+    .hero{ min-height:min(92vh, 620px); }
+    .hero-inner{ padding:64px 0 48px; }
     .hero .wrap, .belief .wrap, .close .wrap, .footer-row{ padding:0 18px; }
     form.waitlist{ flex-direction:column; }
     form.waitlist button{ padding:14px; }
@@ -333,8 +338,10 @@
 
 <main>
 
-  <!-- HERO — positioning.png sharpened into headline + sub-hook -->
+  <!-- HERO — positioning sharpened into headline + sub-hook. CSS-only background per Step 3 priority 3:
+       records/assets is empty (no hero.mp4/hero-poster.jpg, no static image asset) — no video/image spend approved. -->
   <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <p class="eyebrow">Acoustic output subscription — quarterly</p>
       <h1>Quiet is a number.<br>We publish it.</h1>
@@ -343,18 +350,6 @@
         <a class="btn-primary" href="#join">Join the waitlist</a>
         <p class="hero-meta">Pre-launch — the first quarterly set is in final testing.</p>
       </div>
-
-      <!-- decorative acoustic-meter motif, pillar: waveform/dB-meter layout language. No specific dB value is asserted here. -->
-      <div class="meter" aria-hidden="true">
-        <i style="height:22%"></i><i style="height:38%"></i><i style="height:18%"></i>
-        <i style="height:55%"></i><i style="height:30%"></i><i style="height:70%"></i>
-        <i style="height:24%"></i><i style="height:44%"></i><i style="height:16%"></i>
-        <i style="height:60%"></i><i style="height:28%"></i><i style="height:48%"></i>
-        <i style="height:20%"></i><i style="height:66%"></i><i style="height:34%"></i>
-        <i style="height:26%"></i><i style="height:52%"></i><i style="height:18%"></i>
-        <i style="height:40%"></i><i style="height:24%"></i>
-      </div>
-      <p class="meter-caption">Measured, not implied.</p>
     </div>
   </section>
 
@@ -366,8 +361,8 @@
       <div class="belief-index">01 / 06<span class="tick"></span></div>
       <div>
         <h2>&ldquo;Quiet&rdquo; is a number, not a marketing word.</h2>
-        <p>The category's most-used sound-comparison resource builds its entire method on subjective audio clips — <em>&ldquo;No talking, just the sound of Keyboards&rdquo;</em> — and publishes zero decibel readings. &ldquo;Quiet&rdquo; stays an adjective you have to take on faith.</p>
-        <p>Quiet Desk publishes a decibel figure for every switch it ships, alongside the test condition it was measured under — switch, typing speed, distance from mic — the way a spec sheet cites its test conditions. Not an adjective. A number you can compare.</p>
+        <p>The category's most-used sound-comparison resource builds its entire method on subjective audio clips — &ldquo;No talking, just the sound of Keyboards&rdquo; — and publishes zero decibel readings. &ldquo;Quiet&rdquo; stays an adjective you have to take on faith.</p>
+        <p>Quiet Desk publishes a decibel figure for every switch it ships, alongside the test condition it was measured under — switch, typing speed, distance from mic — the way a spec sheet cites its test conditions: <span class="spec">dB @ WPM &middot; distance</span>. Not an adjective. A number you can compare.</p>
       </div>
     </div>
   </section>
