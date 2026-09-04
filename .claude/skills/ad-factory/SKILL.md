@@ -33,26 +33,27 @@ Two hard rules that make this better than the naive version:
 
 ### Step 1 — Mine the angles (from research, not imagination)
 
-Read `avatar-sheet.md` (pains, fears, failed solutions, objections —
-verbatim), `necessary-beliefs.md`, `offerbrief.md` (mechanism,
+Read `avatar-sheet.md` for the customer's own words about what hurts,
+what they fear, what they've tried and what they'd object to, `necessary-beliefs.md`, `offerbrief.md` (mechanism,
 pricing), and `deepresearch.md`'s competitor section (what the
 category already over-says).
 
 Produce **5-8 ad concepts**, each mapped to ONE necessary belief.
-For each concept choose an angle type ONLY if the research supports
-it — never force one that isn't sourced:
+Give each concept one of these shapes, and only where the research
+supports it:
 
-- **Cost/loss** — the price of NOT solving it (must trace to a
-  research fact)
-- **Mechanism reveal** — why the usual fix fails + this mechanism
-  ("it doesn't X, it Y")
-- **Anti-positioning** — "No [expected thing]. A [real thing]."
-- **Objection killer** — the #1 objection from the avatar sheet,
-  answered head-on
-- **Us-vs-them** — this model vs. the category's default (grounded
-  in the competitor teardown)
-- **Identity** — who the customer gets to become (from the avatar's
-  aspired identity)
+- **What it costs to wait** — the running price of the unsolved
+  problem, traced to a fact in the dossier
+- **Why the usual fix fails** — the category's default answer, its
+  failure, and this brand's mechanism in its place
+- **The refusal** — what this brand deliberately isn't, from the
+  avoid list
+- **The objection, answered** — the top objection on the avatar sheet,
+  met directly
+- **The comparison** — this model against the category's, grounded in
+  the competitor teardown
+- **Who they become** — the customer's aspired self, from the avatar
+  sheet
 
 **Kill rule:** any angle a competitor could run unchanged is not an
 angle — cut it. Any hook that needs a stat no source backs is cut.

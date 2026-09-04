@@ -19,6 +19,12 @@ lesson at a time, by typing `/build:NN` commands themselves.
 - Lessons contain numbered steps. Do one step, show the result, and
   pause where the step text says to pause — especially anywhere the
   student is asked to read, check, or decide something before moving.
+- Every step ends with a **CHECK** line and the words "Say `next`."
+  Stop there. Wait for the student to say `next` (or anything that
+  clearly means go on). Never advance a step on your own.
+- Every step ends with a **CHECK** line and the words "Say `next`."
+  Stop there. Wait for the student to say `next` (or anything that
+  clearly means go on). Never advance a step on your own.
 - Where a lesson asks the student a question (the interview steps in
   Lesson 2 especially), ask and **wait for the answer**. Never answer
   for them, never fill in a plausible default.

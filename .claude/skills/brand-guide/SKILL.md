@@ -7,7 +7,7 @@ description: Use when a brand foundation (and ideally design.md) already exist a
 
 You build the document someone actually sends: Part I is the story (what
 this brand believes, who it's for, what it's against), Part II is the
-rulebook (positioning, audience, voice of the customer, proof, colour,
+rulebook (positioning, audience, the customer quoted, proof, colour,
 type, components, messaging). This is a synthesis of decisions already made
 elsewhere — never invent a new claim, quote, or rule here that isn't already
 in the foundation, brand book, research file, or `design.md`.
@@ -53,12 +53,12 @@ Before designing, ask the user:
 - `records/brands/<brand_id>/brand-book.md` — the fuller prose version.
 - `records/brands/<brand_id>/deepresearch.md` if it exists — this is your
   ONLY source for real customer quotes and competitor facts. If it doesn't
-  exist, or is explicitly marked as a fixture/unverified, the "voice of the
-  customer" section in Part II must say so plainly and skip inventing
+  exist, or is explicitly marked as a fixture/unverified, the customer-quotes
+  section in Part II must say so plainly and skip inventing
   quotes.
 - `records/brands/<brand_id>/project-knowledge.md` if it exists — read its
   `## VERIFIED` / `## UNVERIFIED` split directly. Every UNVERIFIED item
-  there is mandatory input to the "what we never claim" panel (Step 2.4) —
+  there is mandatory input to the "Never claimed" panel (Step 2.4) —
   don't re-derive that list from scratch when this file already states it.
 - `design.md` at the repo root — required; exact palette/type/component
   values rendered throughout Part II.
@@ -80,7 +80,7 @@ that doesn't trace to one:
 1. **Positioning** — `positioning` field, verbatim or lightly tightened.
 2. **Audience** — `audience` field, expanded with any real detail from the
    research file (if present).
-3. **Voice of the customer** — real quotes from `records/brands/<brand_id>/deepresearch.md`
+3. **The customer, quoted** — real quotes from `records/brands/<brand_id>/deepresearch.md`
    ONLY, quoted verbatim with attribution to their source. **If the research
    file doesn't exist, or is a labeled fixture/test file, this section must
    say so explicitly instead of inventing quotes** — write "No sourced
@@ -89,7 +89,7 @@ that doesn't trace to one:
    anything that reads like proof.
 4. **Proof and honesty rules**: two things, both required —
    - Any real, sourced fact from the research file worth stating.
-   - **A "What we never claim" panel** — this is not optional. List every
+   - **A "Never claimed" panel** — this is not optional. List every
      unprovable claim category this brand explicitly refuses to make
      (revenue figures without evidence, results you haven't had, named
      clients who haven't agreed, before/after stats with no source).
@@ -196,15 +196,15 @@ has real content, correct page count, or renders your CSS.
 
 Print both file paths. Tell them to open the HTML, then the PDF, and check:
 does the story sound like this brand, not brand-guide prose in general? Is
-every claim traceable to the foundation or research? Is the "what we never
-claim" panel real and specific, not generic?
+every claim traceable to the foundation or research? Is the "Never
+claimed" panel real and specific, not generic?
 
 ## Boundaries — never do these
 
 - Never invent a customer quote, testimonial, or stat not present in the
   research file — an honest "no sourced language yet" beats a fabricated
   one.
-- Never skip the "what we never claim" panel.
+- Never skip the "Never claimed" panel.
 - Never report the PDF as done without actually rasterizing and looking at
   it — exit code 0 is not verification.
 - Never write outside the repo root (`brand-guide.html` / `.pdf` live at the

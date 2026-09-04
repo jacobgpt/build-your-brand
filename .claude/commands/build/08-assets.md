@@ -1,169 +1,131 @@
 ---
-description: "Build Your Brand — Lesson 8: Direction and production. Typed brief, gate, real asset — reject one on purpose."
+description: "Build Your Brand, Lesson 8: The gate. A typed brief, a gated build, one real asset, and one refusal on purpose."
 ---
 
 # /build:08-assets
 
-```ansi
-     ██  [38;5;208m█████[0m  [38;5;208m██[0m  ██████  ██████  ██████
-     ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
-     ██ [38;5;208m███████[0m [38;5;208m██[0m ██      ██    ██ ██████
-██   ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
- █████  [38;5;208m██   ██[0m [38;5;208m██[0m  ██████  ██████  ██████
+```
+     ██  ▓▓▓▓▓  ▓▓  ██████  ██████  ██████
+     ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+     ██ ▓▓▓▓▓▓▓ ▓▓ ██      ██    ██ ██████
+██   ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+ █████  ▓▓   ▓▓ ▓▓  ██████  ██████  ██████
 
           T H E   C R E A T I V E   A R C H I T E C T
 ```
 
-```
-──────────────────────────────────────────────────
-LESSON 8 · DIRECTION + PRODUCTION
-THE ASSET
-──────────────────────────────────────────────────
-```
-
-> **Timing**     ~15 minutes
-> **Goal**       One real asset built, one rejection on record
-> **Progress**   `[███████░░░] 7/9 · starting`
+**LESSON 8 OF 10 · THE GATE**
+About fifteen minutes. You leave with one real asset and one refusal, both on record.
 
 ---
 
-## Two decisions, split apart
+## Two jobs, two agents, one contract between them
 
-What should exist (Aphrodite) and how to build it (Hephaestus) are
-two different jobs, held by two different agents with a typed
-handoff between them. Aphrodite never picks a tool or model — if she
-does, something's wrong with the brief. Stop and check it before
-continuing.
+Deciding what should exist is Aphrodite's job. Building it is
+Hephaestus's. A typed brief passes between them, and Aphrodite never
+names a tool or a model. If she does, the brief is wrong. Stop and fix
+it before anything else.
 
 ---
 
-## STEP 1 — One line, one brief
+## STEP 1 · One line, one brief
 
-Think of one line: a product, scene, or concept for the asset. Then:
+Think of one line: a product, a scene, a concept.
 
 > **RUN (Claude, in this session):** Use `aphrodite-direction` to write
 > a creative brief for: `<your one-liner>`.
 
-This reads your foundation and folds positioning, audience, tone,
-`visual_pillars`, and `avoid` into the brief automatically.
+It reads your foundation and folds positioning, audience, tone, visual
+pillars and the avoid list into the brief on its own.
 
-Open the resulting `records/briefs/<brief_id>.json`. It's typed JSON,
-not prose — every field is a slot the next skill reads directly, so a
-vague `placement` or missing `must_preserve` entry becomes a real
-production bug the moment it reaches the build.
+Open `records/briefs/<brief_id>.json`. It's typed JSON, not prose.
+Every field is a slot the next skill reads directly, so a vague
+`placement` or a missing `must_preserve` becomes a production defect
+the moment it reaches the build.
 
-**The brief quality bar:** read it as the image model would. If any
-field could produce two different images, tighten it now — "a
-premium scene" is empty; "deep green #1E3A2F background, cream product,
-soft morning side-light, no people" is a slot the model can fill
-exactly. Fixing a vague brief costs a minute here; a vague brief
-that reaches the gate costs credits.
+The bar: read it as the image model would. If any field could produce
+two different images, tighten it now. "A premium scene" is empty.
+"Deep green #1E3A2F background, cream product, soft morning side-light,
+no people" is a slot the model can fill exactly. A vague brief costs a
+minute here and credits at the gate.
 
 ```bash
 python3 scripts/validate_brief.py records/briefs/<brief_id>.json
 ```
 
-Must print `VALID`.
+`VALID`, or it doesn't move.
 
-> **ACTION:** Brief written, read, validator prints `VALID`.
-> Type `1`.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Typed brief validated                           │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[███████░░░] 7/9 · Step 1/3`
+> **CHECK.** Brief written, read, `VALID`. Say `next`.
 
 ---
 
-## STEP 2 — Build it through the gate
+## STEP 2 · Build through the gate
 
 > **RUN (Claude, in this session):** Use `hephaestus-production` on
 > `records/briefs/<brief_id>.json`.
 
 Two keystrokes, neither of them Claude's. Claude shows you the brief
-and asks `Approve build? [y/N]` — you answer here. Then Claude Code's
+and asks `Approve build? [y/N]`; you answer here. Then Claude Code's
 permission dialog shows the exact gate command with your answer in it,
-and you allow it. If you'd rather, open a second terminal and run
+and you allow it. Prefer your own terminal? Run
 `python3 scripts/approval_gate.py records/briefs/<brief_id>.json`
-yourself — same prompt, same record. This step **spends real
-credits**, so check `higgsfield account status` before approving. On
-approve, the real Higgsfield CLI builds it, downloads to
-`records/assets/`, and a dated record writes to `records/runs/`.
+there and answer the prompt. Same gate, same record. This step spends
+credits: check `higgsfield account status` first. On `y`, the
+Higgsfield CLI builds it, the file lands in `records/assets/`, and a
+dated record lands in `records/runs/`.
+
+Then judge it hard. Does it keep every `must_preserve`? Does it break
+any `forbidden`? Zoom in. A clean exit isn't proof the image is right;
+you are the proof step. A broken rule means a tighter brief and a
+rebuild, and both attempts stay on record.
 
 One honest note: this lesson lets the image model render your headline
-so you can judge it. Lesson 10 shows the production-grade way — a
-text-free plate with the type overlaid afterwards — because image
-models garble text often enough that ads can't rely on it.
+so you can see how it does. Lesson 10 does it the production way, a
+text-free plate with type laid over it afterwards, because image
+models garble text often enough that ads can't depend on it.
 
-**Then actually look at the result and judge it hard.**
-Does it obey every `must_preserve`? Does it break any `forbidden`?
-Zoom in and check. A clean exit code isn't proof the image is right
-— you are the proof step. If it breaks a rule, that's a rebuild
-with a tighter brief, and both attempts stay on record.
-
-> **ACTION:** Read the brief, check your balance, type `y`, allow the
-> command. Then open the asset and actually look at it. Type `1` when
-> you've seen it.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  One real asset, built and reviewed               │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[███████░░░] 7/9 · Step 2/3`
+> **CHECK.** Brief read, balance checked, `y` given, dialog allowed,
+> asset opened and inspected. Say `next`.
 
 ---
 
-## STEP 3 — Reject one on purpose
+## STEP 3 · Refuse one on purpose
 
-Run STEP 2 again with any brief — and this time answer anything other
-than `y`. No Higgsfield account is needed for this: a rejection spends
-nothing. Open the resulting record in `records/runs/`: the rejection
-is on file too, dated, with no asset produced and no credits spent.
+Run STEP 2 again with any brief and answer anything but `y`. No
+Higgsfield account needed; a refusal spends nothing. Open the record in
+`records/runs/`. The refusal is on file, dated, with no asset produced
+and no credit spent.
 
-A record holding only the wins is a highlight reel. The rejections
-are what make it a real record.
+A record that only holds the wins is a highlight reel. The refusals
+are what make it a record.
 
-> **ACTION:** One rejection on file in `records/runs/`. Type `1`.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  The gate tested both ways                        │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[████████░░] 8/9 · Lesson 8 complete`
+> **CHECK.** One refusal on file in `records/runs/`. Say `next`.
 
 ---
 
 ## If something goes wrong
 
-`hephaestus_build.py` turns these into clean one-line fixes instead
-of stack traces:
-- **Auth error** → `higgsfield auth login`, then re-run
-- **Rate limit** → wait ~60s, re-run
-- **Out of credits** → top up at higgsfield.ai, re-run
-- **Content filter** (false-positive on brand names) → re-run
-  `aphrodite-direction` dropping the specific brand/trademark name
+`hephaestus_build.py` turns these into one-line fixes instead of
+stack traces:
 
-A raw Python traceback instead of one of these is a real bug. Normal failures look like the list above; — worth digging into rather than just retrying.
+- **Auth error.** `higgsfield auth login`, then re-run.
+- **Rate limit.** Wait a minute, re-run.
+- **Out of credits.** Top up at higgsfield.ai, re-run.
+- **Content filter**, usually a false positive on a brand name.
+  Re-run `aphrodite-direction` without the specific name.
+
+A raw Python traceback instead of one of those is a real bug. Dig in
+rather than retrying.
 
 ---
 
-## DONE
+## On record
 
-**What you have now:**
-- One real asset in `records/assets/`, traceable brief → gate → build
-- One rejection on record — proof the gate works both ways
-- The full pattern: decision split from execution, typed handoff,
-  human at the consequential step
+- One real asset in `records/assets/`, traceable from brief to gate to
+  build
+- One refusal in `records/runs/`, dated
+- The pattern: decision split from execution, a typed contract between
+  them, a human at the step that costs money, a record either way
 
-**Next lesson:** `/build:09-done` — look at everything you built,
-and the pattern behind it.
+Next: `/build:09-done`. Look at everything you built, and the pattern
+underneath it.

@@ -1,14 +1,13 @@
 ---
 name: content-engine
-description: Use when the student wants ongoing content — pillars mined from the foundation, brand-locked carousels built as HTML and rendered to PNG, captions, and a 2-week calendar. Re-runnable any time to refill the calendar.
+description: Use when the student wants ongoing content — pillars from the foundation, carousels built as HTML in the brand's own tokens and rendered to PNG, captions, and a fortnight's schedule. Run again whenever the schedule runs dry.
 ---
 
 # Content Engine
 
-A repeatable content machine: 4-5 pillars, a batch of on-brand
-carousels rendered as finished PNGs (not instructions — actual
-image files), ready captions, and a 2-week calendar. The brand
-actually shows up, and every post advances a belief.
+Four or five pillars, a set of carousels rendered to finished PNG
+files rather than instructions, a caption for each, and a fortnight's
+schedule. Every post moves one belief.
 
 ## Prerequisites
 
@@ -30,9 +29,10 @@ especially), and the brand book's messaging library. Write
 - **Problem** — the pain, in their words
 - **Mechanism** — how the fix actually works
 - **Proof** — results/specs, sourced only
-- **Behind-the-build** — how it's made, founder reality
-- **Contrarian take** — the belief the market gets wrong (from the
-  research's category pattern)
+- **How it's made** — the work behind the product, the founder's
+  actual week
+- **Against the grain** — the thing the category believes that the
+  research shows is wrong
 - **Customer voice** — verbatim quotes, transformations
 
 Plus **15-20 post ideas**, each mapped to ONE belief, tagged
@@ -43,12 +43,12 @@ The student reviews this file before anything gets built.
 
 ### Step 2 — Carousels: HTML, rendered to PNG, brand-locked
 
-Pick the best 3-4 carousel ideas. For each, write a slide-by-slide
-script — **hook slide** (bold claim/number/question that stops the
-scroll) → **4-6 value slides** (one beat each, the argument step by
-step) → **CTA slide** (what to do next + handle). Big type, minimal
-words, real copy in the brand voice — if a slide needs a paragraph,
-it's two slides.
+Take the three or four strongest ideas. Script each one slide at a
+time: an opening slide that earns the stop (a claim, a number, a
+question), then four to six slides that each carry one step of the
+argument, then a closing slide with the action and the handle. Large
+type, few words, real copy in the brand's voice. A slide that needs a
+paragraph is two slides.
 
 Then build each slide as its own single HTML file at
 `records/content/<brand_id>/carousels/<topic>/slide-N.html`:
@@ -91,15 +91,15 @@ CTA: [what to do + handle/link]
 Tags: [5-10, niche over generic]
 ```
 
-### Step 4 — The 2-week calendar
+### Step 4 — The fortnight
 
 `records/content/<brand_id>/calendar.md`:
 
-| Day | Format | Pillar | Asset | Caption | Belief |
-|-----|--------|--------|-------|---------|--------|
+| Date | Type | Pillar | File | Caption ref | Belief served |
+|------|------|--------|------|-------------|---------------|
 
-Balanced across pillars and formats; never the same pillar twice
-in a row; hooks front-loaded into the first week. Include the
+Spread across pillars and types, no pillar on consecutive days, the
+strongest openers in week one. Include the
 already-rendered carousels first so the calendar starts with assets
 that exist, not promises.
 
@@ -110,7 +110,7 @@ records/content/<brand_id>/
   content-plan.md      pillars + 15-20 sourced ideas
   carousels/          slide HTML + rendered PNGs
   captions.md         per-asset captions
-  calendar.md         the 2-week schedule
+  calendar.md         the fortnight's schedule
 ```
 
 ## Boundaries — never do these

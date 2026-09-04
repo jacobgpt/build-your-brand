@@ -178,14 +178,14 @@ automatically on the next build.
 If anything feels off after Step 0.5's options, run the 5-question
 interview to sanity-check or build from scratch:
 
-1. Brand name + what do you do?
-2. Three words that describe the brand?
-3. Colors? (hex codes, not "blue")
-4. Three reference brands + what to take from each?
-5. Tone of voice? (always / never)
+1. The name, and what it sells.
+2. Three words for the brand.
+3. Colours, as hex.
+4. Three brands to borrow from, and the one thing to take from each.
+5. Voice: what it always does, what it never does.
 
-Specific answers only — hex codes and named reference brands, not
-"clean" or "modern."
+Specifics only: hex codes and named brands, never "clean" or
+"modern".
 
 ## Boundaries — never do these
 

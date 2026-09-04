@@ -13,34 +13,35 @@ answers, and only write down what's actually specific and defensible.
 
 ## Interview first — never skip this
 
-Before any research or reasoning, interview the user. Ask your questions
-one at a time or in one clear list, and **wait for real answers** — never
-fill in a plausible default for them. You must get answers (or an explicit
+Before any research or reasoning, interview the user. Ask as one list or
+one by one, and **wait for real answers**. Never fill in a plausible
+default for them. You must get answers (or an explicit
 "I don't know / undecided") to at least these seven:
 
 1. **Who are you?** Background — what they've done, built, or sold
    before, and what they want to be known for.
 2. **What are you building?** What it is, who it's for, why it's
    different, what it refuses to look like. Two to four sentences.
-3. **Who exactly is it for?** The ideal customer — demographics plus a
-   one-line psychographic sketch if they know it.
+3. **Who exactly is it for?** One real buyer: who they are and how they
+   see themselves, as far as the user knows.
 4. **What does it cost?** Price, range, or model (one-time,
    subscription, bundle) — or an explicit "undecided."
 5. **Do you have an existing sales page, site, or ads?** If yes, get
    the URL or have them drop the file into the repo.
-6. **Who are the top 2-3 competitors** they already know of?
-7. **The single biggest result** the customer wants, and the single
-   biggest fear or frustration they have — plus anything else worth
-   knowing (founder story, unique mechanism, testimonials, press).
+6. **Which two or three competitors** do they already know about?
+7. **The outcome the customer most wants, and the fear or frustration
+   they most want gone.** Plus anything else worth knowing: founder
+   story, unique mechanism, testimonials, press.
 
 Plus one more that feeds Lesson 4: **how do they want it to feel?**
 Colour/type preferences, and any look they hate.
 
 **If they provided an existing sales page or site: audit it before
-researching.** Read it properly and write a written analysis of: hook
-strength, claim specificity, mechanism clarity, proof, objection
-handling, and call-to-action. Save that analysis at the TOP of
-`deepresearch.md` under `## Existing Sales Page Audit`.
+researching.** Read it properly and write up how it performs on six counts: the
+hook, how specific its claims are, whether the mechanism is clear, what
+proof it shows, how it handles objections, and what it asks the reader
+to do. That write-up opens `deepresearch.md` under
+`## Existing Sales Page Audit`.
 
 If the input is under ~2 sentences or too thin to research (see
 Boundaries), the interview is where you get the missing depth — extend
@@ -128,32 +129,35 @@ positioning.
    - **What they charge** and their offer structure, where findable.
    - **What they get right** — copy, proof, mechanism — not just where
      they're weak.
-   - **Category landscape**: how the category is positioned today,
-     where it's saturated, where the openings are, where it's heading.
+   - **The category**: what everyone in it currently claims, which
+     claims are crowded, which are unclaimed, and which way it is
+     moving.
 
-   **Customer language — deep, not a garnish.** Search Reddit, Amazon
-   reviews, YouTube comments, forums, and review sites for how real
-   customers talk about the problem AND the dream outcome. Pull 20+
+   **Customer language — deep, not a garnish.** Search review sites,
+   forums, comment threads and communities where buyers talk
+   unprompted about the problem AND about the outcome they want. Pull 20+
    actual phrases, verbatim, in blockquotes so later lessons can lift
    them directly — paraphrases are worthless here. Alongside the
    phrases, capture:
-   - **Failed solutions**: what have customers already tried? Why
-     didn't it work, in their words? What do they blame?
+   - **What they tried before**: the fixes they already paid for, why
+     each one let them down in their words, and who they hold
+     responsible.
    - **Fears**: what do they secretly fear is true about themselves
      because the problem persists?
-   - **Dream outcomes**: what does life look like when it's solved —
-     the identity-level transformation, not just the feature win.
+   - **The outcome they picture**: what changes about their life, and
+     about who they are, once this is solved. Not the feature, the
+     person.
 
    **Proof points.** Studies, certifications, founder credentials,
    manufacturing/sourcing facts, anything in the category that lends
    rock-solid credibility — captured, not invented.
 
-   **Unique mechanism opportunities.** What proprietary angle,
-   process, or framing could this brand claim and defend as "only
-   available here"?
+   **Mechanisms this brand could own.** A process, an angle or a frame
+   nobody else in the category is claiming, and that this brand could
+   defend as its own.
 
-   **Timeliness.** Any trend, news, regulatory shift, or seasonal
-   driver that makes a specific angle defensible right now.
+   **Timing.** Anything in the news, in the rules, or in the calendar
+   that makes one angle stronger this quarter than it was last.
 
    **Depth bar: this is a dossier, not a summary.** Minimum ~3,000
    words of dense, structured research (H2/H3 sections, customer
@@ -201,11 +205,11 @@ positioning.
    Every pain/desire/belief must be either a direct quote from
    `deepresearch.md` (attributed) or explicitly marked `(inferred, not
    sourced)`. Never state an inferred item as if it were sourced fact.
-   Do not leave any section blank — if the research doesn't cover
-   something, do additional targeted research to fill it in.
+   No section stays empty. Where the dossier is silent, go back and
+   search for that specific gap before writing the section.
 
-4. **Write `offerbrief.md`** — product, promise, unique mechanism, proof,
-   pricing, built from the user's interview answers in `intake.md` about
+4. **Write `offerbrief.md`**: what is sold, what it promises, the
+   mechanism behind the promise, the proof, the price. Built from the user's interview answers in `intake.md` about
    their own product (this is self-reported, not something you need to
    externally source — the user describing their own mechanism is not a
    claim requiring proof) plus the competitive contrast from
@@ -216,7 +220,7 @@ positioning.
    - **Unique mechanism**: the proprietary, ownable angle — named, in
      plain English, why it works, why it beats the category's existing
      solutions, and why competitors can't or haven't replicated it.
-     All roads lead back to this. If the user's input doesn't give you
+     Everything else in the offer points back at it. If the user's input doesn't give you
      one, propose the strongest candidate from the research's
      "mechanism opportunities" and mark it for their confirmation.
    - **Risk reversal**: guarantee terms if any, and the confidence
@@ -242,9 +246,10 @@ positioning.
      them from current → destination. Every future piece of copy
      installs or reinforces exactly one of these beliefs.
 
-   Six beliefs maximum — fewer is stronger. Order them the way a
-   prospect should encounter them in a funnel: problem-aware →
-   solution-aware → product-aware → ready-to-buy.
+   No more than six, and fewer is stronger. Sequence them in the order
+   a stranger has to accept them: first that the problem is real, then
+   that a fix exists, then that this is the fix, then that now is the
+   time.
 
 6. Now reason through the core brand decisions — same bar as before, do not
    accept the first generic answer for any of these:
@@ -261,9 +266,9 @@ positioning.
      prefer cliches actually observed in `deepresearch.md` over generic
      guesses.
 
-7. **Write `project-knowledge.md`** — the synthesis, structured so a
-   copywriter, media buyer, or AI assistant could read it once and
-   operate from it:
+7. **Write `project-knowledge.md`**: the synthesis, laid out so that
+   anyone writing copy or buying media for this brand, human or model,
+   can work from it after one read:
    - **Snapshot** — product, promise, customer (one paragraph), unique
      mechanism, price.
    - **Customer** — the condensed avatar.
@@ -306,25 +311,25 @@ positioning.
     `deepresearch.md` at the top (e.g. "grounded in: `deepresearch.md`").
     This must not contradict the JSON — it's the same reasoning, prose form.
 
-11. **Write `copywriter-prompt.md`** — a ready-to-paste system prompt
-    the user can drop into any AI assistant (Claude Project, custom
-    GPT, etc) so every future piece of copy is grounded in this brand.
-    Copy-paste ready, no commentary inside the file. It must:
-    - Declare the assistant the in-house direct-response copywriter
-      for THIS specific brand.
-    - Reference the foundation files by name as ground truth.
-    - Encode the methodology: argument-first, mechanism-driven,
-      belief-led, customer-language-faithful.
-    - Define the default tone from the foundation and the forbidden
-      tones from `avoid`.
-    - List the asks it should handle (ad copy, email sequences,
-      landing sections, hooks, angles, objection handlers).
-    - Require it to ask which necessary belief a given piece of copy
-      targets before writing.
-    - Forbid claims, stats, or proof not in the foundation — flag
-      gaps, never invent.
+11. **Write `copywriter-prompt.md`**: a system prompt the user pastes
+    into any assistant so every future line of copy is grounded in
+    this brand. Nothing in the file but the prompt itself. It must:
+    - Give the assistant one job: writing for THIS brand, and no
+      other.
+    - Name the foundation files and treat them as the only source of
+      fact.
+    - Set the working order: build the argument, name the mechanism,
+      pick the belief each piece serves, use the customer's words.
+    - Fix the voice from the foundation's `tone` and rule out the
+      tones in `avoid`.
+    - Cover the work it will be asked for: ads, emails, page
+      sections, hooks, angles, objection answers.
+    - Make it ask which belief a piece of copy serves before it
+      writes.
+    - Ban any claim, number or proof that isn't in the foundation.
+      Gaps get flagged, never filled.
 
-12. Tell the user it's ready. Print all nine file paths (in the order
+12. Report completion. Print all nine file paths (in the order
     above) and the `VALID` line. Tell them: from now on, `aphrodite-direction`
     will automatically use `brand_foundation.json` for every brief unless
     told otherwise, and `brand-website` will read `necessary-beliefs.md` if

@@ -1,6 +1,6 @@
 ---
 name: email-sequence
-description: Use when the student wants a welcome/launch email sequence — a belief-mapped 5-7 email arc in the brand voice, with A/B subjects, plus optional brand-locked HTML email templates rendered and screenshot-verified.
+description: Use when the student wants a welcome or launch email sequence — five to seven emails, one belief each, in the brand voice, two subject lines apiece, with optional HTML templates in the brand's tokens, rendered and checked by eye.
 ---
 
 # Email Sequence
@@ -23,25 +23,28 @@ brand's voice, every claim sourced.
 
 ### Step 1 — The arc
 
-Map a **5-7 email sequence** to the beliefs, in the order they're
-sequenced in `necessary-beliefs.md` (problem-aware → ready-to-buy).
-One belief per email, one CTA per email. Typical arc:
+Five to seven emails, one per belief, in the order
+`necessary-beliefs.md` gives them. One belief and one ask per email.
+The default shape, adjusted to the beliefs on file:
 
-| # | Day | Email | Installs | CTA strength |
-|---|-----|-------|----------|-------------|
-| 1 | 0 | Welcome — who we are, the one promise | the frame | soft |
-| 2 | 1 | The problem, in their words | Belief 1 | low |
-| 3 | 2 | Why the usual fixes fail + the mechanism | Beliefs 2-3 | medium |
-| 4 | 4 | Proof, sourced — how it works | Belief 3/5 | medium |
-| 5 | 5 | The offer + price | Belief 4 | strong |
-| 6 | 6 | Objection-killer — the #1 objection head-on | Belief 5 | strong |
-| 7 | 7 | Earned-urgency close (real scarcity only) | Belief 6 | hard |
+1. **Day 0, the frame.** Who this is and the one thing it promises.
+   Ask nothing yet.
+2. **Day 1, the problem.** In the customer's own words from the avatar
+   sheet. First belief.
+3. **Day 3, why the usual fixes fail, and the mechanism.** Second and
+   third beliefs.
+4. **Day 5, the proof.** Only what the offer brief and the dossier can
+   back. Third or fifth belief.
+5. **Day 6, the offer and its price.** Fourth belief. The first firm
+   ask.
+6. **Day 8, the top objection, answered directly.** Fifth belief.
+7. **Day 9, the close.** Sixth belief. A deadline only if the offer
+   brief holds a real one.
 
-Collapse to 5 if the offer is simple. **Day 7's urgency must be
-real** — an actual deadline, cap, or season from the offer brief. No
-real scarcity? The close earns the buy on the argument alone; fake
-urgency is forbidden everywhere and would cost the brand trust it
-can't buy back.
+Five emails if the offer is simple. **The closing deadline has to
+exist**: a date, a cap or a season from the offer brief. Without one,
+the close rests on the argument. Manufactured urgency is banned
+throughout; it spends trust the brand cannot earn back.
 
 Write the plan to `records/email/<brand_id>/sequence-plan.md` for the
 student to review BEFORE any email body gets written.
@@ -63,10 +66,9 @@ Preview: [extends the subject, never repeats it]
 [Sign-off, in the brand's tone]
 ```
 
-Subject patterns to draw from: the customer's pain verbatim · a
-bold-but-sourced claim · "the real reason [pain]" · a number (only
-if sourced). Never a clickbait curiosity gap the body doesn't pay
-off.
+Subject lines come from four places: a pain phrase lifted from the
+avatar sheet, a strong claim the dossier backs, the cause behind the
+pain, or a sourced figure. Never a tease the body doesn't deliver on.
 
 **Proof discipline:** every number, result, or testimonial in any
 body must trace to `offerbrief.md` or `deepresearch.md`. Anything
@@ -81,8 +83,9 @@ Build `records/email/<brand_id>/html/email-N.html` per email:
 - Brand colours and fonts from `design.md`; note that most clients
   fall back to system fonts — design for that degradation, don't
   fight it.
-- Logo header (hosted URL or base64 — clients can't read local
-  files), one big button CTA, generous padding, dark-mode-friendly.
+- A logo at the top as a hosted URL or base64, since mail clients
+  won't load a local file; one prominent button; room around
+  everything; readable in dark mode.
 - Keep the plain-text version alongside — it lands in more inboxes
   than any HTML.
 
@@ -100,10 +103,9 @@ Gmail has failed.
 
 ### Step 4 — Ship (the student's hands)
 
-Provide exact instructions for the ESP the student uses (Klaviyo /
-Mailchimp / Beehiiv / ConvertKit): create a signup-triggered flow,
-one message per email, send delays from the arc, paste subject +
-preview + body or import the HTML. **The student pastes it — the
+Give exact steps for whichever email platform the student uses: a
+flow triggered on signup, one message per email, the waits from the
+arc, each subject, preview and body pasted in or the HTML imported. **The student pastes it — the
 skill never touches an ESP account itself.**
 
 ## Output layout

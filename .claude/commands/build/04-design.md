@@ -1,135 +1,106 @@
 ---
-description: "Build Your Brand — Lesson 4: design.md. Choose a visual direction from real options, then lock exact tokens the whole build inherits."
+description: "Build Your Brand, Lesson 4: The tokens. Choose a visual direction from real options, then lock exact values every build inherits."
 ---
 
 # /build:04-design
 
-```ansi
-     ██  [38;5;208m█████[0m  [38;5;208m██[0m  ██████  ██████  ██████
-     ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
-     ██ [38;5;208m███████[0m [38;5;208m██[0m ██      ██    ██ ██████
-██   ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
- █████  [38;5;208m██   ██[0m [38;5;208m██[0m  ██████  ██████  ██████
+```
+     ██  ▓▓▓▓▓  ▓▓  ██████  ██████  ██████
+     ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+     ██ ▓▓▓▓▓▓▓ ▓▓ ██      ██    ██ ██████
+██   ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+ █████  ▓▓   ▓▓ ▓▓  ██████  ██████  ██████
 
           T H E   C R E A T I V E   A R C H I T E C T
 ```
 
-```
-──────────────────────────────────────────────────
-LESSON 4 · DESIGN TOKENS
-THE LOOK
-──────────────────────────────────────────────────
-```
-
-> **Timing**     ~10 minutes
-> **Goal**       A visual direction you chose from real options, locked into design.md
-> **Progress**   `[███░░░░░░░] 3/9 · starting`
+**LESSON 4 OF 10 · THE TOKENS**
+About ten minutes. You leave with a direction you chose, locked into `design.md`.
 
 ---
 
-## Why most AI sites look identical
+## Why AI sites look alike
 
 Same instruction, same model, no design system. The model reaches for
-its default, and its default is everyone's default.
+its default, and its default is everyone's.
 
-`design.md` is the fix. Exact hex codes, named fonts, the rule for
-when the accent colour appears, the words your brand uses and the
-words it never uses. It sits in the project root and everything reads
-it. Colour and type get settled here — BEFORE the brand guide, so you
-never build the guide and then go back.
+`design.md` is the fix: exact hex, named fonts, the rule for when the
+accent appears, the words the brand uses and the words it never does.
+It sits at the repo root and every build reads it. Colour and type get
+settled here, before the brand book, so you never build the book and
+then go back.
 
 ---
 
-## STEP 1 — See your options, pick one
+## STEP 1 · See the options. Pick one.
 
 > **RUN (Claude, in this session):** Use the `design-tokens` skill for
-> `<brand_id>` now. Present the options and wait for the pick — never
+> `<brand_id>` now. Present the options and wait for the pick. Never
 > write `design.md` before the student has chosen.
 
-The skill reads your competitor teardown (`deepresearch.md`) and your
-interview answers (`intake.md`), then presents **2-3 real visual
-directions** — each with its palette, its type pairing, and a reason
-grounded in what your competitors already look like. One direction
-might lean into the category pattern; another might break it exactly
-where it's weakest.
+The skill reads the competitor teardown in `deepresearch.md` and your
+preferences in `intake.md`, then puts two or three real directions in
+front of you. Each has a palette in hex, a type pairing, and one
+sentence on why, grounded in what your competitors already look like.
+One might lean into the category pattern. Another might break it
+exactly where it's thinnest.
 
 What lands in `design.md`:
-- Palette: exact hex + role for every colour (and the accent-is-not-
-  decoration rule)
-- Typography: named families, the full type scale, when each is used
-- Voice: USE/AVOID words **plus signature sentence structures** —
-  the 2-3 constructions the brand uses so often they become
-  recognizable
-- Components: button/card/spacing rules you can check a build
+
+- Palette: exact hex and a role for every colour, with the rule that
+  the accent is not decoration
+- Typography: named families, the type scale, when each is used
+- Voice: words to use, words never to use, and the two or three
+  sentence shapes the brand repeats until they're recognisable
+- Components: button, card and spacing rules you can check a build
   against
-- Motion: how things move (and never move)
-- Mood: the gut-check paragraph
+- Motion: how things move, and how they never move
+- Mood: one paragraph for the cases no rule covers
 
-You choose. That's the point — you're the one who has to look at this
-brand every day.
+You choose. You're the one who looks at this brand every day.
 
-> **ACTION:** Look at the options. Pick the one that's yours.
-> Type `1` when you've chosen.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Visual direction chosen                         │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[███░░░░░░░] 3/9 · Step 1/2`
+> **CHECK.** Direction chosen. Say `next`.
 
 ---
 
-## STEP 2 — Sharpen it (cross-check)
+## STEP 2 · Cross-check, if you're torn
 
-Unsure between options, or want to stress-test the one you picked?
-Answer five questions — specific answers only, hex codes and named
-brands, never "clean" or "modern":
+Unsure between two, or want to test the one you picked? Give Claude
+five specifics. Not "clean", not "modern": hex codes and named brands.
 
-1. Brand name + what do you do?
-2. Three words that describe the brand?
-3. Colours? (hex codes, not "blue")
-4. Three reference brands + what you want to take from each?
-5. Tone of voice? (always / never)
+- The name and what you sell
+- Three words for the brand
+- Colours, as hex
+- Three brands you'd borrow from, and the one thing you'd take from
+  each
+- Voice: what it always does, what it never does
 
-Give Claude these answers and it re-derives the tokens and tells you
-where they differ from your picked option — that disagreement is
-where the real decision lives.
-
----
-
-## STEP 3 — Specific beats vague
-
-Check the `design.md` that landed. If any line in it could describe two different brands, it isn't
-finished yet. Tighten it now. `#1B4B8F` is a decision. "Warm blue" leaves the model
-guessing. Every colour, font, and word must earn its place — if you can't
-say which research line or interview answer forced it, cut it.
-
-> If you already have a `design.md` from a different brand at the
-> repo root, the skill stops and asks before overwriting it. Answer
-> it, don't route around it — it's protecting the other brand's file.
-
-> **ACTION:** Read `design.md`. Every value specific? Type `1`.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  design.md locked — every build inherits it       │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[████░░░░░░] 4/9 · Lesson 4 complete`
+Claude re-derives the tokens from your answers and shows you where
+they differ from the direction you picked. The disagreement is where
+the real decision is.
 
 ---
 
-## DONE
+## STEP 3 · Specific, or it isn't finished
 
-**What you have now:**
-- A `design.md` at the repo root: exact palette with hex + roles,
-  named fonts, USE/AVOID voice, component rules, mood
-- A direction you chose yourself, with the evidence for it on record
+Open `design.md`. Any line that could describe two different brands
+isn't done. `#1B4B8F` is a decision. "Warm blue" leaves the model
+guessing. If you can't say which research line or interview answer
+forced a value, cut it.
 
-**Next lesson:** `/build:05-guide` — turn it into a scrollable visual
-brand book.
+> If a `design.md` from another brand already sits at the root, the
+> skill stops and asks before overwriting. Answer it. It's protecting
+> the other brand.
+
+> **CHECK.** Every value in `design.md` is specific. Say `next`.
+
+---
+
+## On record
+
+- `design.md` at the repo root: hex with roles, named fonts, voice,
+  components, mood
+- A direction you chose, with the evidence for it
+
+Next: `/build:05-guide`. Turn the tokens into a brand book you can
+scroll.

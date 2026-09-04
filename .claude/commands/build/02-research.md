@@ -1,204 +1,150 @@
 ---
-description: "Build Your Brand — Lesson 2: Interview + deep research. Real competitor and customer research, sourced, before any brand decisions."
+description: "Build Your Brand, Lesson 2: The evidence. The interview, then sourced research on competitors and customers, before any brand decision."
 ---
 
 # /build:02-research
 
-```ansi
-     ██  [38;5;208m█████[0m  [38;5;208m██[0m  ██████  ██████  ██████
-     ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
-     ██ [38;5;208m███████[0m [38;5;208m██[0m ██      ██    ██ ██████
-██   ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
- █████  [38;5;208m██   ██[0m [38;5;208m██[0m  ██████  ██████  ██████
+```
+     ██  ▓▓▓▓▓  ▓▓  ██████  ██████  ██████
+     ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+     ██ ▓▓▓▓▓▓▓ ▓▓ ██      ██    ██ ██████
+██   ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+ █████  ▓▓   ▓▓ ▓▓  ██████  ██████  ██████
 
           T H E   C R E A T I V E   A R C H I T E C T
 ```
 
-```
-──────────────────────────────────────────────────
-LESSON 2 · DEEP RESEARCH
-THE FOUNDATION
-──────────────────────────────────────────────────
-```
-
-> **Timing**     ~30-40 minutes (most of it Claude searching the web)
-> **Goal**       Your interview answers on file, and a sourced competitor dossier you have actually read
-> **Progress**   `[█░░░░░░░░░] 1/9 · starting`
+**LESSON 2 OF 10 · THE EVIDENCE**
+Thirty to forty minutes, most of it Claude searching. You leave with your answers on file and a sourced dossier you have read.
 
 ---
 
-## Why this is the most important lesson
+## Why this lesson carries the rest
 
-Every weak brand skips this. Every strong one starts here.
+Generic output has one cause: a prompt with nothing behind it. The
+model fills the gaps with the average of everything it has seen, and
+the average looks like everyone else.
 
-Generic AI output comes from the same place: a prompt with nothing
-behind it. The model fills the gaps with the average of everything
-it's seen — and the average looks like everything else.
+Evidence is the fix. Real competitors taken apart: their type, their
+palette, their promise, where they're thin. The words customers
+actually use, quoted, with the URL beside them. The opening nobody in
+the category is standing in.
 
-Research is what stops that. Not vibes about your market — real
-competitors taken apart properly: their visual language, their type,
-their palette, their positioning, and where they're weak. Plus the
-language customers actually use, and the gap nobody's filling.
-
-Everything in the next seven lessons is built on what this lesson
-produces. Get it wrong and everything downstream is confidently wrong.
+Every lesson after this one reads what this one writes. Get it wrong
+here and everything downstream is wrong with confidence.
 
 ---
 
-## STEP 1 — The interview
+## STEP 1 · The interview
 
-Before any research happens, Claude asks you questions. Real ones —
-answer in your own words, as much or as little as you like:
+Claude asks first and writes nothing until you've answered. Seven
+questions, in your own words, as long or as short as you like:
 
-1. **Who are you?** Your background — what you've done, built, or sold
-   before, and what you want to be known for.
+1. **Who are you?** What you've built, sold or done before, and what
+   you want to be known for.
 2. **What are you building?** What it is, who it's for, why it's
-   different, what it refuses to look like. Two to four sentences —
-   don't over-polish it.
-3. **Who exactly is it for?** The ideal customer.
-4. **What does it cost?** Price, range, or model — genuinely unset is
-   fine too.
-5. **Existing sales page, site, or ads?** A URL gets audited before
-   research starts.
-6. **Top 2-3 competitors** you already know of.
-7. **The biggest result your customer wants, and their biggest
-   fear or frustration** — plus anything else worth knowing
-   (founder story, testimonials, press).
+   different, what it refuses to look like. Two to four sentences.
+3. **Who exactly buys it?** One real person, not a segment.
+4. **What does it cost?** A price, a range, a model, or an honest
+   "not set".
+5. **Is anything live already?** A sales page, a site, ads. A URL
+   gets audited before the research starts.
+6. **Which two or three competitors do you already know?**
+7. **The result your customer most wants, and the fear or frustration
+   they most want gone.** Plus anything else that matters: founder
+   story, testimonials, press.
 
-   Also: **how do you want it to feel?** Colour and type preferences,
-   and any look you hate — Lesson 4's design options will use these.
+And one for Lesson 4: **how should it feel?** Colour and type
+preferences, and any look you can't stand.
 
-Don't have perfect answers? Good enough is fine — the research fills
-the gaps. Your answers are written to
-`records/brands/<brand_id>/intake.md` before anything else happens:
-every later step reads what YOU said. Guessing is what produces the
-generic output you've seen everywhere else.
+Half-formed answers are fine. Say what you know. The research does the
+rest, and it works from what you said rather than from a guess about
+you.
 
 > **RUN (Claude, in this session):** Start the `brand-foundation` skill
-> now. Ask the seven questions above and the feel question, one at a
-> time or as one list, and wait for real answers — never fill one in.
-> Write `records/brands/<brand_id>/intake.md`, then continue straight
-> into the research in STEP 2. Never `claude -p`, never a second
-> terminal.
+> now. Ask the seven questions and the feel question, one at a time or
+> as one list, and wait for real answers. Never fill one in. Write
+> `records/brands/<brand_id>/intake.md`, then continue into STEP 2.
+> Never `claude -p`, never a second terminal.
 
-> **ACTION:** Answer the questions here. When `intake.md` exists with
-> your answers in it, type `1` — the research is already running.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Interview complete — intake.md written          │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[█░░░░░░░░░] 1/9 · Step 1/3`
+> **CHECK.** `intake.md` exists with your answers in it. Say `next`;
+> the research is already running.
 
 ---
 
-## STEP 2 — Run the research
+## STEP 2 · The research
 
-Now the real work. The same `brand-foundation` run continues from
-your `intake.md` — nothing new to type.
+The same skill run continues from your `intake.md`. Nothing to type.
 
-Real web search first, and it runs long. The dossier needs to reach
-a ~3,000-word deepresearch.md with a per-competitor teardown (visual
-language, type, palette, positioning, pricing, weaknesses), the
-category landscape and its openings, 20+ verbatim customer quotes
-with failed solutions and fears, proof points, and mechanism
-opportunities. If you gave it a sales page URL, that gets audited
-first. Later lessons offer you real choices instead of defaulting
-because of this step. It writes nine files, in order, to
-`records/brands/<brand_id>/`:
+It searches first and reasons later, and it runs long. The bar: a
+dossier of roughly 3,000 words with a teardown of each competitor
+(visual language, type, palette, positioning, pricing, weaknesses),
+the shape of the category and its openings, twenty or more customer
+quotes verbatim with what they tried before and what they fear, proof
+points, and the mechanisms this brand could own. If you gave a URL,
+its audit lands at the top.
+
+Nine files, written in this order to `records/brands/<brand_id>/`:
 
 ```
-intake.md               your interview answers (written first)
-copywriter-prompt.md    a ready-to-paste AI copywriter prompt, tuned
-                        to your brand, that flags gaps instead of
-                        inventing claims
-deepresearch.md         the dossier, sourced — lands before anything else
-avatar-sheet.md         the customer, in their own words
+intake.md               your answers, verbatim, first
+copywriter-prompt.md    a system prompt for any AI assistant, tuned to
+                        this brand, that flags gaps instead of inventing
+deepresearch.md         the dossier, sourced
+avatar-sheet.md         the customer in their own words
 offerbrief.md           product, promise, mechanism, proof, pricing
 necessary-beliefs.md    what someone must accept before they buy
-project-knowledge.md    the synthesis, VERIFIED vs UNVERIFIED
+project-knowledge.md    the synthesis, VERIFIED and UNVERIFIED kept apart
 brand-book.md           the readable brand book
-brand_foundation.json   the structured contract
+brand_foundation.json   the contract every later skill reads
 ```
 
-This takes the longest — the research is doing real work across the
-web. Let it cook.
+This is the long step. Leave it running.
 
-> **ACTION:** Let it run. When all nine files exist, type `1`.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Research complete — nine files written         │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[█░░░░░░░░░] 1/9 · Step 2/3`
+> **CHECK.** Nine files on disk. Say `next`.
 
 ---
 
-## STEP 3 — Read it before you move
+## STEP 3 · Read it before you move
 
-This is the step people skip and regret. Open `deepresearch.md` and
-read it in full — especially the competitor teardown. A wrong
-assumption about your customer, a competitor you didn't know about, a
-claim with nothing behind it — this is where it shows up, and it's
-cheap to fix here and expensive later.
+The step people skip and pay for later. Open `deepresearch.md` and
+read all of it, the competitor teardown especially. A wrong assumption
+about your customer, a competitor you'd never heard of, a claim with
+nothing under it: this is where it shows, and this is where it's cheap
+to fix.
 
-Then open `project-knowledge.md` and check the UNVERIFIED section
-specifically — those claims stay out of everything you build. Not
-because it's cautious — a brand that only says what it can prove is
-the one people believe.
+Then open `project-knowledge.md` and read the UNVERIFIED section.
+Those claims stay out of everything you build. A brand that only says
+what it can prove is the one people believe.
 
-> **ACTION:** Read `deepresearch.md` and sanity-check it against what
-> you know. Check the UNVERIFIED section. Type `1` when it holds up.
+Hold the dossier to this:
 
----
+- **Every market claim has a URL beside it.** No source is a guess
+  wearing a suit. Tell Claude to source it or cut it.
+- **The teardown describes what you can see.** Actual colours, actual
+  type, an actual promise from a homepage. "They focus on quality"
+  describes nothing.
+- **Twenty or more quotes, verbatim.** Fewer means it paraphrased, and
+  a paraphrase is worth nothing here.
+- **It told you something you didn't know.** If you could have
+  written it before the run, name the competitor or angle to dig into
+  and run it again.
 
-## If the dossier is weak, make it redo the work
+Weak evidence isn't a phase you pass through. Everything downstream
+inherits it. Redo it here.
 
-A dossier earns its name only if it passes this:
-
-- **Every market claim has a URL next to it.** A claim with no source
-  is a guess wearing a suit — tell Claude to source it or cut it.
-- **The competitor teardown describes things you can SEE** — actual
-  colours, actual type, an actual promise from their homepage — not
-  "they focus on quality."
-- **At least 20 verbatim customer quotes.** Fewer means it
-  paraphrased, and paraphrased research is worth nothing.
-- **It found something you didn't know.** If everything matches what
-  you could have said before the run, tell Claude which competitor
-  or angle to dig into harder and run it again.
-
-Weak research is not a phase — everything downstream will be
-confidently wrong. Redo it here.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Foundation researched and reviewed              │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[██░░░░░░░░] 2/9 · Lesson 2 complete`
+> **CHECK.** Dossier read against what you know; two URLs clicked;
+> UNVERIFIED section read. Say `next`.
 
 ---
 
-## DONE
+## On record
 
-**What you have now:**
-- Your interview answers on record (`intake.md`)
-- A ready-to-paste AI copywriter prompt (`copywriter-prompt.md`) —
-  drop it into any AI assistant and every piece of copy it writes is
-  grounded in your brand so nothing it writes comes out generic
-- A ~3,000-word sourced dossier: competitor teardown (visual +
-  strategic), category landscape, 20+ verbatim customer quotes, proof
-  points, mechanism opportunities
-- The customer's exact language, the offer with a named mechanism,
-  beliefs with bridges, and a VERIFIED/UNVERIFIED split
+- Your answers, verbatim: `intake.md`
+- A copywriter prompt grounded in this brand: `copywriter-prompt.md`
+- A sourced dossier: competitors, category, quotes, proof, mechanisms
+- The customer's language, a named mechanism, beliefs with bridges,
+  and a VERIFIED/UNVERIFIED split
 
-**Next lesson:** `/build:03-foundation` — validate the contract your
-research produced and make it yours. Quick one.
+Next: `/build:03-foundation`. Validate the contract and make it yours.
+Short.

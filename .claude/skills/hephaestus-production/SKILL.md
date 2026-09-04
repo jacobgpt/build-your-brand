@@ -116,8 +116,7 @@ remember.
    or — a real failure mode — the image model hallucinates fabricated
    text/logos onto a surface despite being told not to), the fix is
    **upstream**: write a new brief and rebuild — don't try to fix it by
-   tuning the video step next. A weak still makes a weak video with motion
-   on it. Name the revision brief `<brand_id>-hero-still-v2` (increment for
+   tuning the video step next. Motion doesn't rescue a weak frame. Name the revision brief `<brand_id>-hero-still-v2` (increment for
    further attempts) — `hephaestus_build.py` recognizes both the bare
    `-hero-still` suffix and `-hero-still-vN` as the same still-build mode,
    so a revision still gets the fixed-path copy behavior. If a revision is
@@ -131,9 +130,9 @@ remember.
 1. Confirm `records/assets/hero-still.png` exists — it must, from Step 1.
    If it doesn't, stop and say so; don't attempt video from nothing.
 2. Ask Aphrodite for a brief with `brief_id: "<brand_id>-hero-video"`. The
-   brief's `visual_description`/`style_notes` must specify **subtle motion
-   only**: a slow push-in, ambient drift, or light environmental movement
-   (steam, dust, a needle twitching) — never a new object entering frame,
+   brief's `visual_description`/`style_notes` must keep the motion
+   **quiet**: a gentle move toward the subject, a little air in the scene,
+   small environmental life (steam, dust, a needle twitching) — never a new object entering frame,
    never a camera move that reveals something not in the still, never a
    color shift. `must_preserve` must include an explicit entry that colors
    stay locked to the source still and no new elements appear. This is a

@@ -22,16 +22,16 @@ you need to read, choose or approve. Don't run the lessons through
 
 | # | Command | What it does |
 |---|---|---|
-| 1 | `/build:01-setup` | Confirm the toolchain, skills visible, dashboard live |
-| 2 | `/build:02-research` | The interview, then real sourced research — `deepresearch.md` lands first |
-| 3 | `/build:03-foundation` | Validate and review the brand contract |
-| 4 | `/build:04-design` | `design.md` — pick a visual direction from real options, then lock exact hex, fonts, voice |
-| 5 | `/build:05-guide` | Brand book (HTML + PDF), scrollable, verified by looking at it |
-| 6 | `/build:06-hero` | Hero still through the gate, checked for fabricated text (video optional) |
-| 7 | `/build:07-website` | Copy-first, `design.md`-driven, hero-aware one-page site |
-| 8 | `/build:08-assets` | A typed creative brief (Aphrodite), gated production (Hephaestus), one rejection on purpose |
-| 9 | `/build:09-done` | Review everything, the pattern behind it, ship the site live if you want |
-| 10 | `/build:10-grow` | The engines: research-mined ads through the gate, a belief-mapped email sequence, a rendered content batch |
+| 1 | `/build:01-setup` | The toolchain: tools confirmed, nine skills visible, dashboard reading the disk |
+| 2 | `/build:02-research` | The evidence: the interview, then sourced research, `deepresearch.md` first |
+| 3 | `/build:03-foundation` | The contract: validate the foundation, read every file, correct what isn't you |
+| 4 | `/build:04-design` | The tokens: choose a direction from real options, lock `design.md` |
+| 5 | `/build:05-guide` | The book: a scrollable brand guide, HTML and PDF, verified by looking |
+| 6 | `/build:06-hero` | The face: a hero still through the gate, inspected for fabricated text; video optional |
+| 7 | `/build:07-website` | The storefront: a one-page site, words first, styled from `design.md` |
+| 8 | `/build:08-assets` | The gate: a typed brief, a gated build, one asset and one refusal on record |
+| 9 | `/build:09-done` | The record: review everything, ship the site if you want, name the pattern |
+| 10 | `/build:10-grow` | The engines: ads through the gate, a belief-mapped email sequence, rendered content |
 
 Lessons 1 to 9 take about two and a half hours. Lesson 10 is another
 thirty to forty-five minutes and can be run any time after.
@@ -111,8 +111,7 @@ records/                  everything the skills write (gitignored; empty
   the competitor teardown and your stated preferences, waits for your
   pick, then locks `design.md`. Specific values only.
 - **Brand Guide** turns the documents into one shareable HTML file and
-  a PDF, including a "what we never claim" panel for anything
-  UNVERIFIED.
+  a PDF, including a "Never claimed" panel for anything UNVERIFIED.
 - **Aphrodite** turns a one-line idea into a typed creative brief. She
   decides what should exist, never how.
 - **Hephaestus** reads the brief exactly as written, runs the gate, and

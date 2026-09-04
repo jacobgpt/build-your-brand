@@ -1,167 +1,126 @@
 ---
-description: "Build Your Brand — Lesson 6: The hero. Still through the gate, then image-to-video."
+description: "Build Your Brand, Lesson 6: The face. A hero still through the gate, then motion if you choose to spend on it."
 ---
 
 # /build:06-hero
 
-```ansi
-     ██  [38;5;208m█████[0m  [38;5;208m██[0m  ██████  ██████  ██████
-     ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
-     ██ [38;5;208m███████[0m [38;5;208m██[0m ██      ██    ██ ██████
-██   ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
- █████  [38;5;208m██   ██[0m [38;5;208m██[0m  ██████  ██████  ██████
+```
+     ██  ▓▓▓▓▓  ▓▓  ██████  ██████  ██████
+     ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+     ██ ▓▓▓▓▓▓▓ ▓▓ ██      ██    ██ ██████
+██   ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+ █████  ▓▓   ▓▓ ▓▓  ██████  ██████  ██████
 
           T H E   C R E A T I V E   A R C H I T E C T
 ```
 
-```
-──────────────────────────────────────────────────
-LESSON 6 · THE HERO
-THE FACE
-──────────────────────────────────────────────────
-```
-
-> **Timing**     ~20 minutes
-> **Goal**       A hero still built through the gate and reviewed pixel-by-pixel
-> **Progress**   `[█████░░░░░] 5/9 · starting`
+**LESSON 6 OF 10 · THE FACE**
+About twenty minutes. You leave with a hero still that went through the gate and that you inspected up close.
 
 ---
 
-## Still first, always
+## The still decides the video
 
-A strong still makes a strong video. A weak still makes a weak video
-with motion on it. Two moves: generate the still, approve it, then
-animate it. And this lesson spends real credits — that's why the gate
-is here: nothing gets built until you read the brief and type `y`.
+Motion adds nothing a bad frame lacks. So the order is fixed: generate
+the still, approve it, inspect it, and only then animate it. This
+lesson spends real credits, which is why the gate exists. Nothing is
+built until you've read the brief and typed `y`.
 
 **Needs a Higgsfield account with credits** (`higgsfield auth login`,
-then `higgsfield account status`). Don't have one? Skip to
-`/build:07-website` — the site falls back to a CSS hero, and Lesson 8's
-rejection record still works with no account at all.
+then `higgsfield account status`). Don't have one? Go to
+`/build:07-website`. The site falls back to a CSS hero, and Lesson 8's
+refusal record works with no account at all.
 
 ---
 
-## STEP 1 — Write the brief
+## STEP 1 · The brief
 
 > **RUN (Claude, in this session):** Use `aphrodite-direction` to write
 > the hero-still brief for `<brand_id>`, `brief_id` ending in
 > `-hero-still`, `asset_type: hero-still`.
 
-Be explicit in the brief about what's forbidden. Image models can
-sometimes render fabricated text or a logo onto a textured surface
-even when told not to — if the still has multiple surfaces (a mat, a
-switch, a tray, a meter housing), say "no text or logo" for each one
-specifically rather than once in general.
+Be exact about what's forbidden. Image models will print fabricated
+text or a logo onto any surface with texture, however clearly you said
+not to. If the still has several surfaces (a mat, a switch, a tray, a
+housing), forbid text on each one by name rather than once in general.
 
-> **ACTION:** Open the brief at `records/briefs/<brief_id>.json` and
-> read it. Forbidden list specific enough? Type `1`.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Hero brief written                              │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[█████░░░░░] 5/9 · Step 1/3`
+> **CHECK.** Brief open at `records/briefs/<brief_id>.json`; the
+> forbidden list names each surface. Say `next`.
 
 ---
 
-## STEP 2 — Run it through the gate
+## STEP 2 · Through the gate
 
 > **RUN (Claude, in this session):** Use `hephaestus-production` on
 > `records/briefs/<brief_id>.json`.
 
-The gate is two keystrokes, and neither is Claude's. First Claude shows
-you the brief and asks `Approve build? [y/N]` — answer here. Then Claude
-Code's own permission dialog shows the exact gate command, including
-your answer, and you allow it. Claude can't click that dialog. This
-step **spends real credits**: check `higgsfield account status` before
-you answer, and again after. Lands at `records/assets/hero-still.png`
-+ `hero-poster.jpg`, with a dated run record in `records/runs/`.
+The gate is two keystrokes and neither is Claude's. Claude shows you
+the brief and asks `Approve build? [y/N]`; you answer here. Then Claude
+Code's own permission dialog shows the exact gate command with your
+answer inside it, and you allow it. Claude can't click that dialog.
+This step spends credits: check `higgsfield account status` before you
+answer and again after. The result lands at
+`records/assets/hero-still.png` and `hero-poster.jpg`, with a dated
+record in `records/runs/`.
 
-**Judge it like an art director would.** A "fine" still is a bad
-still. Zoom in: are the colours exactly your palette hex?
-Is the mood your `design.md` mood, or the model's default mood? Is
-there fabricated text anywhere?
+Judge it like an art director. "Fine" is bad. Are the colours your
+hex? Is the mood the one in `design.md`, or the model's default mood?
+Is there text anywhere?
 
-If it comes back mediocre, iterate — it's cheaper to rebuild with a
-sharper brief than to animate a weak image. A great still makes a
-great video; a "fine" one makes a video nobody remembers.
+If it's mediocre, rebuild with a sharper brief. It's cheaper than
+animating a weak frame.
 
-> **ACTION:** Read the brief. Check your balance. Type `y` only if you
-> actually want this build, then allow the command in the dialog.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Hero still built — through the gate              │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[█████░░░░░] 5/9 · Step 2/3`
+> **CHECK.** Brief read, balance checked, `y` given only if you want
+> this build, dialog allowed. Say `next`.
 
 ---
 
-## STEP 3 — Actually look at the image
+## STEP 3 · Look at it up close
 
-Don't assume a clean exit means a clean image. **Zoom into any
-patterned or textured surface** and check for readable fabricated
-text. If it comes back bad, the fix is upstream: a new `-hero-still`
-brief (or `-hero-still-v2` — the build recognizes version suffixes),
-not a patched video prompt.
+A clean exit isn't a clean image. Zoom into every textured surface and
+look for readable fabricated text. If it's there, the fix is upstream:
+a new brief named `-hero-still-v2` (the build recognises version
+suffixes), not a patched video prompt.
 
-> **ACTION:** Open the still and look at it closely, especially
- textured surfaces. Clean? Type `1`. If not — new brief, rebuild.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Hero reviewed pixel-by-pixel                    │
-└─────────────────────────────────────────────────┘
-```
-
-> **Progress**  `[██████░░░░] 6/9 · Lesson 6 complete`
+> **CHECK.** Still inspected at full size, textured surfaces
+> especially. Clean, or a new brief written. Say `next`.
 
 ---
 
-## OPTIONAL — Logo + section images
+## OPTIONAL · Logo and section images
 
-While the asset pipeline is warm, round out the visual set the same
-way: a logo (mark + wordmark) if the brand doesn't have one, and any
-product shots or abstract textures the site will need. Same rules —
-brief through Aphrodite, gate through Hephaestus, exact `design.md`
-colours in the brief, no text baked into images the site will overlay
-copy onto. Each one is a dated, rejected-or-approved record like the
-hero.
+While the pipeline is warm, round out the set the same way: a mark and
+wordmark if the brand has none, product shots or textures the site
+will need. Same rules. Aphrodite writes the brief, Hephaestus gates
+it, `design.md` hex goes in the brief, no baked-in text where the site
+will lay copy. Each one is a dated record, approved or refused, like
+the hero.
 
 ---
 
-## OPTIONAL — The motion
+## OPTIONAL · Motion
 
-Subtle only: slow push-in, ambient drift, colours locked to the
-source, no new objects. It's a background for text and must stay
-readable underneath. Five to eight seconds, looping.
+Quiet only. A slow move toward the subject, a little air in the scene,
+colours locked to the still, nothing new entering frame. It's a
+background for text and has to stay readable underneath. Five to eight
+seconds, looping.
 
 > **RUN (Claude, in this session):** Use `aphrodite-direction` for the
 > `<brand_id>` hero video, `brief_id` ending in `-hero-video`, then
 > `hephaestus-production` on the resulting brief.
 
-Same gate — and video costs more than a still, so check your balance
-before approving. Lands at `records/assets/hero.mp4`.
+Same gate. Video costs more than a still, so check your balance first.
+Lands at `records/assets/hero.mp4`.
 
-Fine to stop at the still — the website in the next lesson works
-either way.
+Stopping at the still is fine. Lesson 7 works either way.
 
 ---
 
-## DONE
+## On record
 
-**What you have now:**
 - A hero still in `records/assets/`, approved by you at the gate,
-  reviewed by you pixel-by-pixel
-- A dated run record of the decision in `records/runs/`
+  inspected by you up close
+- The decision, dated, in `records/runs/`
 - The video, only if you chose to spend on it
 
-**Next lesson:** `/build:07-website` — the site, copy-first and
-driven by your design.md.
+Next: `/build:07-website`. The site: words first, `design.md` second.

@@ -1,214 +1,172 @@
 ---
-description: "Build Your Brand — Lesson 10: Grow. Ads, emails, and content — the three engines that make the brand show up, all gated and grounded."
+description: "Build Your Brand, Lesson 10: The engines. Ads, email and content that read the same foundation, every claim sourced, every generation gated."
 ---
 
 # /build:10-grow
 
-```ansi
-     ██  [38;5;208m█████[0m  [38;5;208m██[0m  ██████  ██████  ██████
-     ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
-     ██ [38;5;208m███████[0m [38;5;208m██[0m ██      ██    ██ ██████
-██   ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
- █████  [38;5;208m██   ██[0m [38;5;208m██[0m  ██████  ██████  ██████
+```
+     ██  ▓▓▓▓▓  ▓▓  ██████  ██████  ██████
+     ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+     ██ ▓▓▓▓▓▓▓ ▓▓ ██      ██    ██ ██████
+██   ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+ █████  ▓▓   ▓▓ ▓▓  ██████  ██████  ██████
 
           T H E   C R E A T I V E   A R C H I T E C T
 ```
 
-```
-──────────────────────────────────────────────────
-LESSON 10 · GROW
-THE ENGINES
-──────────────────────────────────────────────────
-```
-
-> **Timing**     ~30-45 minutes (pick one engine or run all three)
-> **Goal**       A launch-ready ad set, a belief-mapped email sequence, and a 2-week content calendar — whichever you choose, grounded and gated
-> **Progress**   `[██████████] 9/9 done · post-course utilities`
+**LESSON 10 OF 10 · THE ENGINES**
+Thirty to forty-five minutes; run one engine or all three. You leave with a launch-ready ad set, a belief-mapped email sequence, and two weeks of rendered content, whichever you chose.
 
 ---
 
-## The brand exists. Now make it show up.
+## The brand exists. Now it has to show up.
 
-Lessons 1-9 built the brand. This lesson runs the engines that put
-it in front of people. Three of them, each reading the same
-foundation everything else reads — the angles in your ads come from
-the same research your site came from:
+Lessons 1 to 9 built the brand. This lesson runs the engines that put
+it in front of people. Three of them, all reading the foundation the
+site was built from, so the angle in an ad and the argument on the
+page come from the same evidence.
 
-| Engine | What you get | Spend |
-|--------|-------------|-------|
-| **Ads** | 5-8 researched angles, a Meta-ready copy bank, static ads, video scripts | Image plates cost credits (gated); copy is free |
-| **Email** | A 5-7 email welcome/launch arc, belief-mapped, A/B subjects, HTML templates | No credits — just your review |
-| **Content** | 4-5 pillars, 15-20 sourced ideas, 3-4 rendered carousels, captions, a 2-week calendar | No credits — headless Chrome renders |
+| Engine | You get | Spend |
+|---|---|---|
+| **Ads** | five to eight researched angles, a Meta-ready copy bank, static ads, video scripts | image plates cost credits and are gated; copy is free |
+| **Email** | a welcome sequence mapped to your beliefs, subject variants, HTML templates | none; your review only |
+| **Content** | pillars, sourced post ideas, rendered carousels, captions, a fortnight's schedule | none; headless Chrome renders |
 
-Run one, two, or all three — each works standalone once the
-foundation and `design.md` exist.
+Each works on its own once the foundation and `design.md` exist.
 
-One rule runs through all of them: **every claim sourced, every
-generation gated.** If an engine needs a number the research doesn't
-have, it flags it — it doesn't invent it. That's the difference
-between marketing a real brand and impersonating one.
+One rule across all three: every claim sourced, every generation
+gated. If an engine needs a number the research doesn't hold, it
+flags the gap. It never fills it. That's the line between marketing a
+real brand and impersonating one.
 
 ---
 
-## ENGINE 1 — Ads (`ad-factory`)
+## ENGINE 1 · Ads (`ad-factory`)
 
-### Why ads fail the naive way
+### How AI ads go wrong
 
-Two ways AI ads go wrong. First: the angles come from imagination, so
-they say nothing ("quality matters"). Second: the image model renders
-the text, which is where garbled headlines and fake logos come
-from. This engine fixes both: angles mined from YOUR research, and
-all type overlaid in post as brand-locked HTML, never generated.
+Two ways. The angles come from imagination, so they say nothing. And
+the image model renders the text, which is where garbled headlines and
+fake logos come from. This engine fixes both: angles mined from your
+research, and all type laid over in post as brand-locked HTML, never
+generated.
 
-### STEP 1 — Angles and the copy bank (free, your review)
+### STEP 1 · Angles and copy bank (free)
 
 > **RUN (Claude, in this session):** Use `ad-factory` to mine ad angles
 > for `<brand_id>`.
 
-It reads your avatar's pains/fears/objections verbatim, your
-necessary beliefs, and the competitor teardown, then writes 5-8
-concepts to `records/ads/<brand_id>/ad-concepts.md` — each mapped to
-one belief, three distinct hooks each, every line with its source.
-**The kill rule: any angle a competitor could run unchanged is cut.**
+It reads the avatar's pains, fears and objections verbatim, the
+beliefs, and the competitor teardown, then writes five to eight
+concepts to `records/ads/<brand_id>/ad-concepts.md`. Each maps to one
+belief, carries three distinct hooks, and cites its source line. The
+kill rule: any angle a competitor could run unchanged is cut.
 
-Read and edit this file. It's your campaign's source of truth.
+Read it. Edit it. It's the campaign's source of truth.
 
-> **ACTION:** `ad-concepts.md` read, cut/sharpened where needed,
-> `copy-bank.md` looks ready. Type `1` when the angles are locked.
+> **CHECK.** `ad-concepts.md` read and sharpened; `copy-bank.md`
+> ready. Say `next`.
 
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Angles mined from the research                   │
-└─────────────────────────────────────────────────┘
-```
+### STEP 2 · Statics: plate through the gate, type in post (gated)
 
-### STEP 2 — Static ads: plate through the gate, overlay in post (gated)
-
-For each concept you approve for production:
+For each concept you approve:
 
 > **RUN (Claude, in this session):** Use `ad-factory` to produce a static
 > ad for concept N of `<brand_id>`.
 
-Two layers, and this is the anti-trash trick:
-1. **The plate** — a text-free background in your exact
-   `design.md` palette, built through the approval gate (real
-   credits — check your balance before `y`). Briefs carry
-   `asset_type: ad-plate`; the build prompt explicitly forbids any
-   text, logos, or fabricated characters.
-2. **The overlay** — your hook, headline, and CTA rendered on top
-   as brand-locked HTML (your exact fonts, your exact colours),
-   screenshotted to PNG. Crisp type every time.
+Two layers:
+1. **The plate.** A text-free background in your exact `design.md`
+   palette, through the approval gate (credits; check your balance
+   before `y`). The brief carries `asset_type: ad-plate` and the build
+   prompt forbids text, logos and fabricated characters on every
+   surface.
+2. **The overlay.** Your hook, headline and button rendered on top as
+   HTML in your exact fonts and colours, screenshotted to PNG. Crisp
+   type every time.
 
-**Then judge it:** copy legible, palette exact, no garbled text.
-Weak plate? Write a new plate brief and rebuild. Patching the
-overlay hides the problem instead of fixing it.
+Then judge: copy legible, palette exact, nothing garbled. A weak plate
+gets a new plate brief. Patching the overlay hides the problem.
 
-> **ACTION:** Statics judged — every one legible and on-palette.
-> Type `1`.
+> **CHECK.** Every static legible and on-palette. Say `next`.
 
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Launch-ready statics — crisp type, zero garble   │
-└─────────────────────────────────────────────────┘
-```
+### STEP 3 · Video scripts (optional)
 
-### STEP 3 — Video scripts (optional)
-
-Beat scripts per concept (hook → problem → mechanism → CTA, timed)
-written to `records/ads/<brand_id>/video/`. Plates gated as above;
-motion/VO/caption assembly runs only when you say go — the skill
-provides exact commands and naming, spends nothing uninvited.
+Beat scripts per concept (hook, problem, mechanism, call to action,
+timed) go to `records/ads/<brand_id>/video/`. Plates are gated as
+above. Motion, voice and caption assembly run only when you say so;
+the skill gives exact commands and file names and spends nothing
+uninvited.
 
 ---
 
-## ENGINE 2 — Email (`email-sequence`)
+## ENGINE 2 · Email (`email-sequence`)
 
-### The arc before the emails
+### The arc first
 
 > **RUN (Claude, in this session):** Use `email-sequence` to plan a
 > welcome sequence for `<brand_id>`.
 
-It maps a 5-7 email arc to your beliefs in funnel order —
-`sequence-plan.md` for your review BEFORE any body is written.
-Day-7 urgency only if your offer actually has a real deadline; fake
-urgency is banned and would cost trust you can't buy back.
+It maps the sequence to your beliefs in the order a reader needs them
+and writes `sequence-plan.md` for your review before a single body is
+written. A closing deadline appears only if your offer has a real one.
+Invented urgency is banned; it costs trust you can't buy back.
 
-> **ACTION:** Arc reviewed and approved. Type `1` to write the
-> emails.
+> **CHECK.** Arc reviewed and approved. Say `next` to write the emails.
 
 ### The emails
 
-Bodies in `records/email/<brand_id>/emails.md` — subject A/B pairs,
-preview text, hook in the customer's verbatim words, one belief and
-one CTA per email. Plus brand-locked HTML templates (table layout,
-inline styles, 600px — email clients strip everything else),
-screenshot-verified by actually rendering them.
+Bodies in `records/email/<brand_id>/emails.md`: two subject lines
+each, preview text, an opening line in the customer's own words, one
+belief and one action per email. Plus HTML templates in your brand's
+tokens (table layout, inline styles, 600 pixels wide, because email
+clients strip everything else), each rendered and screenshotted so
+you've seen it.
 
-You paste the sequence into your ESP (Klaviyo/Mailchimp/Beehiiv/
-ConvertKit) — the skill gives exact instructions but never touches
-your account.
+You paste the sequence into your email tool yourself. The skill gives
+exact steps and never touches your account.
 
-> **ACTION:** Emails read and tweaked, HTML renders verified.
-> Type `1`.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Belief-mapped sequence ready to ship            │
-└─────────────────────────────────────────────────┘
-```
+> **CHECK.** Emails read and edited; renders checked. Say `next`.
 
 ---
 
-## ENGINE 3 — Content (`content-engine`)
+## ENGINE 3 · Content (`content-engine`)
 
-### Pillars, then carousels as finished files
+### Pillars, then finished files
 
 > **RUN (Claude, in this session):** Use `content-engine` to build a
 > content batch for `<brand_id>`.
 
-1. **Plan** — 4-5 pillars + 15-20 post ideas in
-   `records/content/<brand_id>/content-plan.md`, each idea mapped
-   to a belief with its source line. Ideas with no source are cut.
-   Your review first.
-2. **Carousels** — the best 3-4 built as slide-by-slide HTML in
-   your EXACT design tokens and rendered to PNG at 1080×1350.
-   These are finished, postable images. The renders get checked
-   that the fonts actually loaded — headless Chrome fails silently
-   on web fonts.
-3. **Captions + calendar** — per-asset captions and a balanced
-   2-week calendar that starts with assets that already exist.
+1. **Plan.** Pillars and fifteen to twenty post ideas in
+   `records/content/<brand_id>/content-plan.md`, each mapped to a
+   belief with its source line. No source, no post. You review first.
+2. **Carousels.** The best three or four built slide by slide as HTML
+   in your exact tokens and rendered to PNG at 1080 by 1350. Finished,
+   postable files. The renders are checked for fonts that actually
+   loaded; headless Chrome fails silently on web fonts.
+3. **Captions and schedule.** A caption per asset and a fortnight's
+   schedule that starts with the files that already exist.
 
-> **ACTION:** Carousels rendered and looked at, calendar confirmed.
-> Type `1`.
-
-```
-┌─────────────────────────────────────────────────┐
-│  ACHIEVEMENT UNLOCKED                            │
-│  Two weeks of content, done and on-brand          │
-└─────────────────────────────────────────────────┘
-```
+> **CHECK.** Carousels rendered and looked at; schedule confirmed. Say
+> `next`.
 
 ---
 
-## DONE
+## On record
 
-**What you have now (whichever engines you ran):**
+Whichever engines you ran:
 - **Ads:** research-mined angles, a Meta-ready copy bank, gated
-  statics with crisp overlaid type, timed video scripts
-- **Email:** a belief-mapped welcome arc, verified HTML templates,
-  ready to paste into your ESP
-- **Content:** pillars, rendered carousels, captions, a 2-week
-  calendar
+  statics with crisp type, timed video scripts
+- **Email:** a belief-mapped welcome arc and verified templates, ready
+  to paste
+- **Content:** pillars, rendered carousels, captions, a fortnight's
+  schedule
 
-All three read the same foundation your site was built on. Same
-claims, same voice, same palette — the whole surface area of the
-brand is one argument, delivered in three paces: seconds (ads),
-days (email), weeks (content).
+All three read the foundation the site stands on. Same claims, same
+voice, same palette: one argument delivered at three speeds. Seconds
+for ads, days for email, weeks for content.
 
-**The flywheel:** publish, see what lands, re-run the engine — the
-plan steps regenerate against what you've learned. Ads that win get
-new hooks on the same bodies. Content that lands becomes a pillar.
-The foundation doesn't change; the delivery sharpens.
+Publish, see what lands, run the engine again. Winning ads get new
+hooks; content that lands becomes a pillar. The foundation holds still
+while the delivery sharpens.
+
+Course complete.

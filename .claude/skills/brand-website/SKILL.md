@@ -5,8 +5,8 @@ description: Use when a brand foundation already exists and the user wants a web
 
 # Brand Website
 
-You build a real, running, on-brand one-page site — copy written first, then
-dressed in the brand's own visual pillars, never a generic template default.
+You build a real one-page site that runs. The words come first; the
+brand's own tokens style them afterwards. No template default.
 This is standalone HTML/CSS/vanilla JS: no build step, no framework, no
 external design tool, no image or video generation. If it needs a package
 manager, you've overbuilt it.
@@ -25,8 +25,8 @@ If more than one exists, ask which `brand_id` this site is for.
 
 Read in full:
 - `records/brands/<brand_id>/brand_foundation.json` — positioning, audience,
-  tone, visual pillars, avoid list. This is ground truth; never contradict
-  or invent beyond it.
+  tone, visual pillars, avoid list. It is the source of fact; nothing here
+  may contradict it or go beyond it.
 - `records/brands/<brand_id>/deepresearch.md` if it exists — real competitor
   notes and quoted customer language. This is your proof source.
 - **`records/brands/<brand_id>/necessary-beliefs.md`, if it exists** (built
@@ -78,11 +78,11 @@ this section entirely if there's nothing real to put in it) → CLOSE (CTA)
 Write the section map as a short numbered list — section name + which part
 of the brand foundation it argues — before building anything.
 
-### Step 2 — Write the copy FIRST, before any HTML
+### Step 2 — Words before markup
 
-This is the discipline the whole build rests on. Draft every section's
-headline, sub-head, and body in the brand's actual `tone` field — not
-generic marketing voice.
+The order is the build. Draft every section's headline, sub-head and
+body in the brand's actual `tone` field, never in generic marketing
+voice, before a single tag is written.
 
 **If building one section per belief** (`necessary-beliefs.md` present):
 for each belief, write copy that makes the reader accept that specific
@@ -120,7 +120,7 @@ user or leave a clearly marked `[FILL: ...]` placeholder and tell them.
 
 One self-contained `records/website/<brand_id>/index.html`:
 
-- **CSS inline** in a `<style>` block.
+- **All CSS in one `<style>` block.**
   - **If `design.md` exists**: use its exact hex codes, named fonts,
     component rules, and USE/AVOID voice words verbatim — comment which
     `design.md` section drove which rule (e.g. `/* design.md Palette: signal
@@ -182,7 +182,7 @@ Check, as the visitor would, not as the coder:
 - It reads coherently top to bottom — each section earns its place.
 - Resize narrow (~390px) and confirm it collapses cleanly, no overflow.
 
-Fix anything that fails, re-check. Only then tell the user it's done.
+Fix anything that fails, re-check. Only then report it done.
 
 ## Boundaries — never do these
 
