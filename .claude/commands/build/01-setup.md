@@ -4,12 +4,12 @@ description: "Build Your Brand, Lesson 1: The toolchain. Confirm the tools and t
 
 # /build:01-setup
 
-```ansi
-     ██  [38;5;208m█████[0m  [38;5;208m██[0m  ██████  ██████  ██████
-     ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
-     ██ [38;5;208m███████[0m [38;5;208m██[0m ██      ██    ██ ██████
-██   ██ [38;5;208m██   ██[0m [38;5;208m██[0m ██      ██    ██ ██   ██
- █████  [38;5;208m██   ██[0m [38;5;208m██[0m  ██████  ██████  ██████
+```
+     ██  ▓▓▓▓▓  ▓▓  ██████  ██████  ██████
+     ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+     ██ ▓▓▓▓▓▓▓ ▓▓ ██      ██    ██ ██████
+██   ██ ▓▓   ▓▓ ▓▓ ██      ██    ██ ██   ██
+ █████  ▓▓   ▓▓ ▓▓  ██████  ██████  ██████
 
           T H E   C R E A T I V E   A R C H I T E C T
 ```
@@ -131,8 +131,9 @@ Second terminal:
 python3 scripts/serve_dashboard.py
 ```
 
-Open `http://localhost:8787/dashboard.html`. It reads the files in
-`records/` and reports what exists. Not a progress bar that flatters
+The banner prints in that terminal in the brand's orange, and the same
+banner heads the dashboard. Open `http://localhost:8787/dashboard.html`.
+It reads the files in `records/` and reports what exists. Not a progress bar that flatters
 you; a view of the disk. It fills in as you build.
 
 > **CHECK.** Dashboard open. Say `next`.

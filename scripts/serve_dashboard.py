@@ -26,6 +26,13 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 
 def main() -> int:
+    sys.path.insert(0, str(ROOT / "scripts"))
+    try:
+        from banner import banner, want_color  # type: ignore
+        print(banner(want_color([])))
+        print()
+    except Exception:
+        pass
     subprocess.run([sys.executable, str(STATUS_SCRIPT)], cwd=ROOT, capture_output=True)
     url = f"http://localhost:{PORT}/dashboard.html"
     print(f"Serving dashboard at {url} (Ctrl+C to stop)")

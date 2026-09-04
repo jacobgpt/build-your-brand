@@ -17,6 +17,9 @@
   .eyebrow{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--t3);display:flex;align-items:center;gap:10px}
   .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 0 rgba(225,29,46,.6);animation:pulse 2.2s infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(225,29,46,.5)}70%{box-shadow:0 0 0 8px rgba(225,29,46,0)}100%{box-shadow:0 0 0 0 rgba(225,29,46,0)}}
+  .banner{font-family:ui-monospace,Menlo,monospace;font-size:11px;line-height:1.15;color:var(--t2);margin:18px 0 6px;white-space:pre;overflow-x:auto}
+  .banner .ai{color:#ff8700}
+  .banner .title{display:block;margin-top:8px;letter-spacing:.02em;color:var(--t3);font-size:10px}
   h1{font-weight:700;font-size:clamp(28px,4.5vw,42px);line-height:1.1;letter-spacing:-.01em;margin:16px 0 8px}
   .sub{color:var(--t2);font-size:15px;max-width:520px;line-height:1.5}
   .bar-wrap{margin:30px 0 6px;display:flex;align-items:center;gap:14px}
@@ -44,6 +47,11 @@
 <body>
 <div class="wrap">
   <div class="eyebrow">Build Your Brand</div>
+<pre class="banner">     ██  <span class="ai">█████</span>  <span class="ai">██</span>  ██████  ██████  ██████
+     ██ <span class="ai">██   ██</span> <span class="ai">██</span> ██      ██    ██ ██   ██
+     ██ <span class="ai">███████</span> <span class="ai">██</span> ██      ██    ██ ██████
+██   ██ <span class="ai">██   ██</span> <span class="ai">██</span> ██      ██    ██ ██   ██
+ █████  <span class="ai">██   ██</span> <span class="ai">██</span>  ██████  ██████  ██████<span class="title">          T H E   C R E A T I V E   A R C H I T E C T</span></pre>
   <h1>Build Progress</h1>
   <div class="sub">Cold clone to finished on-brand asset. Refresh after each stage to see it update — this reads directly off the files in <code>records/</code>.</div>
 
