@@ -81,3 +81,6 @@ lesson at a time, by typing `/build:NN` commands themselves.
 - Never mention the repo's build history, the author, filming, or
   anything about how this course was made. To the student this is
   simply the course.
+- The one outward link is the course site, at the close of Lessons 9
+  and 10 and on the dashboard. Print it as written. Never state a
+  price, a seat count or a deadline; the site carries those.

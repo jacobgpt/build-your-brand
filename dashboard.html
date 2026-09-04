@@ -41,6 +41,14 @@
   .stage.done .pill{color:var(--acc);border-color:rgba(225,29,46,.4);background:rgba(225,29,46,.08)}
   .stage.pending .pill{opacity:.5}
   .foot{margin-top:36px;font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .complete{margin-top:26px;border:1px solid rgba(225,29,46,.35);background:linear-gradient(180deg,rgba(225,29,46,.10),transparent);border-radius:14px;padding:24px 26px}
+  .complete .k{font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
+  .complete .big{font-size:22px;font-weight:700;line-height:1.2;letter-spacing:-.01em;margin-bottom:10px}
+  .complete p{color:var(--t2);font-size:14px;line-height:1.5;margin:0 0 16px;max-width:560px}
+  .complete .cta{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 18px;border-radius:10px}
+  .complete .cta:hover{filter:brightness(1.08)}
+  .foot a{color:var(--t3);text-decoration:none}
+  .foot a:hover{color:var(--acc)}
   .refresh-note{margin-top:14px;font-size:12px;color:var(--t3)}
 </style>
 </head>
@@ -63,10 +71,17 @@
 
   <div class="stages" id="stages"></div>
 
+  <div class="complete" id="complete" hidden>
+    <div class="k">Nine of nine · on record</div>
+    <div class="big">You ran the pattern on a brand. Now run it on the business.</div>
+    <p>A named owner for every job. A gate on every spend. A date on every decision. Seven checks before it counts as done. The Creative Architect course does what you just did, for every function you own, and this brand plugs in as the first.</p>
+    <a class="cta" href="https://thecreativearchitect.uk/?src=dashboard">Build yours</a>
+  </div>
+
   <div class="refresh-note">This dashboard reads local files via a tiny script — see <code>scripts/dashboard_status.py</code>. Run it after each stage and reload this page, or leave <code>python3 scripts/serve_dashboard.py</code> running and it auto-refreshes.</div>
 
   <div class="foot">
-    <span id="foot-left">build-your-brand</span>
+    <a id="foot-left" href="https://thecreativearchitect.uk/?src=dashboard-foot">the full course · thecreativearchitect.uk</a>
     <span id="foot-right">—</span>
   </div>
 </div>
@@ -116,6 +131,7 @@ async function load() {
     el.appendChild(div);
   });
 
+  document.getElementById("complete").hidden = !status.done;
   document.getElementById("foot-right").textContent = new Date().toLocaleString();
 }
 load();

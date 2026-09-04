@@ -47,6 +47,10 @@ By the end of Lesson 9, all from an empty folder:
 Lesson 10 adds the engines: ads, email and content that read the same
 foundation.
 
+This free run is one function of a larger build. The Creative
+Architect course puts the same owners, gates and records on your whole
+business. That comes after. First, the brand.
+
 | # | Lesson | Time |
 |---|---|---|
 | 1 | The toolchain | 5 min |

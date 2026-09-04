@@ -6,6 +6,9 @@ guide, a hero, a one-page site and one finished asset — with a human
 approval gate on anything that spends money, and a dated record of
 every decision, including the ones you said no to.
 
+It is the free, complete first function of **The Creative Architect**
+course: https://thecreativearchitect.uk
+
 ## Quickstart
 
 ```bash
@@ -166,3 +169,13 @@ python3 -m http.server 8000            # -> localhost:8000/records/website/<bran
 
 The site folder carries its own `assets/`, so it also serves or
 deploys on its own.
+
+## After the course
+
+You will have run the whole pattern once, on one function, with your
+own hands on the gate. The Creative Architect course runs it on every
+function of your business: a named owner for each job, a gate on every
+spend, a date on every decision, seven checks before it counts as
+done. The brand you built here plugs in as the first function.
+
+Build yours: https://thecreativearchitect.uk/?src=readme
